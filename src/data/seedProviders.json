@@ -1,0 +1,6242 @@
+[
+  {
+    "id": "sante_2",
+    "name": "Liste de notoriété médicale de l'ambassade de France",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "General",
+    "description": "Mis à jour régulièrement",
+    "phone": "Mise à jour : Mars 2025",
+    "whatsapp": null,
+    "email": null,
+    "website": "https://ke.ambafrance.org/Ambassade-de-France-au-Kenya-Liste-de-notoriete-medicale-2029",
+    "address": "Kenya",
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 18,
+    "tags": [
+      "General",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "Ambassade",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Mis à jour régulièrement",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_3",
+    "name": "AAR Healthcare",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Ambulances",
+    "description": "Voie Terrestre",
+    "phone": "+254725225225",
+    "whatsapp": "+254725225225",
+    "email": null,
+    "website": null,
+    "address": "Kenya",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Ambulances",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Voie Terrestre",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_4",
+    "name": "EMS Ambulance",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Ambulances",
+    "description": "Voie Terrestre",
+    "phone": "+254700395395",
+    "whatsapp": "+254700395395",
+    "email": null,
+    "website": null,
+    "address": "Kenya",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Ambulances",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Voie Terrestre",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_5",
+    "name": "AMREF Flying Doctors",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Ambulances",
+    "description": "Voie Aérienne",
+    "phone": "+254-206 992 299",
+    "whatsapp": "+254206992299",
+    "email": null,
+    "website": null,
+    "address": "Kenya",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Ambulances",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Voie Aérienne",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_6",
+    "name": "Aga Khan University hospital",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Hopital",
+    "description": "Aga Khan University hospital - Soins médicaux et consultations recommandés.",
+    "phone": "Service des urgences :",
+    "whatsapp": null,
+    "email": null,
+    "website": null,
+    "address": "3rd Parklands Avenue, Nairobi, Kenya",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 18,
+    "tags": [
+      "Hopital",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_7",
+    "name": "The Nairobi Hospital",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Hopital",
+    "description": "The Nairobi Hospital - Soins médicaux et consultations recommandés.",
+    "phone": "+254703082000",
+    "whatsapp": "+254703082000",
+    "email": null,
+    "website": null,
+    "address": "Argwings Kodhek Rd",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 18,
+    "tags": [
+      "Hopital",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_8",
+    "name": "Dr Onkar S. Bhogal",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Generaliste",
+    "description": "Dr Onkar S. Bhogal - Soins médicaux et consultations recommandés.",
+    "phone": "+254708094208",
+    "whatsapp": "+254708094208",
+    "email": null,
+    "website": null,
+    "address": "Park Medical Center, 6th floor, room 607",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Generaliste",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_9",
+    "name": "Dr Wai Lume, médecin référent du lycée Denis Diderot de Nairobi",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Generaliste",
+    "description": "Dr Wai Lume, médecin référent du lycée Denis Diderot de Nairobi - Soins médicaux et consultations recommandés.",
+    "phone": "+254720132745",
+    "whatsapp": "+254720132745",
+    "email": null,
+    "website": null,
+    "address": "Doctor’s Plaza. The Nairobi Hospital, Argwings Kodhek Road.",
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Generaliste",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_10",
+    "name": "Dr Jacqueline Kitulu",
+    "categoryId": "sante",
+    "neighborhoodId": "karen",
+    "specialty": "Generaliste",
+    "description": "Receptionist@KarenSurgery.com\n\nhttp://karensurgery.com/index.html",
+    "phone": "+254733642246",
+    "whatsapp": "+254733642246",
+    "email": "Receptionist@KarenSurgery.com",
+    "website": "http://karensurgery.com/index.html",
+    "address": "Karen Surgery, 333 Ngong Road, juste après le rond-point du Karen Shopping Centre.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Generaliste",
+      "Karen",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Receptionist@KarenSurgery.com\n\nhttp://karensurgery.com/index.html",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_11",
+    "name": "Dr Mauro Agostino Saio",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Generaliste",
+    "description": "Dr Mauro Agostino Saio - Soins médicaux et consultations recommandés.",
+    "phone": "+254 202-725-776",
+    "whatsapp": "+254202725776",
+    "email": null,
+    "website": null,
+    "address": "Pièce 109 et 111, premier étage du Doctor’s plaza, Nairobi Hospital, Argwings Kodhek Road",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Generaliste",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_12",
+    "name": "Dr Varinder Singh Sur",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Generaliste",
+    "description": "Dr Varinder Singh Sur - Soins médicaux et consultations recommandés.",
+    "phone": "+254733411334",
+    "whatsapp": "+254733411334",
+    "email": null,
+    "website": null,
+    "address": "RDC Oriental building. Nkrumah Lane.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Generaliste",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_13",
+    "name": "Dr F Alibhoy",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Generaliste",
+    "description": "Dr F Alibhoy - Soins médicaux et consultations recommandés.",
+    "phone": "+254722747966",
+    "whatsapp": "+254722747966",
+    "email": null,
+    "website": null,
+    "address": "Aga Khan hospital, Otieno Oyoo Street.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Generaliste",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_14",
+    "name": "Dr. Marie-Louise Cantamessa (généraliste avec pratique pédiatrique).",
+    "categoryId": "sante",
+    "neighborhoodId": "karen",
+    "specialty": "Pediatres",
+    "description": "Receptionist@KarenSurgery.com\n\nhttp://karensurgery.com/index.html\n\nS’intéresse en particulier aux troubles de l’attention et aux troubles de l’alimentation",
+    "phone": "+254733642246",
+    "whatsapp": "+254733642246",
+    "email": "Receptionist@KarenSurgery.com",
+    "website": "http://karensurgery.com/index.html",
+    "address": "Karen Surgery, 333 Ngong Road, juste après le rond-point du Karen Shopping Centre.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pediatres",
+      "Karen",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Receptionist@KarenSurgery.com\n\nhttp://karensurgery.com/index.html\n\nS’intéresse en particulier aux troubles de l’attention et aux troubles de l’alimentation",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_15",
+    "name": "Dr. Claire Majisu",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Pediatres",
+    "description": "info@lavingtonpaediatrics.com\n\nhttp://lavingtonpaediatrics.com\n\nDr Claire a une bonne connaissance du carnet de santé français",
+    "phone": "+254797404877",
+    "whatsapp": "+254797404877",
+    "email": "info@lavingtonpaediatrics.com",
+    "website": "http://lavingtonpaediatrics.com",
+    "address": "Suite 306. Lavington Paediatrics. Chandarana building. Lavington green shopping center.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pediatres",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "info@lavingtonpaediatrics.com\n\nhttp://lavingtonpaediatrics.com\n\nDr Claire a une bonne connaissance du carnet de santé français",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_16",
+    "name": "Dr. Patricia Joy Mpaata",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Pediatres",
+    "description": "dr.mpaataclinic@gmail.com",
+    "phone": "+254720413003",
+    "whatsapp": "+254720413003",
+    "email": "dr.mpaataclinic@gmail.com",
+    "website": null,
+    "address": "Pièce 209. The Nairobi Hospital, Argwings Kodhek Road.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pediatres",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "dr.mpaataclinic@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_17",
+    "name": "Dr Stephen Muhudia",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Pediatres",
+    "description": "child.clinic07@yahoo.com",
+    "phone": "+254-202-716-147",
+    "whatsapp": "+254202716147",
+    "email": "child.clinic07@yahoo.com",
+    "website": null,
+    "address": "pièce 307, 3ième étage, Doctors Plaza, Nairobi Hospital, Argwings Kodhek Road.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pediatres",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "child.clinic07@yahoo.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_18",
+    "name": "Dr Kennedy Charles Wafula",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Pediatres",
+    "description": "drwafula@yahoo.com",
+    "phone": "+254722516690",
+    "whatsapp": "+254722516690",
+    "email": "drwafula@yahoo.com",
+    "website": null,
+    "address": "pièce 237, Doctor’s plaza, Aga Khan hospital, 3rd Parklands avenue",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pediatres",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "drwafula@yahoo.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_19",
+    "name": "Dr Rachel Kariuki",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Pediatres",
+    "description": "rachel.kariuki@yahoo.com",
+    "phone": "+254725602741",
+    "whatsapp": "+254725602741",
+    "email": "rachel.kariuki@yahoo.com",
+    "website": null,
+    "address": "Social security house, 3ième étage, Nkrumah Road.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pediatres",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "rachel.kariuki@yahoo.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_20",
+    "name": "Dr Elizabeth Kuta",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Pediatres",
+    "description": "elizabethkuta@gmail.com",
+    "phone": "+254721412262",
+    "whatsapp": "+254721412262",
+    "email": "elizabethkuta@gmail.com",
+    "website": null,
+    "address": "Aga Khan hospital, Otieno Oyoo Street.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pediatres",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "elizabethkuta@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_21",
+    "name": "Dr Pratful S Patel",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "Dr Pratful S Patel - Soins médicaux et consultations recommandés.",
+    "phone": "+254723121516",
+    "whatsapp": "+254723121516",
+    "email": null,
+    "website": null,
+    "address": "Pièce 114, premier étage, Doctors Plaza, Hôpital Aga Khan, third Parklands Avenue",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_22",
+    "name": "Dr. S.R Patel",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "srgyn@wananchi.com",
+    "phone": "+ 254 202-720-108",
+    "whatsapp": "+254202720108",
+    "email": "srgyn@wananchi.com",
+    "website": null,
+    "address": "pièce n°5, Nairobi Hospital, Argwings Kodhek Road.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "srgyn@wananchi.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_23",
+    "name": "Dr Yamal Patel",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "dryamal.patel@yahoo.com",
+    "phone": "+254728111181",
+    "whatsapp": "+254728111181",
+    "email": "dryamal.patel@yahoo.com",
+    "website": null,
+    "address": "Pièce 202, 2ième étage, Mediplaza, en face hôpital Aga Khan, 3rd parklands avenue",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "dryamal.patel@yahoo.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_24",
+    "name": "Dr Rachel Rukaria-Kambutho",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "Dr Rachel Rukaria-Kambutho - Soins médicaux et consultations recommandés.",
+    "phone": "+254733618339",
+    "whatsapp": "+254733618339",
+    "email": null,
+    "website": null,
+    "address": "pièce 509, cinquième étage, Doctors Plaza, Hôpital Aga Khan, third Parklands Avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_25",
+    "name": "Pr Marleen Temmermann",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "francophone",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "email": null,
+    "website": null,
+    "address": "Doctors Plaza, Hôpital Aga Khan, third Parklands Avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "francophone",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_26",
+    "name": "Dr Aruna Chudasama",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "charm@africaonline.co.ke",
+    "phone": "+254722754544",
+    "whatsapp": "+254722754544",
+    "email": "charm@africaonline.co.ke",
+    "website": null,
+    "address": "Premier étage de la clinique de consultation, hôpital de Mombasa, Off Mama Ngina Drive, next to Treasury Square.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "charm@africaonline.co.ke",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_27",
+    "name": "Dr Peter Griffiths et associés \n(3 autres dentistes et un orthodontiste)",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Chirurgiens-dentistes et orthodontistes",
+    "description": "info@p-griffiths.com\nhttp://thedentalpractice.co.ke/",
+    "phone": "+254722736439",
+    "whatsapp": "+254722736439",
+    "email": "info@p-griffiths.com",
+    "website": "http://thedentalpractice.co.ke/",
+    "address": "à proximité de Waiyaki Way,Westlands.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Chirurgiens-dentistes et orthodontistes",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "info@p-griffiths.com\nhttp://thedentalpractice.co.ke/",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_28",
+    "name": "Dr Pankaj Patel",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Chirurgiens-dentistes et orthodontistes",
+    "description": "ppatel@africaonline.co.ke",
+    "phone": "+254722828611",
+    "whatsapp": "+254722828611",
+    "email": "ppatel@africaonline.co.ke",
+    "website": null,
+    "address": "The Nairobi Hospital Consulting Rooms. Hôpital de Nairobi. Argwings Kodhek Road.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Chirurgiens-dentistes et orthodontistes",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "ppatel@africaonline.co.ke",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_29",
+    "name": "Dr Vaghela Satish",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Chirurgiens-dentistes et orthodontistes",
+    "description": "Adresse-mail ; drsatishvaghela@gmail.com",
+    "phone": "+254722411420",
+    "whatsapp": "+254722411420",
+    "email": "drsatishvaghela@gmail.com",
+    "website": null,
+    "address": "Nyali dental care, Nyali road",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Chirurgiens-dentistes et orthodontistes",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Adresse-mail ; drsatishvaghela@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_30",
+    "name": "Dr. Hemant Saha",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Cardiologues",
+    "description": "saha.hemant@gmail.com",
+    "phone": "+254733635577",
+    "whatsapp": "+254733635577",
+    "email": "saha.hemant@gmail.com",
+    "website": null,
+    "address": "Pièce 305, 3ième étage, Doctor’s plaza, Aga Khan hospital, 3rd Parklands avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Cardiologues",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "saha.hemant@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_31",
+    "name": "Dr. David Silverstein",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Cardiologues",
+    "description": "silver@swiftkenya.com",
+    "phone": "+254733859637",
+    "whatsapp": "+254733859637",
+    "email": "silver@swiftkenya.com",
+    "website": null,
+    "address": "Nairobi Hospital, Argwings Kodhek Road",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Cardiologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "silver@swiftkenya.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_32",
+    "name": "Dr. Majid Warshow",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Cardiologues",
+    "description": "majid.warshow@aku.edu",
+    "phone": "+254733133224",
+    "whatsapp": "+254733133224",
+    "email": "majid.warshow@aku.edu",
+    "website": null,
+    "address": "4ième étage, Doctor’s plaza, Aga Khan hospital, 3rd Parklands avenue",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Cardiologues",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "majid.warshow@aku.edu",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_33",
+    "name": "Dr. Vaghela Vinesh",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Cardiologues",
+    "description": "vineshvaghela@yahoo.com ; \ninfo@coastcardiaccentre.org",
+    "phone": "+254720219977",
+    "whatsapp": "+254720219977",
+    "email": "vineshvaghela@yahoo.com",
+    "website": null,
+    "address": "Coast Cardiac Centre, Pandya Memorial Hospital, Dedan Kimathi Avenue",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Cardiologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "vineshvaghela@yahoo.com ; \ninfo@coastcardiaccentre.org",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_34",
+    "name": "Dr. Muindi Wanjugu, Nairobi Chest Clinic.",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Pneumologue",
+    "description": "nairobichestclinic@gmail.com\n\nRéalise des épreuves fonctionnelles respiratoires",
+    "phone": "+254722756272",
+    "whatsapp": "+254722756272",
+    "email": "nairobichestclinic@gmail.com",
+    "website": null,
+    "address": "Pièce 201, Doctor’s plaza, Nairobi Hospital, Argwings Kodhek Road",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pneumologue",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "nairobichestclinic@gmail.com\n\nRéalise des épreuves fonctionnelles respiratoires",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_35",
+    "name": "Dr. Saroop Singh Bansil",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Dermatologues",
+    "description": "drbansil@uhmc.co.ke\n\nwww.uhmc.co.ke",
+    "phone": "+254736476002",
+    "whatsapp": "+254736476002",
+    "email": "drbansil@uhmc.co.ke",
+    "website": "www.uhmc.co.ke",
+    "address": "Pièce 4F, 4ième étage, Upper Hill medical Centre, Ralph Bunche Road, Off Valley Road",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Dermatologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "drbansil@uhmc.co.ke\n\nwww.uhmc.co.ke",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_36",
+    "name": "Dr. Roop Saini",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Dermatologues",
+    "description": "Dr. Roop Saini - Soins médicaux et consultations recommandés.",
+    "phone": "+254711712512",
+    "whatsapp": "+254711712512",
+    "email": null,
+    "website": null,
+    "address": "aile droite, 6ième étage, Mayfair Centre, Ralph Bunche Road.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Dermatologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_37",
+    "name": "Dr. Asyago",
+    "categoryId": "sante",
+    "neighborhoodId": "karen",
+    "specialty": "Dermatologues",
+    "description": "Dr. Asyago - Soins médicaux et consultations recommandés.",
+    "phone": "+254712188188",
+    "whatsapp": "+254712188188",
+    "email": null,
+    "website": null,
+    "address": "skin allergy Dermato \nKaren (à côté de The Hub)",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Dermatologues",
+      "Karen",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_38",
+    "name": "Dr Hemant Saha",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gastro-entérologues",
+    "description": "saha.hemant@gmail.com",
+    "phone": "+254733635577",
+    "whatsapp": "+254733635577",
+    "email": "saha.hemant@gmail.com",
+    "website": null,
+    "address": "Pièce 305, 3ième étage, Doctor’s Plaza, Aga Khan Hospital",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gastro-entérologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "saha.hemant@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_39",
+    "name": "Dr. Allan Rajula",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gastro-entérologues",
+    "description": "Dr. Allan Rajula - Soins médicaux et consultations recommandés.",
+    "phone": "+254 203-662-000",
+    "whatsapp": "+254203662000",
+    "email": null,
+    "website": null,
+    "address": "Aga Khan Hospital",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gastro-entérologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_40",
+    "name": "Dr Devani",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gastro-entérologues",
+    "description": "Dr Devani - Soins médicaux et consultations recommandés.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "email": null,
+    "website": null,
+    "address": "Aga Khan Hospital",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gastro-entérologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_41",
+    "name": "Dr. Kibata Githeko et cinq autres consultants \n(Upper Hill Eye & Laser Centre)",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Ophtalmologistes",
+    "description": "office@uheal.or.ke\n\nhttp://www.uheal.or.ke/",
+    "phone": "+254714617782",
+    "whatsapp": "+254714617782",
+    "email": "office@uheal.or.ke",
+    "website": "http://www.uheal.or.ke/",
+    "address": "2ième étage du Upper-Hill Medical Centre, Ralph Bunche Road.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Ophtalmologistes",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "office@uheal.or.ke\n\nhttp://www.uheal.or.ke/",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_42",
+    "name": "Dr. D. S. Walia",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Ophtalmologistes",
+    "description": "info@seeclinic.co.ke\n\nhttps://seeclinic.co.ke/",
+    "phone": "+254717783783",
+    "whatsapp": "+254717783783",
+    "email": "info@seeclinic.co.ke",
+    "website": "https://seeclinic.co.ke/",
+    "address": "rez de chaussée, Mediplaza, en face hôpital Aga Khan, 3rd parklands avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Ophtalmologistes",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "info@seeclinic.co.ke\n\nhttps://seeclinic.co.ke/",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_43",
+    "name": "Dr. Sandhya Gokhale",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Ophtalmologistes",
+    "description": "sandhya.kulkarni68@gmail.com\n\nSpecialiste Rétine",
+    "phone": "+254736869534",
+    "whatsapp": "+254736869534",
+    "email": "sandhya.kulkarni68@gmail.com",
+    "website": null,
+    "address": "Lions eye Clinic, Aga Khan Road",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Ophtalmologistes",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "sandhya.kulkarni68@gmail.com\n\nSpecialiste Rétine",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_44",
+    "name": "Dr. H. Rupani",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "ORL",
+    "description": "Dr. H. Rupani - Soins médicaux et consultations recommandés.",
+    "phone": "+254-2022-727-823,",
+    "whatsapp": "+2542022727823,",
+    "email": null,
+    "website": null,
+    "address": "hôpital de Nairobi",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "ORL",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_45",
+    "name": "Dr. Asmeeta Patel",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "ORL",
+    "description": "draipatel.patel55@gmail.com",
+    "phone": "+254737916838",
+    "whatsapp": "+254737916838",
+    "email": "draipatel.patel55@gmail.com",
+    "website": null,
+    "address": "pièce 228,2ième étage, Doctor’s Plaza, Aga Khan Hospital, 3rd parklands avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "ORL",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "draipatel.patel55@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_46",
+    "name": "Dr. H. S. Jandu",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "ORL",
+    "description": "drharbaksh@yahoo.com",
+    "phone": "+254733535234",
+    "whatsapp": "+254733535234",
+    "email": "drharbaksh@yahoo.com",
+    "website": null,
+    "address": "Pièce 208, 2ième étage, Mediplaza, en face hôpital Aga Khan, 3rd parklands avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "ORL",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "drharbaksh@yahoo.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_47",
+    "name": "Dr Nelly Kitazi, psychiatre",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Psychiatres et psychologues",
+    "description": "Dr Nelly Kitazi, psychiatre - Soins médicaux et consultations recommandés.",
+    "phone": "+254724201818",
+    "whatsapp": "+254724201818",
+    "email": null,
+    "website": null,
+    "address": "Doctors Plaza, Aga Khan Hospital, 3rd parklands avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Psychiatres et psychologues",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_48",
+    "name": "Dr. H. Nabishwa, psychiatre",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Psychiatres et psychologues",
+    "description": "Dr. H. Nabishwa, psychiatre - Soins médicaux et consultations recommandés.",
+    "phone": "+254-203-662-000",
+    "whatsapp": "+254203662000",
+    "email": null,
+    "website": null,
+    "address": "Doctors Plaza, Aga Khan Hospital, 3rd parklands avenue.",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Psychiatres et psychologues",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_49",
+    "name": "Mme Lineke Sassen, psychologue clinicienne, \nfrancophone :",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Psychiatres et psychologues",
+    "description": "linekesassen@gmail.com",
+    "phone": "+254724842731",
+    "whatsapp": "+254724842731",
+    "email": "linekesassen@gmail.com",
+    "website": null,
+    "address": "Karen, sauf le jeudi à Westlands",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Psychiatres et psychologues",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "linekesassen@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_50",
+    "name": "Mme Juliette Imbault, psychologue francophone",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Psychiatres et psychologues",
+    "description": "j.imbault@gmail.com",
+    "phone": "+254791010016",
+    "whatsapp": "+254791010016",
+    "email": "j.imbault@gmail.com",
+    "website": null,
+    "address": "610 Mutundu Road, Old Muthaiga",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Psychiatres et psychologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "j.imbault@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_51",
+    "name": "Mme Sophie Gidrol, psychologue francophone",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Psychiatres et psychologues",
+    "description": "Spécialiste dueil / Présente sur Frencheese",
+    "phone": "Portable : ‪+33 6 51 15 63 32‬",
+    "whatsapp": null,
+    "email": null,
+    "website": null,
+    "address": "Nairobi",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Psychiatres et psychologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Spécialiste dueil / Présente sur Frencheese",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_52",
+    "name": "Petrina",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Kiné/Ostheo/Chiropracteur",
+    "description": "Petrina - Soins médicaux et consultations recommandés.",
+    "phone": "+254113056681",
+    "whatsapp": "+254113056681",
+    "email": null,
+    "website": null,
+    "address": "Nairobi",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Kiné/Ostheo/Chiropracteur",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_53",
+    "name": "Altaf",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Kiné/Ostheo/Chiropracteur",
+    "description": "genou/sport rééducation",
+    "phone": "+254724007200",
+    "whatsapp": "+254724007200",
+    "email": null,
+    "website": null,
+    "address": "Nairobi",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Kiné/Ostheo/Chiropracteur",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "genou/sport rééducation",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_54",
+    "name": "Michael Churchill",
+    "categoryId": "sante",
+    "neighborhoodId": "kilimani",
+    "specialty": "Kiné/Ostheo/Chiropracteur",
+    "description": "https://www.chiropractic.co.ke/",
+    "phone": "+254725463719",
+    "whatsapp": "+254725463719",
+    "email": null,
+    "website": "https://www.chiropractic.co.ke/",
+    "address": "Kandara Road, Kileleshwa",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Kiné/Ostheo/Chiropracteur",
+      "Kilimani",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "https://www.chiropractic.co.ke/",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_55",
+    "name": "Dr Thomas Corfmat / Chiro",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Kiné/Ostheo/Chiropracteur",
+    "description": "https://corfmatchiro.com/\ncorfmatchiro@gmail.com",
+    "phone": "+254799869967",
+    "whatsapp": "+254799869967",
+    "email": "corfmatchiro@gmail.com",
+    "website": "https://corfmatchiro.com/",
+    "address": "Lavington Green Mall, Nairobi, Kenya",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Kiné/Ostheo/Chiropracteur",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "https://corfmatchiro.com/\ncorfmatchiro@gmail.com",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_56",
+    "name": "St Austins",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Vétérinaire",
+    "description": "St Austins - Soins médicaux et consultations recommandés.",
+    "phone": "+254797795853",
+    "whatsapp": "+254797795853",
+    "email": null,
+    "website": null,
+    "address": "Nairobi",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Vétérinaire",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_57",
+    "name": "Dr Angela Muliro",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "francophone",
+    "phone": "+254702929901",
+    "whatsapp": "+254702929901",
+    "email": null,
+    "website": null,
+    "address": "Kirichwa Rd, Nairobi, Kenya",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "francophone",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_58",
+    "name": "Dr Berit",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gynécologues Ostétriciens",
+    "description": "Dr Berit - Soins médicaux et consultations recommandés.",
+    "phone": "+254707378990",
+    "whatsapp": "+254707378990",
+    "email": null,
+    "website": null,
+    "address": "Nairobi",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gynécologues Ostétriciens",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_59",
+    "name": "Dr. Adil Waris, Aga Khan",
+    "categoryId": "sante",
+    "neighborhoodId": "westlands",
+    "specialty": "Pneumologue",
+    "description": "Pediatre pneumologue",
+    "phone": "25 42 03 66 27 02",
+    "whatsapp": null,
+    "email": null,
+    "website": null,
+    "address": "Pièce 403, Doctor’s plaza, Aga Khan hospital, 3rd Parklands avenue",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Pneumologue",
+      "Westlands",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Pediatre pneumologue",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_60",
+    "name": "Dr. Reena Shah",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gastro-entérologues",
+    "description": "consultant physician, \nsection head of infectious diseases",
+    "phone": "+254203662117",
+    "whatsapp": "+254203662117",
+    "email": null,
+    "website": null,
+    "address": "Aga Khan",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gastro-entérologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "consultant physician, \nsection head of infectious diseases",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_61",
+    "name": "Dr. Henry",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gastro-entérologues",
+    "description": "Dr. Henry - Soins médicaux et consultations recommandés.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "email": null,
+    "website": null,
+    "address": "Upperhill, Fortis Suites 5th Floor",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gastro-entérologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_62",
+    "name": "Dr. Thomas MBWELE MUTIE",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Gastro-entérologues",
+    "description": "Dr. Thomas MBWELE MUTIE - Soins médicaux et consultations recommandés.",
+    "phone": "+254717967285",
+    "whatsapp": "+254717967285",
+    "email": null,
+    "website": null,
+    "address": "Nairobi Hospital Plaza, ground floor",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Gastro-entérologues",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_63",
+    "name": "Dr Fabian Collis",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Podologue",
+    "description": "Dr Fabian Collis - Soins médicaux et consultations recommandés.",
+    "phone": "+254720018377",
+    "whatsapp": "+254720018377",
+    "email": null,
+    "website": null,
+    "address": "Lower Kabete Rd",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Podologue",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "sante_64",
+    "name": "Dr Naji Abdullah Naji Said",
+    "categoryId": "sante",
+    "neighborhoodId": "lavington",
+    "specialty": "Urologue",
+    "description": "Dr Naji Abdullah Naji Said - Soins médicaux et consultations recommandés.",
+    "phone": "+254203754015",
+    "whatsapp": "+254203754015",
+    "email": null,
+    "website": null,
+    "address": "Address: 3rd Floor Suite 334 Aga Khan University Hospital Doctors Plaza",
+    "languages": [
+      "Anglais",
+      "Français"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 18,
+    "tags": [
+      "Urologue",
+      "Lavington",
+      "Recommandé Communauté"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Santé"
+    }
+  },
+  {
+    "id": "taxi_3",
+    "name": "Absolute Michael",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Chauffeur Privé / Safari Guide",
+    "description": "Grosse voiture",
+    "phone": "+254733901183",
+    "whatsapp": "+254733901183",
+    "website": null,
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Grosse voiture (Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_4",
+    "name": "Peter",
+    "categoryId": "transports",
+    "neighborhoodId": "lavington",
+    "specialty": "Driver/Guide/Car",
+    "description": "Peter is really awsome everyone I recommended him to, really liked him. Hes is a great guide, always finding the hidden spots and willing to go (a bit) off tracks when possible. Hes has two brothers one is very good too, the other one not so much. Classic Safari Van 10 seaters.",
+    "phone": "+254724377898",
+    "whatsapp": "+254724377898",
+    "website": null,
+    "pricingNotes": "Around 19,000 KES per day (a bit less if many days) for the car (safari Van), fuel, driver/guide, park entries (driver+car), etc.)",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Peter is really awsome everyone I recommended him to, really liked him. Hes is a great guide, always finding the hidden spots and willing to go (a bit) off tracks when possible. Hes has two brothers one is very good too, the other one not so much. Classic Safari Van 10 seaters. (Tarif: Around 19,000 KES per day (a bit less if many days) for the car (safari Van), fuel, driver/guide, park entries (driver+car), etc.))",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_5",
+    "name": "Ben Mathenge - Game Africa Safaris",
+    "categoryId": "transports",
+    "neighborhoodId": "lavington",
+    "specialty": "Chauffeur/Guide",
+    "description": "Nairobi National Park",
+    "phone": "+254723370677",
+    "whatsapp": "+254723370677",
+    "website": "www.gameafricasafaris.com",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Nairobi National Park (Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_6",
+    "name": "Sammy",
+    "categoryId": "transports",
+    "neighborhoodId": "lavington",
+    "specialty": "Driver/Guide/Car",
+    "description": "Fiable, gentil, ponctuel, dispo a Nairobi et pour de longs voyages",
+    "phone": "+254727875006",
+    "whatsapp": "+254727875006",
+    "website": null,
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Fiable, gentil, ponctuel, dispo a Nairobi et pour de longs voyages (Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_7",
+    "name": "Hunter",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Chauffeur Privé / Safari Guide",
+    "description": "has the best local guides and supports local community,his prices are so friendly woudl always recommend  and has 15 landcruisers Pays attention to detail for all age groups",
+    "phone": "+254739149798",
+    "whatsapp": "+254739149798",
+    "website": null,
+    "pricingNotes": "14000 onwards  depends on the location for the car (safari CAR), fuel, driver/guide, park entries (driver+car), etc.)",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "has the best local guides and supports local community,his prices are so friendly woudl always recommend  and has 15 landcruisers Pays attention to detail for all age groups (Tarif: 14000 onwards  depends on the location for the car (safari CAR), fuel, driver/guide, park entries (driver+car), etc.))",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_8",
+    "name": "Samuel Chacal  - Expedition",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Chauffeur Privé / Safari Guide",
+    "description": "Frères ayant appris le français à l'alliance fr Mombasa",
+    "phone": "+254728625348",
+    "whatsapp": "+254728625348",
+    "website": null,
+    "pricingNotes": null,
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Frères ayant appris le français à l'alliance fr Mombasa (Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_9",
+    "name": "The Sacred Wilderness",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Présent sur frenchesse",
+    "description": "Service de transport et excursions safari.",
+    "phone": "+254739149798",
+    "whatsapp": "+254739149798",
+    "website": null,
+    "pricingNotes": "thesacredwilderness.org",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "(Tarif: thesacredwilderness.org)",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_10",
+    "name": "Antonio",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Guide Tsavo",
+    "description": "Service de transport et excursions safari.",
+    "phone": "+254724330799",
+    "whatsapp": "+254724330799",
+    "website": null,
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "(Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_11",
+    "name": "David",
+    "categoryId": "transports",
+    "neighborhoodId": "lavington",
+    "specialty": "Guide/Driver",
+    "description": "National Park",
+    "phone": "+254733282110",
+    "whatsapp": "+254733282110",
+    "website": null,
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "National Park (Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_12",
+    "name": "Paul Mwangi",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Car Rent",
+    "description": "Service de transport et excursions safari.",
+    "phone": "+254722540760",
+    "whatsapp": "+254722540760",
+    "website": null,
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "(Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "taxi_13",
+    "name": "Maina Kabithi",
+    "categoryId": "transports",
+    "neighborhoodId": "lavington",
+    "specialty": "Chauffeur/Guide",
+    "description": "Groupe de chauffeurs fiables",
+    "phone": "+254722780502",
+    "whatsapp": "+254722780502",
+    "website": null,
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 24,
+    "tags": [
+      "Chauffeur",
+      "Safari",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Groupe de chauffeurs fiables (Tarif: )",
+      "sourceSheet": "TaxiSafaris"
+    }
+  },
+  {
+    "id": "fundi_3",
+    "name": "Simon - Plombier",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Plombier",
+    "description": "Artisan qualifié (Plombier) recommandé pour interventions à domicile.",
+    "phone": "+254725639837",
+    "whatsapp": "+254725639837",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Plombier",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_4",
+    "name": "Bildad Simiyu - Plombier",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Plombier",
+    "description": "Artisan qualifié (Plombier) recommandé pour interventions à domicile.",
+    "phone": "+254708011173",
+    "whatsapp": "+254708011173",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Plombier",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_5",
+    "name": "Oscar - Plombier",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Plombier",
+    "description": "Artisan qualifié (Plombier) recommandé pour interventions à domicile.",
+    "phone": "+254710808758",
+    "whatsapp": "+254710808758",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Plombier",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_6",
+    "name": "James - Plombier",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Plombier",
+    "description": "Artisan qualifié (Plombier) recommandé pour interventions à domicile.",
+    "phone": "+254723101258",
+    "whatsapp": "+254723101258",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Plombier",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_7",
+    "name": "Alex Wachira - Electricien",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Electricien",
+    "description": "Artisan qualifié (Electricien) recommandé pour interventions à domicile.",
+    "phone": "+254722711304",
+    "whatsapp": "+254722711304",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Electricien",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_8",
+    "name": "Christine - Couture",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Couture",
+    "description": "Good work, quite cheap. Curtains, pillows, etc.",
+    "phone": "+254713538149",
+    "whatsapp": "+254713538149",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Couture",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Good work, quite cheap. Curtains, pillows, etc.",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_9",
+    "name": "Vithal - Couture",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Couture",
+    "description": "Artisan qualifié (Couture) recommandé pour interventions à domicile.",
+    "phone": "+254736873339",
+    "whatsapp": "+254736873339",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Couture",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_10",
+    "name": "Jane Wanjiku (Seamstress) - Couture",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Couture",
+    "description": "Elle est super!",
+    "phone": "+254721476033",
+    "whatsapp": "+254721476033",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Couture",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Elle est super!",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_11",
+    "name": "Beatrice - Couture",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Couture",
+    "description": "Artisan qualifié (Couture) recommandé pour interventions à domicile.",
+    "phone": "+254720258120",
+    "whatsapp": "+254720258120",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Couture",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_12",
+    "name": "Auma - Couture",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Couture",
+    "description": "Artisan qualifié (Couture) recommandé pour interventions à domicile.",
+    "phone": "+254737449589",
+    "whatsapp": "+254737449589",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Couture",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_14",
+    "name": "Boucherie en ligne / Flavie - Marché / Epicerie",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Marché / Epicerie",
+    "description": "https://www.toromeat.com/ Livraison à domicile",
+    "phone": "+254724110695",
+    "whatsapp": "+254724110695",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Marché / Epicerie",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "https://www.toromeat.com/ Livraison à domicile",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_15",
+    "name": "Kenavo Production / Jean-Claude - Marché / Epicerie",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Marché / Epicerie",
+    "description": "Paté, fromage, etc",
+    "phone": "+254729515941",
+    "whatsapp": "+254729515941",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Marché / Epicerie",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Paté, fromage, etc",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_16",
+    "name": "George Otieno - Demenagement",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Demenagement",
+    "description": "Camion pour déménagement",
+    "phone": "+254723551941",
+    "whatsapp": "+254723551941",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Demenagement",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Camion pour déménagement",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_17",
+    "name": "Nellions - Demenagement",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Demenagement",
+    "description": "Mise à dispo de cartons",
+    "phone": "+254700000002",
+    "whatsapp": "+254700000002",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Demenagement",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Mise à dispo de cartons",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_18",
+    "name": "Alfred Alpha - Demenagement",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Demenagement",
+    "description": "Artisan qualifié (Demenagement) recommandé pour interventions à domicile.",
+    "phone": "+254722102902",
+    "whatsapp": "+254722102902",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Demenagement",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_19",
+    "name": "Capital Moving - Demenagement",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Demenagement",
+    "description": "Permet également de stocker meubles",
+    "phone": "+254722454315",
+    "whatsapp": "+254722454315",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Demenagement",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Permet également de stocker meubles",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_20",
+    "name": "Chris - Peintre",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Peintre",
+    "description": "Artisan qualifié (Peintre) recommandé pour interventions à domicile.",
+    "phone": "+254726518019",
+    "whatsapp": "+254726518019",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Peintre",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_21",
+    "name": "Duncan - Peintre",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Peintre",
+    "description": "Artisan qualifié (Peintre) recommandé pour interventions à domicile.",
+    "phone": "+254727131868",
+    "whatsapp": "+254727131868",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Peintre",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_22",
+    "name": "Josephat - Peintre",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Peintre",
+    "description": "Artisan qualifié (Peintre) recommandé pour interventions à domicile.",
+    "phone": "+254726008880",
+    "whatsapp": "+254726008880",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Peintre",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_23",
+    "name": "Samy - Peintre",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Peintre",
+    "description": "Artisan qualifié (Peintre) recommandé pour interventions à domicile.",
+    "phone": "+254720938485",
+    "whatsapp": "+254720938485",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Peintre",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_24",
+    "name": "Daniel - Peintre",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Peintre",
+    "description": "Artisan qualifié (Peintre) recommandé pour interventions à domicile.",
+    "phone": "+254710773160",
+    "whatsapp": "+254710773160",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Peintre",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_25",
+    "name": "Crumbs (pate à pizza livraison) - Marché / Epicerie",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Marché / Epicerie",
+    "description": "livraison à domicile",
+    "phone": "+254759200487",
+    "whatsapp": "+254759200487",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Marché / Epicerie",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "livraison à domicile",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_26",
+    "name": "Computer Mart - Réparation écran",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Réparation écran",
+    "description": "Mac",
+    "phone": "+254724588876",
+    "whatsapp": "+254724588876",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Réparation écran",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Mac",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_27",
+    "name": "Your Apps Lency - Réparation écran",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Réparation écran",
+    "description": "Réparation écran externe",
+    "phone": "+254780688637",
+    "whatsapp": "+254780688637",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Réparation écran",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Réparation écran externe",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_28",
+    "name": "Krishna plaza- 3rd Parklands - Marché / Epicerie",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Marché / Epicerie",
+    "description": "Vente d'épices",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Marché / Epicerie",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Vente d'épices",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_29",
+    "name": "Haroun - Musique",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Musique",
+    "description": "Prof piano à domicile",
+    "phone": "+254796452350",
+    "whatsapp": "+254796452350",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Musique",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Prof piano à domicile",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_30",
+    "name": "Mylana / Laini rolls - Marché / Epicerie",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Marché / Epicerie",
+    "description": "Rouleau de printemps",
+    "phone": "+32 475455500",
+    "whatsapp": "+32475455500",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Marché / Epicerie",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Rouleau de printemps",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_31",
+    "name": "Romain - Tatoueur",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Tatoueur",
+    "description": "Artisan qualifié (Tatoueur) recommandé pour interventions à domicile.",
+    "phone": "+254799402552",
+    "whatsapp": "+254799402552",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Tatoueur",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_32",
+    "name": "Shawn Kay Davies - Tatoueur",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Tatoueur",
+    "description": "Sur Rdv uniquement",
+    "phone": "+254714413329",
+    "whatsapp": "+254714413329",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Tatoueur",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Sur Rdv uniquement",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "fundi_33",
+    "name": "Gobeba - Marché / Epicerie",
+    "categoryId": "fundis",
+    "neighborhoodId": "lavington",
+    "specialty": "Artisan Marché / Epicerie",
+    "description": "Livraison Eau",
+    "phone": "+254710440403",
+    "whatsapp": "+254710440403",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 16,
+    "tags": [
+      "Marché / Epicerie",
+      "Fundi",
+      "Maison",
+      "Dépannage"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Livraison Eau",
+      "sourceSheet": "Fundi Reco"
+    }
+  },
+  {
+    "id": "soins_3",
+    "name": "Salon malibu",
+    "categoryId": "loisirs",
+    "neighborhoodId": "gigiri",
+    "specialty": "Coiffeur",
+    "description": "Prestations Coiffeur recommandées par la communauté.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "Village market",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Gigiri"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_4",
+    "name": "A great Idea Salon",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Coiffeur",
+    "description": "Prestations Coiffeur recommandées par la communauté.",
+    "phone": "+254 707 96306",
+    "whatsapp": "+25470796306",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_5",
+    "name": "Abi / Kami",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Coiffeur",
+    "description": "Prestations Coiffeur recommandées par la communauté.",
+    "phone": "+254711216030",
+    "whatsapp": "+254711216030",
+    "website": null,
+    "address": "Riverside drive",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_6",
+    "name": "Tirath",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Coiffeur",
+    "description": "Prestations Coiffeur recommandées par la communauté.",
+    "phone": "+254707812900",
+    "whatsapp": "+254707812900",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_7",
+    "name": "Nothing Like It",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Coiffeur",
+    "description": "Coiffeur / esthéticienne / Massage / Laser / Onglerie",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "Karen",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Coiffeur / esthéticienne / Massage / Laser / Onglerie",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_8",
+    "name": "Mary Nasambu",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage lympatiques",
+    "phone": "+254719843400",
+    "whatsapp": "+254719843400",
+    "website": null,
+    "address": "",
+    "pricingNotes": "2000Ksh",
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage lympatiques",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_9",
+    "name": "Grace",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage lympatiques",
+    "phone": "+254725410181",
+    "whatsapp": "+254725410181",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage lympatiques",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_10",
+    "name": "Fatuma",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage à domicile\nReflexology",
+    "phone": "+254721556633",
+    "whatsapp": "+254721556633",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage à domicile\nReflexology",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_11",
+    "name": "Lucy",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage à domicile",
+    "phone": "+254721990596",
+    "whatsapp": "+254721990596",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage à domicile",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_12",
+    "name": "Serenity Spa",
+    "categoryId": "loisirs",
+    "neighborhoodId": "gigiri",
+    "specialty": "Massage/Spa",
+    "description": "Prestations Massage/Spa recommandées par la communauté.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://www.serenityspa.co.ke/",
+    "address": "Gigiri/Karen/Kitisuru",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage/Spa",
+      "Bien-être",
+      "Soins",
+      "Gigiri"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_13",
+    "name": "Viviane",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage à domicile - tonique et doux, de vraies mains de fées, réflexo aussi",
+    "phone": "+254741129765",
+    "whatsapp": "+254741129765",
+    "website": null,
+    "address": "À domicile",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage à domicile - tonique et doux, de vraies mains de fées, réflexo aussi",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_14",
+    "name": "Loise",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage à domicile",
+    "phone": "+254739510306",
+    "whatsapp": "+254739510306",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage à domicile",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_15",
+    "name": "Hamisi Mwapesa",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage à domicile\nDeep tissue spécialité",
+    "phone": "+254716599728",
+    "whatsapp": "+254716599728",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage à domicile\nDeep tissue spécialité",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_16",
+    "name": "Rose",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Massage",
+    "description": "Massage à domicile",
+    "phone": "+254720414456",
+    "whatsapp": "+254720414456",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Massage",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Massage à domicile",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_17",
+    "name": "Amanda",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Yoga",
+    "description": "Amanda's yoga class emphasizes technique through a unique combination of flow, strength and mobility movements",
+    "phone": "+254792650930",
+    "whatsapp": "+254792650930",
+    "website": null,
+    "address": "Cours différents endroits à Nairobi",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Yoga",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Amanda's yoga class emphasizes technique through a unique combination of flow, strength and mobility movements",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_18",
+    "name": "Kanga Studio",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Yoga",
+    "description": "Cours de Nancy recommandés",
+    "phone": "+254759956291",
+    "whatsapp": "+254759956291",
+    "website": null,
+    "address": "Online\nPeponi Road",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Yoga",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Cours de Nancy recommandés",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_19",
+    "name": "Liz Salima",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Yoga",
+    "description": "Prestations Yoga recommandées par la communauté.",
+    "phone": "+254775406236",
+    "whatsapp": "+254775406236",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Yoga",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_20",
+    "name": "Moses (barber)",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Coiffeur",
+    "description": "Barber",
+    "phone": "+254723563694",
+    "whatsapp": "+254723563694",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Barber",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_21",
+    "name": "Adham Ali Theias Beauty",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Coiffeur",
+    "description": "Barber",
+    "phone": "+254745359165",
+    "whatsapp": "+254745359165",
+    "website": null,
+    "address": "",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Barber",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_22",
+    "name": "Milla Otieno",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Sport",
+    "description": "Excellent coach de musculation et fitness, proposant des programmes efficaces où l’on constate de vrais progrès, avec une personnalité motivante et agréable",
+    "phone": "+254712782638",
+    "whatsapp": "+254712782638",
+    "website": null,
+    "address": "A domicile",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Sport",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Excellent coach de musculation et fitness, proposant des programmes efficaces où l’on constate de vrais progrès, avec une personnalité motivante et agréable",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_23",
+    "name": "Jiu Jitsu Academy",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Sport",
+    "description": "Programme aussi pour les enfants",
+    "phone": "+254798566294",
+    "whatsapp": "+254798566294",
+    "website": null,
+    "address": "3rd floor New Muthaiga \nShopping Mall Thigiri Rd",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Sport",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Programme aussi pour les enfants",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_24",
+    "name": "The Colosseum \nFitness Centre\nBox Thai",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Sport",
+    "description": "Prestations Sport recommandées par la communauté.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "Adams Arcade",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Sport",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_25",
+    "name": "Forward Equestrian Centre",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Sport",
+    "description": "Ecole d'équitation, compétition, pension-travail.\nPony camp et ballade dans la Karura possible",
+    "phone": "+254769126714",
+    "whatsapp": "+254769126714",
+    "website": "https://www.instagram.com/forward.equestrian.centre/",
+    "address": "4,1H Tate Close, KItisuru",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Sport",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Ecole d'équitation, compétition, pension-travail.\nPony camp et ballade dans la Karura possible",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_26",
+    "name": "Horse Association of Kenya",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Sport",
+    "description": "Association qui s'occupe de toute la vie equestre du kenya, en lien avec le dressage, saut d'obstacle, concours complet, Organisation de compétition, stage, formation etc,\nListe des écoles d'équitation : https://www.horseassociationofkenya.com/riding-school-instructors",
+    "phone": "+254724804564",
+    "whatsapp": "+254724804564",
+    "website": "https://www.horseassociationofkenya.com/",
+    "address": "HAK Office Ngong Racecourse - Nairobi \nOff Ngong Road\nPO BOX 24555 Karen 00502 Nairobi",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Sport",
+      "Bien-être",
+      "Soins",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Association qui s'occupe de toute la vie equestre du kenya, en lien avec le dressage, saut d'obstacle, concours complet, Organisation de compétition, stage, formation etc,\nListe des écoles d'équitation : https://www.horseassociationofkenya.com/riding-school-instructors",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_27",
+    "name": "Tom / Hairffice",
+    "categoryId": "loisirs",
+    "neighborhoodId": "gigiri",
+    "specialty": "Coiffeur",
+    "description": "Prestations Coiffeur recommandées par la communauté.",
+    "phone": "+254731022220",
+    "whatsapp": "+254731022220",
+    "website": null,
+    "address": "Limuru rd",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Coiffeur",
+      "Bien-être",
+      "Soins",
+      "Gigiri"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "soins_28",
+    "name": "Philomena N'Dungu",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Pedicure/manicure",
+    "description": "Tres bonne manicure/pedicure a domicile.",
+    "phone": "+254722330776",
+    "whatsapp": "+254722330776",
+    "website": null,
+    "address": "A domicile",
+    "pricingNotes": null,
+    "languages": [
+      "Anglais",
+      "Swahili"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 12,
+    "tags": [
+      "Pedicure/manicure",
+      "Bien-être",
+      "Soins",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Tres bonne manicure/pedicure a domicile.",
+      "sourceSheet": "MassageSoinsYogaactivités sport"
+    }
+  },
+  {
+    "id": "sortir_3",
+    "name": "Nairobi Accueil",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "All",
+    "description": "Bonne adresse All à Lavington.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://nairobi-accueil.org/association/",
+    "address": "All",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 35,
+    "tags": [
+      "All",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "Nairobi Accueil",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_4",
+    "name": "Céline & Lolo",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Deco française année 60 / bistro français. Si vous êtes en manque d'oeufs mayo, saucisson : alors foncez!",
+    "phone": "+254117070707",
+    "whatsapp": "+254117070707",
+    "website": "www.celineandlolo.com/bistro-lolo",
+    "address": "Kabarsiran Ave, Lavington",
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.9,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Deco française année 60 / bistro français. Si vous êtes en manque d'oeufs mayo, saucisson : alors foncez!",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_5",
+    "name": "Mambo Italia",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Rooftop mall\nPizza\nJeux pour enfants\n(Existe différentes branches dans Nairobi)",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://share.google/05xUwKEcItNSNU7HU",
+    "address": "Located on the 2nd floor of Lavington Curve, at the junction of James Gichuru Rd and Naushad Merali Drive.",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Rooftop mall\nPizza\nJeux pour enfants\n(Existe différentes branches dans Nairobi)",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_6",
+    "name": "Chekafe",
+    "categoryId": "loisirs",
+    "neighborhoodId": "kilimani",
+    "specialty": "Restaurant / Café",
+    "description": "Restaurant Japonais, excellent Ramen\nEn profiter pour découvrir Cheche Bookshop, librairie indé qui propose à la vente de nombreux auteurs du continent",
+    "phone": "+254717700666",
+    "whatsapp": "+254717700666",
+    "website": "https://www.instagram.com/chekafe/",
+    "address": "Nouvelle adresse\nRiara road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Kilimani"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Restaurant Japonais, excellent Ramen\nEn profiter pour découvrir Cheche Bookshop, librairie indé qui propose à la vente de nombreux auteurs du continent",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_7",
+    "name": "Under the Radar",
+    "categoryId": "loisirs",
+    "neighborhoodId": "kilimani",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Kilimani.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "KILIMANI",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Kilimani"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_8",
+    "name": "Geco Café",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Lieu pour sortir\nConcerts",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://share.google/7Iax1nBtbfShWpMKm",
+    "address": "Mbaazi avenue, Lavington",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Lieu pour sortir\nConcerts",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_9",
+    "name": "The Wine Bar",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Tapas\nVerre de vin",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://thewinebox.biz/the-wine-bar/",
+    "address": "Lavington Corner Mall along James Gichuru Road,\nopposite Rubis Petrol Station",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Tapas\nVerre de vin",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_10",
+    "name": "Kengeles",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Pub\nDiffuse sport à la TV",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://tamarind.co.ke/kengeles/",
+    "address": "Lavington mall",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Pub\nDiffuse sport à la TV",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_11",
+    "name": "Bamba",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Lavington.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://www.bamba-restaurant-kenya.com/",
+    "address": "847 Amboseli Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_12",
+    "name": "Kalamata",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Lavington.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://share.google/jC10iY82kK3sp94DX",
+    "address": "along James Gichuru Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_13",
+    "name": "Crafty Chameleon",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Bonnes bières, four à pizza",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://craftychameleon.co.ke/",
+    "address": "along James Gichuru Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Bonnes bières, four à pizza",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_14",
+    "name": "Habesha",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Excellent restaurant ethiopien",
+    "phone": "+254733730469",
+    "whatsapp": "+254733730469",
+    "website": "www.habesharestaurant.co.ke",
+    "address": "Argwings Kodhek Rd, Lavington",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Excellent restaurant ethiopien",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_15",
+    "name": "La Salumeria",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Restaurant italien, deco un peu rustique\nJe conseille les gnocchi maisons!",
+    "phone": "+254722530288",
+    "whatsapp": "+254722530288",
+    "website": null,
+    "address": "Dhajay Apartments, Valley Arcade, Lavington",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Restaurant italien, deco un peu rustique\nJe conseille les gnocchi maisons!",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_16",
+    "name": "Misono",
+    "categoryId": "loisirs",
+    "neighborhoodId": "kilimani",
+    "specialty": "Restaurant / Café",
+    "description": "Un des plus anciens japonais de Nairobi",
+    "phone": "+254722511229",
+    "whatsapp": "+254722511229",
+    "website": null,
+    "address": "Adams Arcade, The Greenhouse, Ngong Rd",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Kilimani"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Un des plus anciens japonais de Nairobi",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_17",
+    "name": "Cedars",
+    "categoryId": "loisirs",
+    "neighborhoodId": "kilimani",
+    "specialty": "Restaurant / Café",
+    "description": "Cedars propose une cuisine libanaise à des prix très abordables. Traditionnel mezzé jusqu’à 24 plats. Jardin",
+    "phone": "+254722512916",
+    "whatsapp": "+254722512916",
+    "website": "https://www.cedarsnairobi.com/",
+    "address": "Lenana Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Kilimani"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Cedars propose une cuisine libanaise à des prix très abordables. Traditionnel mezzé jusqu’à 24 plats. Jardin",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_18",
+    "name": "Shokudo",
+    "categoryId": "loisirs",
+    "neighborhoodId": "kilimani",
+    "specialty": "Restaurant / Café",
+    "description": "Japonais",
+    "phone": "+254759555501",
+    "whatsapp": "+254759555501",
+    "website": "https://share.google/fjshfjnXUfKV0GM8F",
+    "address": "Lenana road,Astrol Petrol station",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Kilimani"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Japonais",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_19",
+    "name": "Pickled",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Pour manger sur le pouce, excellents sandwishes",
+    "phone": "+254114521531",
+    "whatsapp": "+254114521531",
+    "website": null,
+    "address": "1269 Olenguruone Ave, Lavington",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Pour manger sur le pouce, excellents sandwishes",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_20",
+    "name": "Amani Ya Juu",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "Westlands",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_21",
+    "name": "Amani Gardens",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Jeux pour enfants",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "Westlands",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Jeux pour enfants",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_22",
+    "name": "About thyme",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254721850026",
+    "whatsapp": "+254721850026",
+    "website": "www.about-thyme.com",
+    "address": "Eldama Ravine Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_23",
+    "name": "Até",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254700283283",
+    "whatsapp": "+254700283283",
+    "website": "www.ate.co.ke",
+    "address": "220 Kyuna Crescent",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_24",
+    "name": "Beit é selam",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254702882508",
+    "whatsapp": "+254702882508",
+    "website": "www.instagram.com/beiteselam",
+    "address": "Maua Close, off Parklands Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_25",
+    "name": "Dijo",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Restaurant français",
+    "phone": "+254726345512",
+    "whatsapp": "+254726345512",
+    "website": "www.instagram.com/dijo.nairobi",
+    "address": "The Mandrake, Ring Rd Parklands",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Restaurant français",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_26",
+    "name": "Furusato",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254722488706",
+    "whatsapp": "+254722488706",
+    "website": null,
+    "address": "Ring Rd Parklands",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_27",
+    "name": "Mythos Taverna",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254115312209",
+    "whatsapp": "+254115312209",
+    "website": "www.mythos-restaurant.com",
+    "address": "Mwanzi Market Mwanzi Rd",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_28",
+    "name": "Open House",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254727726345",
+    "whatsapp": "+254727726345",
+    "website": "www.openhouserestaurant.co.ke",
+    "address": "Gallant mall, Parklands Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_29",
+    "name": "Peponi's",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Westlands.",
+    "phone": "+254715717171",
+    "whatsapp": "+254715717171",
+    "website": null,
+    "address": "Peponi Rd",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_30",
+    "name": "Tin Roof Cafe",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Jeux pour enfants",
+    "phone": "+254748259066",
+    "whatsapp": "+254748259066",
+    "website": "www.tinroof.cafe",
+    "address": "in front of Karen the Hub 70 Dagoretti Road, House of Treasures, Karen",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Jeux pour enfants",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_31",
+    "name": "Cultiva Farm",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Ouvert du mercredi au Dimanche\nConcept « de la ferme à l’assiette », mettant à l’honneur des ingrédients locaux et biologiques.",
+    "phone": "+254701579902",
+    "whatsapp": "+254701579902",
+    "website": "www.cultivakenya.com",
+    "address": "Pofu Road, Karen",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Ouvert du mercredi au Dimanche\nConcept « de la ferme à l’assiette », mettant à l’honneur des ingrédients locaux et biologiques.",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_32",
+    "name": "Asmara",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Jeux pour enfants",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "KAREN",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Jeux pour enfants",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_33",
+    "name": "Talisman",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Jeux pour enfants",
+    "phone": "+254705999997",
+    "whatsapp": "+254705999997",
+    "website": "www.thetalismanrestaurant.com",
+    "address": "320 Ngong Road, Karen, Nairobi",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Jeux pour enfants",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_34",
+    "name": "Under the Swahili tree",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "weekends they have kids pizza making, face painting bouncing castle",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "KAREN",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "weekends they have kids pizza making, face painting bouncing castle",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_35",
+    "name": "Big Smoke",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Karen.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "KAREN",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_36",
+    "name": "Cave à manger",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Un espace chaleureux et intimiste où les meilleurs vins ont déjà été sélectionnés pour vous. Des sommeliers ont associé chaque plat à deux vins, proposés à gauche et à droite du menu, pour faciliter votre choix et sublimer l’expérience gastronomique.",
+    "phone": "+254748428655",
+    "whatsapp": "+254748428655",
+    "website": "www.thewinebox.biz/cave-a-manger",
+    "address": "Karen Plains Rd, opposite Waterfront Mall",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Un espace chaleureux et intimiste où les meilleurs vins ont déjà été sélectionnés pour vous. Des sommeliers ont associé chaque plat à deux vins, proposés à gauche et à droite du menu, pour faciliter votre choix et sublimer l’expérience gastronomique.",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_37",
+    "name": "Matteo's",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Ce restaurant italien familial sert des pizzas artisanales et des plats traditionnels italiens dans un cadre de jardin tropical luxuriant. Une véritable escapade gourmande aux saveurs de l’Italie, au cœur de Karen. Une adresse très appréciée des habitants du quartier.",
+    "phone": "+254110098333",
+    "whatsapp": "+254110098333",
+    "website": null,
+    "address": "Ngong Road and Karen Road junction",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Ce restaurant italien familial sert des pizzas artisanales et des plats traditionnels italiens dans un cadre de jardin tropical luxuriant. Une véritable escapade gourmande aux saveurs de l’Italie, au cœur de Karen. Une adresse très appréciée des habitants du quartier.",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_38",
+    "name": "Haru",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Pour les amaterus de sushis",
+    "phone": "+254720945400",
+    "whatsapp": "+254720945400",
+    "website": null,
+    "address": "Karen Professional Centre, Karen Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Pour les amaterus de sushis",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_39",
+    "name": "Mam Mam",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "2e branch du restaurant / excellente nourriture vietnamienne",
+    "phone": "+254790335350",
+    "whatsapp": "+254790335350",
+    "website": "https://www.instagram.com/mammam.ke",
+    "address": "Mytown Mall Karen",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "2e branch du restaurant / excellente nourriture vietnamienne",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_40",
+    "name": "Karen Blixen Coffee \nGarden",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Karen.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://www.karenblixencoffeegardens.com/dining/",
+    "address": "KAREN",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_41",
+    "name": "The Saddle & Boot",
+    "categoryId": "loisirs",
+    "neighborhoodId": "karen",
+    "specialty": "Restaurant / Café",
+    "description": "Un gastropub à l’énergie londonienne et à l’âme nairobienne. L’endroit idéal pour un déjeuner décontracté, un dîner animé ou une soirée entre amis.",
+    "phone": "+254707061123",
+    "whatsapp": "+254707061123",
+    "website": "www.instagram.com/saddleandboot/",
+    "address": "Ngong Racecourse, off Ngong Rd",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Karen"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Un gastropub à l’énergie londonienne et à l’âme nairobienne. L’endroit idéal pour un déjeuner décontracté, un dîner animé ou une soirée entre amis.",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_42",
+    "name": "⁠The Shamba Cafe",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Grand jardin, activités pour enfants\nVente fruits/legumes bio\nBacs pour recyclage",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "LORESHO",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Grand jardin, activités pour enfants\nVente fruits/legumes bio\nBacs pour recyclage",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_43",
+    "name": "Wasp & Sprout",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Lavington.",
+    "phone": "+254799873422",
+    "whatsapp": "+254799873422",
+    "website": "https://share.google/fU3KUpOnJukQ8VUef",
+    "address": "Loresho Shopping Centre, Loresho Ridge Road.",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_44",
+    "name": "Karura Forest",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Activity / Walk / Nature",
+    "description": "https://chng.it/6C89248Zzt\n\nPétition suite à la reprise de la foret par KFS",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": "https://chng.it/6C89248Zzt",
+    "address": "Karura Forest",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Activity / Walk / Nature",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "https://chng.it/6C89248Zzt\n\nPétition suite à la reprise de la foret par KFS",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_45",
+    "name": "The River Cafe",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Lavington.",
+    "phone": "+254725969891",
+    "whatsapp": "+254725969891",
+    "website": "https://www.therivercafekenya.com/",
+    "address": "Inside Karura Forest,\n Off Limuru road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_46",
+    "name": "Sigiria Coffee House",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Lavington.",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "website": null,
+    "address": "https://maps.google.com/maps?hl=fr&gl=fr&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x182f17907d7231db:0xd23d7a91b9856e7b",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_47",
+    "name": "Grenier à Pain",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Restaurant / Café",
+    "description": "Bonne adresse Restaurant / Café à Lavington.",
+    "phone": "+254799848118",
+    "whatsapp": "+254799848118",
+    "website": "https://www.legrenierapain.co.ke/",
+    "address": "Branche principale : 9 Riverside Building,\nGround Floor\n\nPrésent aussi au Yaya center, Warwick et Mwanzi Market",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_48",
+    "name": "Two Grapes The Winery",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Vente de vin français",
+    "description": "Bonne adresse Vente de vin français à Lavington.",
+    "phone": "+254116222244",
+    "whatsapp": "+254116222244",
+    "website": null,
+    "address": "en ligne",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Vente de vin français",
+      "Gastronomie",
+      "Sortir",
+      "Lavington"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "sortir_49",
+    "name": "D's Place - Gaufres & Crêpes",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Restaurant / Café",
+    "description": "Gaufrerie & crêperie",
+    "phone": "+254727755571",
+    "whatsapp": "+254727755571",
+    "website": "www.instagram.com/dsplace.nairobi",
+    "address": "Broadwall Mall, Ojijo Road & Muthithi Road",
+    "languages": [
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 4.8,
+    "reviewsCount": 35,
+    "tags": [
+      "Restaurant / Café",
+      "Gastronomie",
+      "Sortir",
+      "Westlands"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "Gaufrerie & crêperie",
+      "sourceSheet": "Sortir à Nairobi"
+    }
+  },
+  {
+    "id": "admin_2",
+    "name": "Ambassade de France",
+    "categoryId": "loisirs",
+    "neighborhoodId": "gigiri",
+    "specialty": "Contact visas embassade de France :",
+    "description": "Service administratif & légal (Contact visas embassade de France :)",
+    "phone": "visas.nairobi-amba@diplomatie.gouv.fr",
+    "whatsapp": null,
+    "email": "visas.nairobi-amba@diplomatie.gouv.fr",
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 5.0,
+    "reviewsCount": 20,
+    "tags": [
+      "Démarches",
+      "Visa",
+      "Officiel",
+      "Ambassade"
+    ],
+    "sourceInfo": {
+      "badge": "Ambassade",
+      "channel": "embassy_list",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Visa Ambassade Work Permit"
+    }
+  },
+  {
+    "id": "admin_3",
+    "name": "Alliance française",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Traduction",
+    "description": "Service administratif & légal (Traduction)",
+    "phone": "+254795753575",
+    "whatsapp": "+254795753575",
+    "email": "translation3@afkenya.org",
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 5.0,
+    "reviewsCount": 20,
+    "tags": [
+      "Démarches",
+      "Visa",
+      "Officiel",
+      "Ambassade"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Visa Ambassade Work Permit"
+    }
+  },
+  {
+    "id": "admin_4",
+    "name": "ABC expat",
+    "categoryId": "domestique",
+    "neighborhoodId": "lavington",
+    "specialty": "Aide Administratif kenyan",
+    "description": "Service administratif & légal (Aide Administratif kenyan)",
+    "phone": "+254 700 000 000",
+    "whatsapp": null,
+    "email": null,
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 5.0,
+    "reviewsCount": 20,
+    "tags": [
+      "Démarches",
+      "Visa",
+      "Officiel",
+      "Ambassade"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Visa Ambassade Work Permit"
+    }
+  },
+  {
+    "id": "admin_5",
+    "name": "Rhoda",
+    "categoryId": "loisirs",
+    "neighborhoodId": "lavington",
+    "specialty": "Work Permit",
+    "description": "Service administratif & légal (Work Permit)",
+    "phone": "+254704609894",
+    "whatsapp": "+254704609894",
+    "email": null,
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 5.0,
+    "reviewsCount": 20,
+    "tags": [
+      "Démarches",
+      "Visa",
+      "Officiel",
+      "Ambassade"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-01T20:25:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Marie Élodie C.",
+      "reliabilityScore": 5,
+      "originalNotes": "",
+      "sourceSheet": "Visa Ambassade Work Permit"
+    }
+  }
+]

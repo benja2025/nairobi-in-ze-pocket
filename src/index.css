@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans overflow-x-hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Glassmorphism & Safari Warm Concierge utilities */
+.glass-panel {
+  @apply bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-2xl shadow-slate-950/60;
+}
+
+.glass-nav {
+  @apply bg-slate-950/90 backdrop-blur-md border-t border-white/10;
+}
+
+.glass-badge {
+  @apply bg-slate-900/70 backdrop-blur-sm border border-white/10;
+}
+
+/* Rift Valley Topography Pattern (High crisp vector definition, 0.15 opacity) */
+.bg-topo-safari {
+  background-color: #0b0f19;
+  background-image: 
+    radial-gradient(at 90% 10%, rgba(245, 158, 11, 0.18) 0px, transparent 50%),
+    radial-gradient(at 10% 90%, rgba(37, 99, 235, 0.16) 0px, transparent 55%),
+    radial-gradient(at 50% 50%, rgba(217, 119, 6, 0.08) 0px, transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23f59e0b' stroke-width='1.5' stroke-opacity='0.14'%3E%3Cpath d='M0 80 C 100 130, 180 40, 280 90 C 340 120, 370 60, 400 95'/%3E%3Cpath d='M0 120 C 90 170, 190 80, 270 130 C 330 160, 360 100, 400 135'/%3E%3Cpath d='M0 160 C 80 210, 200 120, 260 170 C 320 200, 350 140, 400 175'/%3E%3Cpath d='M0 200 C 70 250, 210 160, 250 210 C 310 240, 340 180, 400 215'/%3E%3Cpath d='M0 260 C 120 230, 160 310, 300 270 C 350 250, 380 300, 400 280'/%3E%3Cpath d='M0 300 C 130 270, 150 350, 290 310 C 340 290, 390 340, 400 320'/%3E%3Cpath d='M0 340 C 140 310, 140 390, 280 350 C 330 330, 395 380, 400 360'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: auto, auto, auto, 400px 400px;
+}
+
+/* Rendering performance & CLS stabilization */
+.provider-card-contain {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 240px;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
