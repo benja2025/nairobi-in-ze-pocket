@@ -1,5 +1,5 @@
 import React, { useState, useMemo, lazy, Suspense } from 'react';
-import { CategoryId, NeighborhoodId, Provider } from '../../types';
+import { CategoryId, NeighborhoodId, Provider, ProviderSubmission, SourceBadge } from '../../types';
 import { MOCK_PROVIDERS } from '../../data/mockProviders';
 import { filterProviders } from '../../utils/directoryFilter';
 import ProviderCard from './ProviderCard';
@@ -11,9 +11,10 @@ const ProviderModal = lazy(() => import('./ProviderModal'));
 
 interface DirectoryPageProps {
   onNavigateToSubmit: () => void;
+  submissions?: ProviderSubmission[];
 }
 
-export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit }) => {
+export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit, submissions = [] }) => {
   const [selectedCategory, setSelectedCategory] = useState<CategoryId | 'all'>('all');
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<NeighborhoodId>('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,9 +22,52 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit
 
   const [visibleCount, setVisibleCount] = useState(12);
 
+  // Transform community submissions into Provider objects so they appear in the Directory
+  const communityProviders: Provider[] = useMemo(() => {
+    if (!submissions || submissions.length === 0) return [];
+    return submissions
+      .filter((s) => s.status !== 'rejected')
+      .map((s) => ({
+        id: s.id || `sub-${s.createdAt}`,
+        name: s.providerName,
+        categoryId: s.categoryId,
+        neighborhoodId: s.neighborhoodId,
+        specialty: s.description.length > 55 ? `${s.description.slice(0, 52)}...` : s.description,
+        description: s.description,
+        phone: s.phone,
+        whatsapp: /^[+]?[0-9\s()-]{6,}$/.test((s.phone || '').trim()) ? s.phone : undefined,
+        languages: ['Français', 'Anglais'],
+        isVerified: s.status === 'approved',
+        rating: 5.0,
+        reviewsCount: s.status === 'approved' ? 3 : 1,
+        tags: [s.categoryId, s.neighborhoodId, 'Recommandation Communauté'],
+        sourceInfo: {
+          badge: (s.status === 'approved' ? 'Nairobi Accueil' : 'WhatsApp Verified') as SourceBadge,
+          channel: 'direct_submission' as const,
+          uploadedAt: s.createdAt,
+          contributorMasked: `Recommandé par ${s.submitterName ? s.submitterName.split(' ')[0] : 'un membre'}`,
+          contributorRevealed: `${s.submitterName || 'Membre'} (${s.submitterEmail || 'Vérifié'})`,
+          reliabilityScore: 5,
+          originalNotes: s.description,
+          sourceSheet: 'Recommandations Communauté'
+        }
+      }));
+  }, [submissions]);
+
+  const allProviders = useMemo(() => {
+    const combined = [...communityProviders, ...MOCK_PROVIDERS];
+    const seen = new Set<string>();
+    return combined.filter((p) => {
+      const key = `${p.name.toLowerCase().trim()}-${p.categoryId}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }, [communityProviders]);
+
   const filteredProviders = useMemo(() => {
-    return filterProviders(MOCK_PROVIDERS, selectedCategory, selectedNeighborhood, searchQuery);
-  }, [selectedCategory, selectedNeighborhood, searchQuery]);
+    return filterProviders(allProviders, selectedCategory, selectedNeighborhood, searchQuery);
+  }, [allProviders, selectedCategory, selectedNeighborhood, searchQuery]);
 
   // Reset visible count on filter/search change
   React.useEffect(() => {

@@ -199,7 +199,10 @@ export const App: React.FC = () => {
               transition={{ duration: 0.15 }}
             >
               {activeTab === 'directory' && (
-                <DirectoryPage onNavigateToSubmit={() => setActiveTab('submit')} />
+                <DirectoryPage 
+                  onNavigateToSubmit={() => setActiveTab('submit')} 
+                  submissions={submissions}
+                />
               )}
               {activeTab === 'guides' && <GuidesPage />}
               {activeTab === 'emergency' && <EmergencyPage />}
