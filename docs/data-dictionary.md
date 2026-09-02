@@ -180,7 +180,7 @@ CREATE POLICY "Admin Modify Providers" ON public.providers FOR ALL
 ## 4. TypeScript Interfaces (`types.ts`)
 
 ```typescript
-export type CategoryId = 'sante' | 'fundis' | 'education' | 'transports' | 'loisirs' | 'domestique';
+export type CategoryId = 'sante' | 'fundis' | 'it_tech' | 'education' | 'transports' | 'loisirs' | 'sport' | 'domestique' | 'autres';
 
 export type NeighborhoodId = 'all' | 'westlands' | 'gigiri' | 'runda' | 'lavington' | 'karen' | 'kilimani';
 

@@ -3571,7 +3571,7 @@
   {
     "id": "soins_3",
     "name": "Salon malibu",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "gigiri",
     "specialty": "Coiffeur",
     "description": "Prestations Coiffeur recommandées par la communauté.",
@@ -3607,7 +3607,7 @@
   {
     "id": "soins_4",
     "name": "A great Idea Salon",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Coiffeur",
     "description": "Prestations Coiffeur recommandées par la communauté.",
@@ -3643,7 +3643,7 @@
   {
     "id": "soins_5",
     "name": "Abi / Kami",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Coiffeur",
     "description": "Prestations Coiffeur recommandées par la communauté.",
@@ -3679,7 +3679,7 @@
   {
     "id": "soins_6",
     "name": "Tirath",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Coiffeur",
     "description": "Prestations Coiffeur recommandées par la communauté.",
@@ -3715,7 +3715,7 @@
   {
     "id": "soins_7",
     "name": "Nothing Like It",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "karen",
     "specialty": "Coiffeur",
     "description": "Coiffeur / esthéticienne / Massage / Laser / Onglerie",
@@ -3751,7 +3751,7 @@
   {
     "id": "soins_8",
     "name": "Mary Nasambu",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage lympatiques",
@@ -3787,7 +3787,7 @@
   {
     "id": "soins_9",
     "name": "Grace",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage lympatiques",
@@ -3823,7 +3823,7 @@
   {
     "id": "soins_10",
     "name": "Fatuma",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage à domicile\nReflexology",
@@ -3859,7 +3859,7 @@
   {
     "id": "soins_11",
     "name": "Lucy",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage à domicile",
@@ -3895,7 +3895,7 @@
   {
     "id": "soins_12",
     "name": "Serenity Spa",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "gigiri",
     "specialty": "Massage/Spa",
     "description": "Prestations Massage/Spa recommandées par la communauté.",
@@ -3931,7 +3931,7 @@
   {
     "id": "soins_13",
     "name": "Viviane",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage à domicile - tonique et doux, de vraies mains de fées, réflexo aussi",
@@ -3967,7 +3967,7 @@
   {
     "id": "soins_14",
     "name": "Loise",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage à domicile",
@@ -4003,7 +4003,7 @@
   {
     "id": "soins_15",
     "name": "Hamisi Mwapesa",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage à domicile\nDeep tissue spécialité",
@@ -4039,7 +4039,7 @@
   {
     "id": "soins_16",
     "name": "Rose",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Massage",
     "description": "Massage à domicile",
@@ -4075,7 +4075,7 @@
   {
     "id": "soins_17",
     "name": "Amanda",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "lavington",
     "specialty": "Yoga",
     "description": "Amanda's yoga class emphasizes technique through a unique combination of flow, strength and mobility movements",
@@ -4111,7 +4111,7 @@
   {
     "id": "soins_18",
     "name": "Kanga Studio",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "lavington",
     "specialty": "Yoga",
     "description": "Cours de Nancy recommandés",
@@ -4147,7 +4147,7 @@
   {
     "id": "soins_19",
     "name": "Liz Salima",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "lavington",
     "specialty": "Yoga",
     "description": "Prestations Yoga recommandées par la communauté.",
@@ -4183,7 +4183,7 @@
   {
     "id": "soins_20",
     "name": "Moses (barber)",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Coiffeur",
     "description": "Barber",
@@ -4219,7 +4219,7 @@
   {
     "id": "soins_21",
     "name": "Adham Ali Theias Beauty",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Coiffeur",
     "description": "Barber",
@@ -4255,7 +4255,7 @@
   {
     "id": "soins_22",
     "name": "Milla Otieno",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "lavington",
     "specialty": "Sport",
     "description": "Excellent coach de musculation et fitness, proposant des programmes efficaces où l’on constate de vrais progrès, avec une personnalité motivante et agréable",
@@ -4291,7 +4291,7 @@
   {
     "id": "soins_23",
     "name": "Jiu Jitsu Academy",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "lavington",
     "specialty": "Sport",
     "description": "Programme aussi pour les enfants",
@@ -4327,7 +4327,7 @@
   {
     "id": "soins_24",
     "name": "The Colosseum \nFitness Centre\nBox Thai",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "lavington",
     "specialty": "Sport",
     "description": "Prestations Sport recommandées par la communauté.",
@@ -4363,7 +4363,7 @@
   {
     "id": "soins_25",
     "name": "Forward Equestrian Centre",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "lavington",
     "specialty": "Sport",
     "description": "Ecole d'équitation, compétition, pension-travail.\nPony camp et ballade dans la Karura possible",
@@ -4399,7 +4399,7 @@
   {
     "id": "soins_26",
     "name": "Horse Association of Kenya",
-    "categoryId": "loisirs",
+    "categoryId": "sport",
     "neighborhoodId": "karen",
     "specialty": "Sport",
     "description": "Association qui s'occupe de toute la vie equestre du kenya, en lien avec le dressage, saut d'obstacle, concours complet, Organisation de compétition, stage, formation etc,\nListe des écoles d'équitation : https://www.horseassociationofkenya.com/riding-school-instructors",
@@ -4435,7 +4435,7 @@
   {
     "id": "soins_27",
     "name": "Tom / Hairffice",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "gigiri",
     "specialty": "Coiffeur",
     "description": "Prestations Coiffeur recommandées par la communauté.",
@@ -4471,7 +4471,7 @@
   {
     "id": "soins_28",
     "name": "Philomena N'Dungu",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Pedicure/manicure",
     "description": "Tres bonne manicure/pedicure a domicile.",
@@ -6106,7 +6106,7 @@
   {
     "id": "admin_2",
     "name": "Ambassade de France",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "gigiri",
     "specialty": "Contact visas embassade de France :",
     "description": "Service administratif & légal (Contact visas embassade de France :)",
@@ -6140,7 +6140,7 @@
   {
     "id": "admin_3",
     "name": "Alliance française",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Traduction",
     "description": "Service administratif & légal (Traduction)",
@@ -6174,7 +6174,7 @@
   {
     "id": "admin_4",
     "name": "ABC expat",
-    "categoryId": "domestique",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Aide Administratif kenyan",
     "description": "Service administratif & légal (Aide Administratif kenyan)",
@@ -6208,7 +6208,7 @@
   {
     "id": "admin_5",
     "name": "Rhoda",
-    "categoryId": "loisirs",
+    "categoryId": "autres",
     "neighborhoodId": "lavington",
     "specialty": "Work Permit",
     "description": "Service administratif & légal (Work Permit)",

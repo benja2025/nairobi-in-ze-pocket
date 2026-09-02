@@ -26,6 +26,18 @@ describe('directoryFilter Logic (TDD)', () => {
     expect(results.every((p) => p.categoryId === 'it_tech')).toBe(true);
   });
 
+  it('should filter providers by sport category (Sport & Fitness)', () => {
+    const results = filterProviders(MOCK_PROVIDERS, 'sport', 'all', '');
+    expect(results.length).toBeGreaterThanOrEqual(5);
+    expect(results.every((p) => p.categoryId === 'sport')).toBe(true);
+  });
+
+  it('should filter providers by autres category (Services divers, démarches & soins)', () => {
+    const results = filterProviders(MOCK_PROVIDERS, 'autres', 'all', '');
+    expect(results.length).toBeGreaterThanOrEqual(10);
+    expect(results.every((p) => p.categoryId === 'autres')).toBe(true);
+  });
+
   it('should verify community source metadata and contributor attribution', () => {
     const withSource = MOCK_PROVIDERS.filter((p) => p.sourceInfo);
     expect(withSource.length).toBeGreaterThan(0);
