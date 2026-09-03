@@ -7,7 +7,8 @@ export const CATEGORIES: Category[] = [
   { id: 'it_tech', name: 'IT & Réparation Mobile + Ordinateur', iconName: 'Laptop', description: 'Dépannage informatique, écrans iPhone/Android, Mac & réseaux Wi-Fi' },
   { id: 'education', name: 'Éducation & Écoles', iconName: 'GraduationCap', description: 'Lycée Denis Diderot, crèches & tuteurs francophones' },
   { id: 'transports', name: 'Transports & Chauffeurs', iconName: 'Car', description: 'Chauffeurs privés de confiance, taxis & véhicules' },
-  { id: 'loisirs', name: 'Loisirs & Safaris', iconName: 'Compass', description: 'Agences safari réceptives, sorties, restaurants & culture' },
+  { id: 'restaurant', name: 'Restaurant - Catering - Chef', iconName: 'ChefHat', description: 'Restaurants, traiteurs, chefs privés & gastronomie' },
+  { id: 'loisirs', name: 'Loisirs & Safaris', iconName: 'Compass', description: 'Agences safari réceptives, sorties, parcs & culture' },
   { id: 'sport', name: 'Sport', iconName: 'Dumbbell', description: 'Coaching sportif, yoga, fitness, arts martiaux & équitation' },
   { id: 'domestique', name: 'Personnel de Maison', iconName: 'Home', description: 'Agences de placement certifiées, NSSF & SHIF' },
   { id: 'autres', name: 'Autres', iconName: 'MoreHorizontal', description: 'Démarches administratives, visas, soins esthétiques & services divers' }

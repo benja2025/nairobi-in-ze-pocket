@@ -1,5 +1,43 @@
 [
   {
+    "id": "loisir_road_trippin",
+    "name": "ROAD TRIPPIN (Harvo OBERAI)",
+    "categoryId": "loisirs",
+    "neighborhoodId": "westlands",
+    "specialty": "Organisateur de Safaris, Logements, Transports & Excursions",
+    "description": "Organisateur de safari, Harvo s'occupe de tout (du logement, du transport, des excursions). Je suis allée avec lui au lac Bogoria et aussi à Samburu, c'était magique !",
+    "phone": "+254 713 254 777",
+    "whatsapp": "+254713254777",
+    "email": "info@roadtrippin.co.ke",
+    "website": "https://roadtrippin.co.ke",
+    "address": "Nairobi, Kenya",
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 5.0,
+    "reviewsCount": 1,
+    "tags": [
+      "Safari",
+      "Excursions",
+      "Road Trip",
+      "Samburu",
+      "Bogoria",
+      "Recommandé"
+    ],
+    "sourceInfo": {
+      "badge": "WhatsApp Verified",
+      "channel": "whatsapp_group",
+      "uploadedAt": "2026-09-03T10:05:00.000Z",
+      "contributorMasked": "Recommandé par un membre",
+      "contributorRevealed": "Emilie T.",
+      "reliabilityScore": 5,
+      "originalNotes": "Organisateur de safari, Harvo s'occupe de tout (du logement, du transport, des excursions). Je suis allée avec lui au lac Bogoria et aussi à Samburu, c'était magique !",
+      "sourceSheet": "Recommandation WhatsApp"
+    }
+  },
+  {
     "id": "sante_2",
     "name": "Liste de notoriété médicale de l'ambassade de France",
     "categoryId": "sante",
