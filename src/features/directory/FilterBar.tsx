@@ -1,7 +1,7 @@
 import React from 'react';
 import { CategoryId, NeighborhoodId } from '../../types';
 import { CATEGORIES, NEIGHBORHOODS } from '../../data/mockProviders';
-import { Search, MapPin, SlidersHorizontal, Stethoscope, Wrench, Laptop, GraduationCap, Car, Compass, Home, Dumbbell, MoreHorizontal, ChefHat } from 'lucide-react';
+import { Search, MapPin, SlidersHorizontal, Stethoscope, Wrench, Laptop, GraduationCap, Car, Compass, Home, Dumbbell, MoreHorizontal, ChefHat, Dog } from 'lucide-react';
 
 interface FilterBarProps {
   selectedCategory: CategoryId | 'all';
@@ -21,6 +21,7 @@ const CATEGORY_ICONS: Record<string, React.ElementType> = {
   restaurant: ChefHat,
   loisirs: Compass,
   sport: Dumbbell,
+  animaux: Dog,
   domestique: Home,
   autres: MoreHorizontal
 };

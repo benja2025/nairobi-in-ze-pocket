@@ -1,4 +1,4 @@
-export type CategoryId = 'sante' | 'fundis' | 'it_tech' | 'education' | 'transports' | 'restaurant' | 'loisirs' | 'sport' | 'domestique' | 'autres';
+export type CategoryId = 'sante' | 'fundis' | 'it_tech' | 'education' | 'transports' | 'restaurant' | 'loisirs' | 'sport' | 'animaux' | 'domestique' | 'autres';
 
 export type NeighborhoodId = 'all' | 'westlands' | 'gigiri' | 'runda' | 'lavington' | 'karen' | 'kilimani';
 
