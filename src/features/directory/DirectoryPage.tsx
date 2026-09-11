@@ -127,8 +127,8 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
     <div className="space-y-6 pb-24">
       {/* Banner Pitch */}
       <div className="glass-panel rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 border-amber-500/20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl" />
-        <div className="flex items-start justify-between">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
+        <div className="flex items-start justify-between gap-4 relative z-10">
           <div>
             <div className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-2">
               <Sparkles className="w-3.5 h-3.5" />
@@ -143,10 +143,11 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
           </div>
 
           <button
+            type="button"
             onClick={onNavigateToSubmit}
-            className="hidden sm:flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs transition-all shadow-md shadow-amber-500/20 shrink-0"
+            className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition-all shadow-md shadow-amber-500/20 shrink-0 cursor-pointer active:scale-95"
           >
-            <Plus className="w-4 h-4" />
+            <Plus className="w-4 h-4 stroke-[2.5]" />
             <span>Recommander</span>
           </button>
         </div>
