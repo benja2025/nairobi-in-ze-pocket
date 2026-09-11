@@ -1,14 +1,14 @@
 import React from 'react';
 import { CategoryId, NeighborhoodId } from '../../types';
 import { CATEGORIES, NEIGHBORHOODS } from '../../data/mockProviders';
-import { Search, MapPin, SlidersHorizontal, Stethoscope, Wrench, Laptop, GraduationCap, Car, Compass, Home, Dumbbell, MoreHorizontal, ChefHat, Dog } from 'lucide-react';
+import { Search, MapPin, SlidersHorizontal, Stethoscope, Wrench, Laptop, GraduationCap, Car, Compass, Home, Dumbbell, MoreHorizontal, ChefHat, Dog, Check } from 'lucide-react';
 
 interface FilterBarProps {
   selectedCategory: CategoryId | 'all';
-  selectedNeighborhood: NeighborhoodId;
+  selectedNeighborhoods: NeighborhoodId[];
   searchQuery: string;
   onCategoryChange: (cat: CategoryId | 'all') => void;
-  onNeighborhoodChange: (neigh: NeighborhoodId) => void;
+  onToggleNeighborhood: (neigh: NeighborhoodId) => void;
   onSearchChange: (query: string) => void;
 }
 
@@ -28,12 +28,15 @@ const CATEGORY_ICONS: Record<string, React.ElementType> = {
 
 export const FilterBar: React.FC<FilterBarProps> = ({
   selectedCategory,
-  selectedNeighborhood,
+  selectedNeighborhoods,
   searchQuery,
   onCategoryChange,
-  onNeighborhoodChange,
+  onToggleNeighborhood,
   onSearchChange
 }) => {
+  const isAllActive = selectedNeighborhoods.length === 0 || selectedNeighborhoods.includes('all');
+  const activeNeighborhoodCount = isAllActive ? 0 : selectedNeighborhoods.length;
+
   return (
     <div className="space-y-3.5 mb-6">
       {/* Search Input Bar */}
@@ -43,7 +46,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           type="text"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Rechercher par nom, métier, pédiatre, fundi..."
+          placeholder="Rechercher par nom, métier, pédiatre, fundi, quartier..."
           className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-slate-800/80 border border-slate-700/80 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
         />
         {searchQuery && (
@@ -56,25 +59,28 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         )}
       </div>
 
-      {/* Neighborhood Pills (Horizontal Scroll) */}
+      {/* Neighborhood Multi-Select Pills (Horizontal Scroll) */}
       <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar text-xs">
-        <div className="flex items-center space-x-1 text-slate-400 font-medium shrink-0 mr-1">
+        <div className="flex items-center space-x-1.5 text-slate-400 font-medium shrink-0 mr-1">
           <MapPin className="w-3.5 h-3.5 text-amber-500" />
-          <span>Quartiers :</span>
+          <span>Quartiers {activeNeighborhoodCount > 1 ? `(${activeNeighborhoodCount})` : ''} :</span>
         </div>
         {NEIGHBORHOODS.map((neigh) => {
-          const isActive = selectedNeighborhood === neigh.id;
+          const isSelected = neigh.id === 'all' ? isAllActive : selectedNeighborhoods.includes(neigh.id);
           return (
             <button
               key={neigh.id}
-              onClick={() => onNeighborhoodChange(neigh.id)}
-              className={`px-3 py-1.5 rounded-xl font-medium shrink-0 transition-all ${
-                isActive
+              onClick={() => onToggleNeighborhood(neigh.id)}
+              className={`flex items-center space-x-1 px-3 py-1.5 rounded-xl font-medium shrink-0 transition-all ${
+                isSelected
                   ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
                   : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-slate-700/60'
               }`}
             >
-              {neigh.name}
+              {isSelected && neigh.id !== 'all' && (
+                <Check className="w-3 h-3 text-slate-950 stroke-[3]" />
+              )}
+              <span>{neigh.name}</span>
             </button>
           );
         })}

@@ -12,11 +12,14 @@ describe('EmergencyPage Component (TDD)', () => {
     expect(screen.getByText(/Nairobi Hospital/i)).toBeInTheDocument();
   });
 
-  it('contains direct click-to-call telephone links for hospitals', () => {
+  it('contains direct click-to-call telephone links for hospitals and French Embassy emergency', () => {
     render(<EmergencyPage />);
     const callLinks = screen.getAllByRole('link', { name: /Appeler/i });
     expect(callLinks.length).toBeGreaterThan(0);
     const agaKhanLink = callLinks.find((link) => link.getAttribute('href')?.includes('203662000'));
     expect(agaKhanLink).toBeDefined();
+
+    const embassyLink = callLinks.find((link) => link.getAttribute('href')?.includes('0113619636'));
+    expect(embassyLink).toBeDefined();
   });
 });

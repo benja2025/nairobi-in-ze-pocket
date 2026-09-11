@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ProviderSubmission, TelegramWaitlistEntry, ModeratorApplication } from '../../types';
+import { Provider, ProviderSubmission, TelegramWaitlistEntry, ModeratorApplication, CategoryId, NeighborhoodId } from '../../types';
+import { CATEGORIES, NEIGHBORHOODS, MOCK_PROVIDERS } from '../../data/mockProviders';
+import { filterProviders } from '../../utils/directoryFilter';
+import ProviderFormModal from './ProviderFormModal';
+import ProviderModal from '../directory/ProviderModal';
 import { 
   ShieldCheck, 
   Check, 
@@ -27,7 +31,13 @@ import {
   HeartHandshake,
   Mail,
   Phone,
-  ArrowLeft
+  ArrowLeft,
+  Plus,
+  Edit,
+  RotateCcw,
+  Search,
+  SlidersHorizontal,
+  Star
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -39,25 +49,35 @@ interface AdminPageProps {
   submissions: ProviderSubmission[];
   telegramWaitlist: TelegramWaitlistEntry[];
   moderatorApplications?: ModeratorApplication[];
+  providers?: Provider[];
   onApprove: (id: string) => void;
   onReject: (id: string) => void;
   onDeleteWaitlistEntry?: (id: string) => void;
   onApplyModerator?: (application: ModeratorApplication) => void;
   onDeleteModeratorApp?: (id: string) => void;
+  onCreateProvider?: (provider: Provider) => void;
+  onUpdateProvider?: (provider: Provider) => void;
+  onDeleteProvider?: (id: string) => void;
+  onResetDefaultProviders?: () => void;
 }
 
-type AdminTab = 'moderation' | 'waitlist' | 'moderator_apps' | 'analytics';
+type AdminTab = 'providers_crud' | 'moderation' | 'waitlist' | 'moderator_apps' | 'analytics';
 type AuthView = 'login' | 'apply' | 'success';
 
 export const AdminPage: React.FC<AdminPageProps> = ({ 
   submissions, 
   telegramWaitlist,
   moderatorApplications = [],
+  providers = MOCK_PROVIDERS,
   onApprove, 
   onReject,
   onDeleteWaitlistEntry,
   onApplyModerator,
-  onDeleteModeratorApp
+  onDeleteModeratorApp,
+  onCreateProvider,
+  onUpdateProvider,
+  onDeleteProvider,
+  onResetDefaultProviders
 }) => {
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
@@ -79,9 +99,19 @@ export const AdminPage: React.FC<AdminPageProps> = ({
   const [applicantMotivation, setApplicantMotivation] = useState('');
   
   // Dashboard UI State
-  const [activeTab, setActiveTab] = useState<AdminTab>('moderation');
+  const [activeTab, setActiveTab] = useState<AdminTab>('providers_crud');
   const [copiedPseudos, setCopiedPseudos] = useState(false);
   const [moderationFilter, setModerationFilter] = useState<'pending' | 'approved' | 'rejected' | 'all'>('pending');
+
+  // Provider CRUD UI States
+  const [providerSearchQuery, setProviderSearchQuery] = useState('');
+  const [providerCategoryFilter, setProviderCategoryFilter] = useState<CategoryId | 'all'>('all');
+  const [providerNeighborhoodFilter, setProviderNeighborhoodFilter] = useState<NeighborhoodId>('all');
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false);
+  const [editingProvider, setEditingProvider] = useState<Provider | null>(null);
+  const [deletingProvider, setDeletingProvider] = useState<Provider | null>(null);
+  const [previewProvider, setPreviewProvider] = useState<Provider | null>(null);
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -144,7 +174,68 @@ export const AdminPage: React.FC<AdminPageProps> = ({
     return s.status === moderationFilter;
   });
 
-  // Export Telegram Waitlist to CSV
+  // Export Directory Backup to JSON
+  const handleExportDirectoryJSON = () => {
+    if (!providers || providers.length === 0) return;
+    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(
+      JSON.stringify(providers, null, 2)
+    )}`;
+    const downloadAnchor = document.createElement('a');
+    downloadAnchor.setAttribute('href', jsonString);
+    downloadAnchor.setAttribute(
+      'download',
+      `nairobi_annuaire_backup_${new Date().toISOString().slice(0, 10)}.json`
+    );
+    document.body.appendChild(downloadAnchor);
+    downloadAnchor.click();
+    downloadAnchor.remove();
+  };
+
+  const handleSaveProvider = (savedProvider: Provider) => {
+    if (editingProvider) {
+      if (onUpdateProvider) {
+        onUpdateProvider(savedProvider);
+      }
+    } else {
+      if (onCreateProvider) {
+        onCreateProvider(savedProvider);
+      }
+    }
+    setEditingProvider(null);
+    setIsFormModalOpen(false);
+  };
+
+  const handleDeleteConfirm = () => {
+    if (deletingProvider && onDeleteProvider) {
+      onDeleteProvider(deletingProvider.id);
+    }
+    setDeletingProvider(null);
+  };
+
+  const handleResetConfirm = () => {
+    if (onResetDefaultProviders) {
+      onResetDefaultProviders();
+    }
+    setShowResetConfirm(false);
+  };
+
+  const filteredAdminProviders = providers.filter((p) => {
+    const matchesCat = providerCategoryFilter === 'all' || p.categoryId === providerCategoryFilter;
+    const matchesNeigh = providerNeighborhoodFilter === 'all' || p.neighborhoodId === providerNeighborhoodFilter;
+    const q = providerSearchQuery.trim().toLowerCase();
+    const matchesSearch =
+      !q ||
+      p.name.toLowerCase().includes(q) ||
+      p.specialty.toLowerCase().includes(q) ||
+      p.description.toLowerCase().includes(q) ||
+      p.phone.toLowerCase().includes(q) ||
+      (p.tags && p.tags.some((t) => t.toLowerCase().includes(q)));
+    return matchesCat && matchesNeigh && matchesSearch;
+  });
+
+  /* =========================================================================
+     1. AUTHENTICATION & MODERATOR WAITLIST VIEWS (WHEN NOT LOGGED IN)
+     ========================================================================= */
   const handleExportCSV = () => {
     if (telegramWaitlist.length === 0) return;
 
@@ -599,6 +690,18 @@ export const AdminPage: React.FC<AdminPageProps> = ({
       {/* Navigation Tabs */}
       <div className="flex space-x-2 border-b border-slate-800 pb-2 overflow-x-auto">
         <button
+          onClick={() => setActiveTab('providers_crud')}
+          className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
+            activeTab === 'providers_crud'
+              ? 'bg-amber-500 text-slate-950 font-extrabold shadow-md shadow-amber-500/25'
+              : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800'
+          }`}
+        >
+          <Sparkles className="w-4 h-4" />
+          <span>Annuaire & Fiches ({providers.length})</span>
+        </button>
+
+        <button
           onClick={() => setActiveTab('moderation')}
           className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
             activeTab === 'moderation'
@@ -646,6 +749,242 @@ export const AdminPage: React.FC<AdminPageProps> = ({
           <span>Statistiques & Synthèse</span>
         </button>
       </div>
+
+      {/* =========================================================================
+          TAB 0: DIRECTORY PROVIDERS CRUD (GESTION VISUELLE DES FICHES)
+          ========================================================================= */}
+      {activeTab === 'providers_crud' && (
+        <div className="glass-panel rounded-2xl p-4 sm:p-6 space-y-5">
+          {/* Top Actions Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div>
+              <h3 className="text-base font-extrabold text-slate-100 flex items-center space-x-2">
+                <Sparkles className="w-4 h-4 text-amber-400" />
+                <span>Gestion Visuelle des Fiches de l'Annuaire</span>
+              </h3>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Créez, modifiez et supprimez directement les fiches visibles par les utilisateurs de la PWA.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => {
+                  setEditingProvider(null);
+                  setIsFormModalOpen(true);
+                }}
+                className="flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold transition-all shadow-md shadow-amber-500/20 active:scale-95"
+              >
+                <Plus className="w-4 h-4 stroke-[3]" />
+                <span>Nouvelle Fiche</span>
+              </button>
+
+              <button
+                onClick={handleExportDirectoryJSON}
+                className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors border border-slate-700"
+                title="Télécharger une copie de sauvegarde complète"
+              >
+                <Download className="w-3.5 h-3.5 text-french-400" />
+                <span>Sauvegarde JSON</span>
+              </button>
+
+              <button
+                onClick={() => setShowResetConfirm(true)}
+                className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-850 hover:bg-sos-950/40 text-slate-400 hover:text-sos-300 text-xs font-semibold transition-colors border border-slate-800"
+                title="Rétablir les fiches certifiées d'origine"
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+                <span>Restaurer</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Search & Filter Toolbar */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <div className="relative sm:col-span-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+              <input
+                type="text"
+                value={providerSearchQuery}
+                onChange={(e) => setProviderSearchQuery(e.target.value)}
+                placeholder="Rechercher une fiche (nom, tél, mot-clé)..."
+                className="w-full pl-9 pr-8 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-amber-500"
+              />
+              {providerSearchQuery && (
+                <button
+                  onClick={() => setProviderSearchQuery('')}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-slate-400 hover:text-slate-200"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            <div>
+              <select
+                value={providerCategoryFilter}
+                onChange={(e) => setProviderCategoryFilter(e.target.value as CategoryId | 'all')}
+                className="w-full px-3 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-slate-100 focus:outline-none focus:border-amber-500"
+              >
+                <option value="all">Toutes les catégories ({providers.length})</option>
+                {CATEGORIES.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <select
+                value={providerNeighborhoodFilter}
+                onChange={(e) => setProviderNeighborhoodFilter(e.target.value as NeighborhoodId)}
+                className="w-full px-3 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-slate-100 focus:outline-none focus:border-amber-500"
+              >
+                {NEIGHBORHOODS.map((n) => (
+                  <option key={n.id} value={n.id}>
+                    {n.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Providers Count and Active Filter Reset */}
+          <div className="flex items-center justify-between text-xs text-slate-400 px-1">
+            <span>
+              <strong>{filteredAdminProviders.length}</strong> fiche{filteredAdminProviders.length > 1 ? 's' : ''} trouvée{filteredAdminProviders.length > 1 ? 's' : ''}
+            </span>
+            {(providerSearchQuery || providerCategoryFilter !== 'all' || providerNeighborhoodFilter !== 'all') && (
+              <button
+                onClick={() => {
+                  setProviderSearchQuery('');
+                  setProviderCategoryFilter('all');
+                  setProviderNeighborhoodFilter('all');
+                }}
+                className="text-amber-400 hover:underline font-semibold"
+              >
+                Effacer les filtres
+              </button>
+            )}
+          </div>
+
+          {/* Providers Cards Grid */}
+          {filteredAdminProviders.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              {filteredAdminProviders.map((p) => (
+                <div
+                  key={p.id}
+                  className="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 hover:border-amber-500/40 transition-all flex flex-col justify-between space-y-3"
+                >
+                  <div className="space-y-2">
+                    {/* Badges Bar */}
+                    <div className="flex flex-wrap items-center justify-between gap-1.5">
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                          {p.categoryId}
+                        </span>
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">
+                          {p.neighborhoodId}
+                        </span>
+                        {p.isVerified && (
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center space-x-1">
+                            <Check className="w-2.5 h-2.5 stroke-[3]" />
+                            <span>Vérifié</span>
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="flex items-center space-x-1 text-amber-400 text-xs font-bold">
+                        <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                        <span>{p.rating || 5.0}</span>
+                        <span className="text-[10px] text-slate-500">({p.reviewsCount || 1})</span>
+                      </div>
+                    </div>
+
+                    {/* Name & Specialty */}
+                    <div>
+                      <h4 className="font-extrabold text-slate-100 text-sm">{p.name}</h4>
+                      <p className="text-xs text-amber-300/90 font-medium line-clamp-1">{p.specialty}</p>
+                    </div>
+
+                    {/* Contact details */}
+                    <div className="space-y-0.5 text-xs text-slate-300">
+                      <p className="font-mono text-[11px] text-slate-200">📞 {p.phone}</p>
+                      {p.address && (
+                        <p className="text-[11px] text-slate-400 line-clamp-1">📍 {p.address}</p>
+                      )}
+                    </div>
+
+                    {/* Description snippet */}
+                    <p className="text-xs text-slate-400 line-clamp-2 italic bg-slate-950/40 p-2 rounded-lg border border-slate-850">
+                      "{p.description}"
+                    </p>
+
+                    {/* Source / Contributor */}
+                    {p.sourceInfo && (
+                      <div className="text-[10px] text-slate-400 flex items-center justify-between pt-1 border-t border-slate-800/80">
+                        <span>{p.sourceInfo.contributorMasked || 'Recommandé par un membre'}</span>
+                        <span className="text-slate-500">{p.sourceInfo.badge}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Actions Bar */}
+                  <div className="pt-2 border-t border-slate-800 flex items-center justify-end space-x-2">
+                    <button
+                      type="button"
+                      onClick={() => setPreviewProvider(p)}
+                      className="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-slate-100 text-xs font-semibold transition-colors flex items-center space-x-1"
+                      title="Aperçu visiteur de la fiche"
+                    >
+                      <Eye className="w-3.5 h-3.5" />
+                      <span>Aperçu</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEditingProvider(p);
+                        setIsFormModalOpen(true);
+                      }}
+                      className="px-3 py-1.5 rounded-lg bg-french-600/30 hover:bg-french-600 text-french-200 hover:text-white text-xs font-bold transition-all border border-french-500/40 flex items-center space-x-1"
+                      title="Modifier les données de cette fiche"
+                    >
+                      <Edit className="w-3.5 h-3.5" />
+                      <span>Modifier</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => setDeletingProvider(p)}
+                      className="p-1.5 rounded-lg text-slate-500 hover:text-sos-400 hover:bg-sos-950/40 transition-colors"
+                      title="Supprimer la fiche"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 text-xs text-slate-400 space-y-3 bg-slate-900/40 rounded-2xl border border-slate-800">
+              <Search className="w-8 h-8 text-amber-400 mx-auto opacity-70" />
+              <p className="text-slate-300 font-semibold">Aucune fiche ne correspond à votre recherche.</p>
+              <button
+                onClick={() => {
+                  setEditingProvider(null);
+                  setIsFormModalOpen(true);
+                }}
+                className="px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs inline-flex items-center space-x-1.5"
+              >
+                <Plus className="w-4 h-4 stroke-[3]" />
+                <span>Créer cette fiche maintenant</span>
+              </button>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* =========================================================================
           TAB 1: RECOMMANDATIONS MODERATION
@@ -1006,6 +1345,119 @@ export const AdminPage: React.FC<AdminPageProps> = ({
             </div>
           </div>
         </div>
+      )}
+
+      {/* =========================================================================
+          MODALS FOR PROVIDER CRUD & ACTIONS
+          ========================================================================= */}
+
+      {/* 1. Form Modal (Create / Edit) */}
+      <ProviderFormModal
+        isOpen={isFormModalOpen}
+        provider={editingProvider}
+        onClose={() => {
+          setIsFormModalOpen(false);
+          setEditingProvider(null);
+        }}
+        onSave={handleSaveProvider}
+      />
+
+      {/* 2. Deletion Confirmation Modal */}
+      {deletingProvider && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="glass-panel w-full max-w-md rounded-2xl p-6 bg-slate-900 border border-sos-500/40 shadow-2xl space-y-4 text-center"
+          >
+            <div className="w-12 h-12 rounded-2xl bg-sos-500/20 border border-sos-500/40 flex items-center justify-center text-sos-400 mx-auto">
+              <Trash2 className="w-6 h-6" />
+            </div>
+
+            <div className="space-y-1">
+              <h3 className="text-base font-bold text-slate-100">
+                Supprimer cette fiche ?
+              </h3>
+              <p className="text-xs text-slate-300">
+                Êtes-vous sûr de vouloir supprimer définitivement la fiche <strong>« {deletingProvider.name} »</strong> ({deletingProvider.categoryId}) de l'annuaire ?
+              </p>
+            </div>
+
+            <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-slate-400 text-left">
+              ⚠️ Cette action retirera immédiatement le professionnel de la recherche publique dans toute l'application.
+            </div>
+
+            <div className="flex items-center justify-end space-x-2 pt-2">
+              <button
+                type="button"
+                onClick={() => setDeletingProvider(null)}
+                className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors"
+              >
+                Annuler
+              </button>
+              <button
+                type="button"
+                onClick={handleDeleteConfirm}
+                className="px-4 py-2 rounded-xl bg-sos-600 hover:bg-sos-500 text-white text-xs font-bold transition-all shadow-md shadow-sos-600/30 flex items-center space-x-1.5"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+                <span>Confirmer la suppression</span>
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* 3. Reset Default Providers Confirmation Modal */}
+      {showResetConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="glass-panel w-full max-w-md rounded-2xl p-6 bg-slate-900 border border-amber-500/40 shadow-2xl space-y-4 text-center"
+          >
+            <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 mx-auto">
+              <RotateCcw className="w-6 h-6" />
+            </div>
+
+            <div className="space-y-1">
+              <h3 className="text-base font-bold text-slate-100">
+                Restaurer l'annuaire d'origine ?
+              </h3>
+              <p className="text-xs text-slate-300">
+                Cette action va réinitialiser la base de données avec l'ensemble des <strong>150+ fiches de référence certifiées d'origine</strong> de Nairobi Accueil.
+              </p>
+            </div>
+
+            <div className="flex items-center justify-end space-x-2 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowResetConfirm(false)}
+                className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors"
+              >
+                Annuler
+              </button>
+              <button
+                type="button"
+                onClick={handleResetConfirm}
+                className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition-all shadow-md shadow-amber-500/30 flex items-center space-x-1.5"
+              >
+                <RotateCcw className="w-3.5 h-3.5 stroke-[2.5]" />
+                <span>Confirmer la réinitialisation</span>
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* 4. Visitor Preview Modal */}
+      {previewProvider && (
+        <ProviderModal
+          provider={previewProvider}
+          onClose={() => setPreviewProvider(null)}
+        />
       )}
     </div>
   );

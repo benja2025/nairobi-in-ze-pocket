@@ -55,7 +55,7 @@ const IT_TECH_SEED_PROVIDERS: Provider[] = [
     name: 'iRepairs Express Kilimani & Yaya Centre',
     categoryId: 'it_tech',
     neighborhoodId: 'lavington',
-    specialty: 'Écrans iPhone, Samsung Galaxy, Batteries & Connecteurs USB-C',
+    specialty: 'Réparation et dépannage express écrans iPhone, Samsung Galaxy & Batteries',
     description: 'Dépannage express de smartphones et tablettes en 45 minutes. Pièces d\'origine garanties, film protecteur hydrogel offert. Technicien francophone disponible sur RDV.',
     phone: '+254 715 444 888',
     whatsapp: '+254715444888',

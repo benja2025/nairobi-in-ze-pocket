@@ -4,7 +4,8 @@ import BottomNav, { TabType } from './components/layout/BottomNav';
 import DirectoryPage from './features/directory/DirectoryPage';
 import { PageSkeleton } from './components/DirectorySkeleton';
 import ScrollToTop from './components/ScrollToTop';
-import { ProviderSubmission, TelegramWaitlistEntry, ModeratorApplication } from './types';
+import { Provider, ProviderSubmission, TelegramWaitlistEntry, ModeratorApplication } from './types';
+import { MOCK_PROVIDERS } from './data/mockProviders';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Code-splitting of non-critical views to optimize initial bundle (LCP / TBT)
@@ -98,6 +99,20 @@ export const App: React.FC = () => {
     }
   });
 
+  // Managed Providers State with LocalStorage Persistence
+  const [providers, setProviders] = useState<Provider[]>(() => {
+    try {
+      const saved = localStorage.getItem('nairobi_managed_providers_v1');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch (e) {
+      console.warn('Error reading stored providers:', e);
+    }
+    return MOCK_PROVIDERS;
+  });
+
   // Moderator Applications State with LocalStorage Persistence
   const [moderatorApplications, setModeratorApplications] = useState<ModeratorApplication[]>(() => {
     try {
@@ -107,6 +122,14 @@ export const App: React.FC = () => {
       return INITIAL_MODERATOR_APPS;
     }
   });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('nairobi_managed_providers_v1', JSON.stringify(providers));
+    } catch (e) {
+      console.warn('LocalStorage error on providers:', e);
+    }
+  }, [providers]);
 
   useEffect(() => {
     try {
@@ -132,20 +155,196 @@ export const App: React.FC = () => {
     }
   }, [moderatorApplications]);
 
+  const handleCreateProvider = (newProvider: Provider) => {
+    console.info('[Nairobi Sync] Creating new provider:', newProvider.name, newProvider.id);
+    setProviders((prev) => {
+      const next = [newProvider, ...prev];
+      try {
+        localStorage.setItem('nairobi_managed_providers_v1', JSON.stringify(next));
+      } catch (e) {
+        console.warn('LocalStorage error on create:', e);
+      }
+      return next;
+    });
+  };
+
+  const handleUpdateProvider = (updatedProvider: Provider) => {
+    console.info('[Nairobi Sync] Updating provider:', updatedProvider.name, updatedProvider.id, updatedProvider);
+    setProviders((prev) => {
+      let matched = false;
+      const next = prev.map((p) => {
+        if (p.id === updatedProvider.id) {
+          matched = true;
+          return updatedProvider;
+        }
+        return p;
+      });
+
+      // If not matched by ID, try matching by name + category
+      const finalNext = matched
+        ? next
+        : prev.some((p) => `${p.name.toLowerCase().trim()}-${p.categoryId}` === `${updatedProvider.name.toLowerCase().trim()}-${updatedProvider.categoryId}`)
+        ? prev.map((p) => (`${p.name.toLowerCase().trim()}-${p.categoryId}` === `${updatedProvider.name.toLowerCase().trim()}-${updatedProvider.categoryId}` ? updatedProvider : p))
+        : [updatedProvider, ...prev];
+
+      try {
+        localStorage.setItem('nairobi_managed_providers_v1', JSON.stringify(finalNext));
+        console.info('[Nairobi Sync] Successfully saved updated provider to LocalStorage.');
+      } catch (e) {
+        console.warn('LocalStorage error on update:', e);
+      }
+      return finalNext;
+    });
+
+    // Also synchronize any existing submission matching this provider
+    setSubmissions((prev) => {
+      const next = prev.map((s) => {
+        if (
+          s.id === updatedProvider.id ||
+          `${s.providerName.toLowerCase().trim()}-${s.categoryId}` === `${updatedProvider.name.toLowerCase().trim()}-${updatedProvider.categoryId}`
+        ) {
+          return {
+            ...s,
+            providerName: updatedProvider.name,
+            categoryId: updatedProvider.categoryId,
+            neighborhoodId: updatedProvider.neighborhoodId,
+            phone: updatedProvider.phone,
+            description: updatedProvider.description,
+            status: 'approved' as const
+          };
+        }
+        return s;
+      });
+      try {
+        localStorage.setItem('nairobi_provider_submissions', JSON.stringify(next));
+      } catch (e) {
+        console.warn('LocalStorage error on submission sync:', e);
+      }
+      return next;
+    });
+  };
+
+  const handleDeleteProvider = (id: string) => {
+    console.info('[Nairobi Sync] Deleting provider:', id);
+    setProviders((prev) => {
+      const next = prev.filter((p) => p.id !== id);
+      try {
+        localStorage.setItem('nairobi_managed_providers_v1', JSON.stringify(next));
+      } catch (e) {
+        console.warn('LocalStorage error on delete:', e);
+      }
+      return next;
+    });
+
+    // Also remove from submissions so it doesn't reappear
+    setSubmissions((prev) => {
+      const next = prev.filter((s) => s.id !== id && `sub-${s.createdAt}` !== id);
+      try {
+        localStorage.setItem('nairobi_provider_submissions', JSON.stringify(next));
+      } catch (e) {
+        console.warn('LocalStorage error on submission delete:', e);
+      }
+      return next;
+    });
+  };
+
+  const handleResetDefaultProviders = () => {
+    console.info('[Nairobi Sync] Resetting to default mock providers');
+    setProviders(MOCK_PROVIDERS);
+    try {
+      localStorage.removeItem('nairobi_managed_providers_v1');
+    } catch (e) {
+      console.warn('LocalStorage error:', e);
+    }
+  };
+
   const handleAddSubmission = (newSub: ProviderSubmission) => {
-    setSubmissions((prev) => [newSub, ...prev]);
+    setSubmissions((prev) => {
+      const next = [newSub, ...prev];
+      try {
+        localStorage.setItem('nairobi_provider_submissions', JSON.stringify(next));
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+      return next;
+    });
   };
 
   const handleApproveSubmission = (id: string) => {
-    setSubmissions((prev) =>
-      prev.map((s) => (s.id === id ? { ...s, status: 'approved' as const } : s))
-    );
+    console.info('[Nairobi Sync] Approving submission:', id);
+    let approvedSub: ProviderSubmission | undefined;
+    setSubmissions((prev) => {
+      const next = prev.map((s) => {
+        if (s.id === id) {
+          approvedSub = s;
+          return { ...s, status: 'approved' as const };
+        }
+        return s;
+      });
+      try {
+        localStorage.setItem('nairobi_provider_submissions', JSON.stringify(next));
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+      return next;
+    });
+
+    // Promote approved submission directly into managed providers
+    if (approvedSub) {
+      const sub = approvedSub;
+      const promotedProvider: Provider = {
+        id: sub.id || `provider-approved-${Date.now()}`,
+        name: sub.providerName,
+        categoryId: sub.categoryId,
+        neighborhoodId: sub.neighborhoodId,
+        specialty: sub.description.length > 55 ? `${sub.description.slice(0, 52)}...` : sub.description,
+        description: sub.description,
+        phone: sub.phone,
+        whatsapp: /^[+]?[0-9\s()-]{6,}$/.test((sub.phone || '').trim()) ? sub.phone : undefined,
+        languages: ['Français', 'Anglais'],
+        isVerified: true,
+        rating: 5.0,
+        reviewsCount: 1,
+        tags: [sub.categoryId, sub.neighborhoodId, 'Recommandation Communauté'],
+        sourceInfo: {
+          badge: 'Nairobi Accueil',
+          channel: 'direct_submission',
+          uploadedAt: sub.createdAt,
+          contributorMasked: `Recommandé par ${sub.submitterName ? sub.submitterName.split(' ')[0] : 'un membre'}`,
+          contributorRevealed: `${sub.submitterName || 'Membre'} (${sub.submitterEmail || 'Vérifié'})`,
+          reliabilityScore: 5,
+          originalNotes: sub.description,
+          sourceSheet: 'Recommandations Communauté'
+        },
+        createdAt: sub.createdAt
+      };
+
+      setProviders((prev) => {
+        const key = `${promotedProvider.name.toLowerCase().trim()}-${promotedProvider.categoryId}`;
+        const exists = prev.some((p) => p.id === promotedProvider.id || `${p.name.toLowerCase().trim()}-${p.categoryId}` === key);
+        const next = exists
+          ? prev.map((p) => (p.id === promotedProvider.id || `${p.name.toLowerCase().trim()}-${p.categoryId}` === key ? promotedProvider : p))
+          : [promotedProvider, ...prev];
+        try {
+          localStorage.setItem('nairobi_managed_providers_v1', JSON.stringify(next));
+        } catch (e) {
+          console.warn('LocalStorage error:', e);
+        }
+        return next;
+      });
+    }
   };
 
   const handleRejectSubmission = (id: string) => {
-    setSubmissions((prev) =>
-      prev.map((s) => (s.id === id ? { ...s, status: 'rejected' as const } : s))
-    );
+    setSubmissions((prev) => {
+      const next = prev.map((s) => (s.id === id ? { ...s, status: 'rejected' as const } : s));
+      try {
+        localStorage.setItem('nairobi_provider_submissions', JSON.stringify(next));
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+      return next;
+    });
   };
 
   const handleJoinWaitlist = (entry: TelegramWaitlistEntry) => {
@@ -202,6 +401,7 @@ export const App: React.FC = () => {
                 <DirectoryPage 
                   onNavigateToSubmit={() => setActiveTab('submit')} 
                   submissions={submissions}
+                  providers={providers}
                 />
               )}
               {activeTab === 'guides' && <GuidesPage />}
@@ -217,11 +417,16 @@ export const App: React.FC = () => {
                   submissions={submissions}
                   telegramWaitlist={telegramWaitlist}
                   moderatorApplications={moderatorApplications}
+                  providers={providers}
                   onApprove={handleApproveSubmission}
                   onReject={handleRejectSubmission}
                   onDeleteWaitlistEntry={handleDeleteWaitlistEntry}
                   onApplyModerator={handleApplyModerator}
                   onDeleteModeratorApp={handleDeleteModeratorApp}
+                  onCreateProvider={handleCreateProvider}
+                  onUpdateProvider={handleUpdateProvider}
+                  onDeleteProvider={handleDeleteProvider}
+                  onResetDefaultProviders={handleResetDefaultProviders}
                 />
               )}
               {!['directory', 'guides', 'emergency', 'bot', 'submit', 'admin'].includes(activeTab) && (

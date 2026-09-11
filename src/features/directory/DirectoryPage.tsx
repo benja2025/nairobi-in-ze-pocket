@@ -12,15 +12,37 @@ const ProviderModal = lazy(() => import('./ProviderModal'));
 interface DirectoryPageProps {
   onNavigateToSubmit: () => void;
   submissions?: ProviderSubmission[];
+  providers?: Provider[];
 }
 
-export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit, submissions = [] }) => {
+export const DirectoryPage: React.FC<DirectoryPageProps> = ({ 
+  onNavigateToSubmit, 
+  submissions = [],
+  providers = MOCK_PROVIDERS
+}) => {
   const [selectedCategory, setSelectedCategory] = useState<CategoryId | 'all'>('all');
-  const [selectedNeighborhood, setSelectedNeighborhood] = useState<NeighborhoodId>('all');
+  const [selectedNeighborhoods, setSelectedNeighborhoods] = useState<NeighborhoodId[]>(['all']);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProvider, setSelectedProvider] = useState<Provider | null>(null);
 
   const [visibleCount, setVisibleCount] = useState(12);
+
+  const handleToggleNeighborhood = (neigh: NeighborhoodId) => {
+    if (neigh === 'all') {
+      setSelectedNeighborhoods(['all']);
+      return;
+    }
+
+    setSelectedNeighborhoods((prev) => {
+      const withoutAll = prev.filter((n) => n !== 'all');
+      if (withoutAll.includes(neigh)) {
+        const next = withoutAll.filter((n) => n !== neigh);
+        return next.length === 0 ? ['all'] : next;
+      } else {
+        return [...withoutAll, neigh];
+      }
+    });
+  };
 
   // Transform community submissions into Provider objects so they appear in the Directory
   const communityProviders: Provider[] = useMemo(() => {
@@ -55,7 +77,9 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit
   }, [submissions]);
 
   const allProviders = useMemo(() => {
-    const combined = [...communityProviders, ...MOCK_PROVIDERS];
+    const baseList = providers && providers.length > 0 ? providers : MOCK_PROVIDERS;
+    // Managed / edited providers always take priority over community submissions
+    const combined = [...baseList, ...communityProviders];
     const seen = new Set<string>();
     return combined.filter((p) => {
       const key = `${p.name.toLowerCase().trim()}-${p.categoryId}`;
@@ -63,16 +87,16 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit
       seen.add(key);
       return true;
     });
-  }, [communityProviders]);
+  }, [communityProviders, providers]);
 
   const filteredProviders = useMemo(() => {
-    return filterProviders(allProviders, selectedCategory, selectedNeighborhood, searchQuery);
-  }, [allProviders, selectedCategory, selectedNeighborhood, searchQuery]);
+    return filterProviders(allProviders, selectedCategory, selectedNeighborhoods, searchQuery);
+  }, [allProviders, selectedCategory, selectedNeighborhoods, searchQuery]);
 
   // Reset visible count on filter/search change
   React.useEffect(() => {
     setVisibleCount(12);
-  }, [selectedCategory, selectedNeighborhood, searchQuery]);
+  }, [selectedCategory, selectedNeighborhoods, searchQuery]);
 
   const visibleProviders = useMemo(() => {
     return filteredProviders.slice(0, visibleCount);
@@ -93,6 +117,11 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit
     observer.observe(loadMoreRef.current);
     return () => observer.disconnect();
   }, [filteredProviders.length]);
+
+  const isFilteringActive =
+    selectedCategory !== 'all' ||
+    (!selectedNeighborhoods.includes('all') && selectedNeighborhoods.length > 0) ||
+    Boolean(searchQuery.trim());
 
   return (
     <div className="space-y-6 pb-24">
@@ -126,10 +155,10 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit
       {/* Interactive Filter & Search Controls */}
       <FilterBar
         selectedCategory={selectedCategory}
-        selectedNeighborhood={selectedNeighborhood}
+        selectedNeighborhoods={selectedNeighborhoods}
         searchQuery={searchQuery}
         onCategoryChange={setSelectedCategory}
-        onNeighborhoodChange={setSelectedNeighborhood}
+        onToggleNeighborhood={handleToggleNeighborhood}
         onSearchChange={setSearchQuery}
       />
 
@@ -138,11 +167,11 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigateToSubmit
         <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
           {filteredProviders.length} adresse{filteredProviders.length > 1 ? 's' : ''} trouvée{filteredProviders.length > 1 ? 's' : ''}
         </span>
-        {(selectedCategory !== 'all' || selectedNeighborhood !== 'all' || searchQuery) && (
+        {isFilteringActive && (
           <button
             onClick={() => {
               setSelectedCategory('all');
-              setSelectedNeighborhood('all');
+              setSelectedNeighborhoods(['all']);
               setSearchQuery('');
             }}
             className="text-xs text-amber-400 font-semibold hover:underline"

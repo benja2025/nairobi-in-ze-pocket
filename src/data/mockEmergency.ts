@@ -36,7 +36,7 @@ export const MOCK_EMERGENCY_CONTACTS: EmergencyContact[] = [
     id: 'e4',
     title: 'Urgence Consulaire - Ambassade de France',
     category: 'embassy',
-    phone: '+254 722 516 664',
+    phone: '+254 0113619636',
     address: 'Peponi Road, Westlands, Nairobi',
     is247: true,
     notes: 'Numéro d\'urgence STRICTEMENT réservé aux ressortissants français en situation de détresse grave (accident, décès, arrestation).'
