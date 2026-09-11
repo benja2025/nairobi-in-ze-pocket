@@ -105,7 +105,11 @@ export const App: React.FC = () => {
       const saved = localStorage.getItem('nairobi_managed_providers_v1');
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const existingIds = new Set(parsed.map((p: Provider) => p.id));
+          const missingSeeds = MOCK_PROVIDERS.filter((seed) => !existingIds.has(seed.id));
+          return missingSeeds.length > 0 ? [...parsed, ...missingSeeds] : parsed;
+        }
       }
     } catch (e) {
       console.warn('Error reading stored providers:', e);
