@@ -93,6 +93,15 @@ import {
   saveModeratorApplication,
   deleteModeratorApplicationFromStorage
 } from './services/storageService';
+import {
+  isSupabaseConfigured,
+  fetchRemoteProviders,
+  syncProviderToCloud,
+  deleteRemoteProvider,
+  fetchRemoteSubmissions,
+  submitRecommendationToCloud,
+  updateRemoteSubmissionStatus
+} from './services/supabaseClient';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('directory');
@@ -109,16 +118,39 @@ export const App: React.FC = () => {
   // Moderator Applications State with Deterministic Storage Persistence
   const [moderatorApplications, setModeratorApplications] = useState<ModeratorApplication[]>(() => loadModeratorApplications());
 
+  // Real-time Cloud Synchronization on mount
+  useEffect(() => {
+    if (isSupabaseConfigured) {
+      console.info('[Supabase Sync] Fetching latest remote providers and submissions...');
+      fetchRemoteProviders().then((res) => {
+        if (res.success && res.data && res.data.length > 0) {
+          console.info(`[Supabase Sync] Received ${res.data.length} providers from cloud.`);
+          setProviders(res.data);
+        }
+      });
+      fetchRemoteSubmissions().then((res) => {
+        if (res.success && res.data && res.data.length > 0) {
+          console.info(`[Supabase Sync] Received ${res.data.length} submissions from cloud.`);
+          setSubmissions(res.data);
+        }
+      });
+    }
+  }, []);
+
   const handleCreateProvider = (newProvider: Provider) => {
     console.info('[Nairobi Storage] Creating new provider:', newProvider.name, newProvider.id);
     const updatedList = saveCustomProvider(newProvider);
     setProviders(updatedList);
+    // Background Cloud Sync
+    syncProviderToCloud(newProvider).catch((e) => console.warn('[Supabase Sync] Create error:', e));
   };
 
   const handleUpdateProvider = (updatedProvider: Provider) => {
     console.info('[Nairobi Storage] Updating provider:', updatedProvider.name, updatedProvider.id);
     const updatedList = updateManagedProvider(updatedProvider);
     setProviders(updatedList);
+    // Background Cloud Sync
+    syncProviderToCloud(updatedProvider).catch((e) => console.warn('[Supabase Sync] Update error:', e));
 
     // Also synchronize any submission linked to this provider
     setSubmissions((prev) => {
@@ -144,6 +176,8 @@ export const App: React.FC = () => {
     console.info('[Nairobi Storage] Deleting provider:', id);
     const updatedList = deleteManagedProvider(id);
     setProviders(updatedList);
+    // Background Cloud Sync
+    deleteRemoteProvider(id).catch((e) => console.warn('[Supabase Sync] Delete error:', e));
   };
 
   const handleResetDefaultProviders = () => {
@@ -156,6 +190,8 @@ export const App: React.FC = () => {
     console.info('[Nairobi Storage] Adding new submission:', newSub.providerName);
     const nextSubs = saveSubmission(newSub);
     setSubmissions(nextSubs);
+    // Background Cloud Sync
+    submitRecommendationToCloud(newSub).catch((e) => console.warn('[Supabase Sync] Submission error:', e));
   };
 
   const handleApproveSubmission = (id: string) => {
@@ -164,13 +200,16 @@ export const App: React.FC = () => {
     setSubmissions(result.submissions);
     if (result.promotedProvider) {
       setProviders(loadManagedProviders());
+      syncProviderToCloud(result.promotedProvider).catch((e) => console.warn('[Supabase Sync] Promote error:', e));
     }
+    updateRemoteSubmissionStatus(id, 'approved').catch((e) => console.warn('[Supabase Sync] Status error:', e));
   };
 
   const handleRejectSubmission = (id: string) => {
     console.info('[Nairobi Storage] Rejecting submission:', id);
     const nextSubs = rejectSubmissionInStorage(id);
     setSubmissions(nextSubs);
+    updateRemoteSubmissionStatus(id, 'rejected').catch((e) => console.warn('[Supabase Sync] Status error:', e));
   };
 
   const handleJoinWaitlist = (entry: TelegramWaitlistEntry) => {
