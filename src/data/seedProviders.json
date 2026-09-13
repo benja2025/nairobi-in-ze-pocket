@@ -1,5 +1,41 @@
 [
   {
+    "id": "autres_ludivine_j",
+    "name": "Ludivine J",
+    "categoryId": "autres",
+    "neighborhoodId": "lavington",
+    "specialty": "Conseil & Accompagnement Expatriation / Coaching",
+    "description": "Fiche de test et validation base de données. Service de conseil, intégration des familles expatriées et mise en relation à Nairobi.",
+    "phone": "+254 700 123 456",
+    "whatsapp": "+254700123456",
+    "email": "ludivine.j@nairobi-accueil.org",
+    "address": "Lavington, Nairobi",
+    "languages": [
+      "Français",
+      "Anglais"
+    ],
+    "isVerified": true,
+    "rating": 5.0,
+    "reviewsCount": 1,
+    "tags": [
+      "Conseil",
+      "Expatriation",
+      "Accompagnement",
+      "Lavington",
+      "Test Validation"
+    ],
+    "sourceInfo": {
+      "badge": "Nairobi Accueil",
+      "channel": "nairobi_accueil_member",
+      "uploadedAt": "2026-09-13T16:15:00.000Z",
+      "contributorMasked": "Recommandé par le bureau",
+      "contributorRevealed": "Ludivine J (Bureau Nairobi Accueil)",
+      "reliabilityScore": 5,
+      "originalNotes": "Fiche insérée directement dans la base de données source pour validation cross-terminal.",
+      "sourceSheet": "Base Officielle"
+    }
+  },
+  {
     "id": "loisir_road_trippin",
     "name": "ROAD TRIPPIN (Harvo OBERAI)",
     "categoryId": "loisirs",
