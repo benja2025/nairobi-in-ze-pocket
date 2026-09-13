@@ -57,7 +57,7 @@ describe('Supabase Client & Data Synchronization Layer', () => {
     expect(row.reviews_count).toBe(4);
     expect(row.languages).toEqual(['Français', 'Anglais']);
     expect(row.tags).toContain('Site Internet');
-    expect(row.source_badge).toBe('Nairobi Accueil');
+    expect(row.source_info?.badge).toBe('Nairobi Accueil');
   });
 
   it('maps PostgreSQL Supabase row back to strongly typed Provider model with zero data loss', () => {

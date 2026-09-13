@@ -127,13 +127,31 @@ export const App: React.FC = () => {
       fetchRemoteProviders().then((res) => {
         if (res.success && res.data && res.data.length > 0) {
           console.info(`[Supabase Sync] Received ${res.data.length} providers from cloud.`);
-          setProviders(res.data);
+          setProviders((local) => {
+            const remoteMap = new Map(res.data!.map((p) => [p.id, p]));
+            const merged = local.map((lp) => remoteMap.get(lp.id) || lp);
+            for (const rp of res.data!) {
+              if (!merged.some((p) => p.id === rp.id)) {
+                merged.unshift(rp);
+              }
+            }
+            return merged;
+          });
         }
       });
       fetchRemoteSubmissions().then((res) => {
         if (res.success && res.data && res.data.length > 0) {
           console.info(`[Supabase Sync] Received ${res.data.length} submissions from cloud.`);
-          setSubmissions(res.data);
+          setSubmissions((local) => {
+            const remoteMap = new Map(res.data!.map((s) => [s.id, s]));
+            const merged = local.map((ls) => remoteMap.get(ls.id) || ls);
+            for (const rs of res.data!) {
+              if (!merged.some((s) => s.id === rs.id)) {
+                merged.unshift(rs);
+              }
+            }
+            return merged;
+          });
         }
       });
 

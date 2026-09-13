@@ -43,9 +43,9 @@ export interface SupabaseProviderRow {
   name: string;
   category_id: string;
   neighborhood_id: string;
-  specialty: string;
-  description: string;
-  phone: string;
+  specialty?: string;
+  description?: string;
+  phone?: string;
   whatsapp?: string;
   email?: string;
   website?: string;
@@ -56,14 +56,6 @@ export interface SupabaseProviderRow {
   rating?: number;
   reviews_count?: number;
   tags?: string[];
-  source_badge?: string;
-  source_channel?: string;
-  source_uploaded_at?: string;
-  contributor_masked?: string;
-  contributor_revealed?: string;
-  reliability_score?: number;
-  original_notes?: string;
-  source_sheet?: string;
   source_info?: any;
   created_at?: string;
   updated_at?: string;
@@ -81,20 +73,19 @@ export interface SupabaseSubmissionRow {
   consent_given: boolean;
   status: 'pending' | 'approved' | 'rejected';
   created_at: string;
-  updated_at?: string;
 }
 
 // Mappers
 export function mapRowToProvider(row: SupabaseProviderRow): Provider {
   const parsedSource = row.source_info || {
-    badge: (row.source_badge || 'Nairobi Accueil') as SourceBadge,
-    channel: (row.source_channel || 'direct_submission') as SourceChannel,
-    uploadedAt: row.source_uploaded_at || row.created_at || new Date().toISOString(),
-    contributorMasked: row.contributor_masked || 'Recommandé par un membre',
-    contributorRevealed: row.contributor_revealed || 'Membre vérifié',
-    reliabilityScore: Number(row.reliability_score || 5),
-    originalNotes: row.original_notes,
-    sourceSheet: row.source_sheet || 'Annuaire Cloud'
+    badge: 'Nairobi Accueil' as SourceBadge,
+    channel: 'direct_submission' as SourceChannel,
+    uploadedAt: row.created_at || new Date().toISOString(),
+    contributorMasked: 'Recommandé par un membre',
+    contributorRevealed: 'Membre vérifié',
+    reliabilityScore: 5,
+    originalNotes: '',
+    sourceSheet: 'Annuaire Cloud'
   };
 
   return {
@@ -139,15 +130,16 @@ export function mapProviderToRow(p: Provider): SupabaseProviderRow {
     rating: p.rating || 5.0,
     reviews_count: p.reviewsCount || 1,
     tags: p.tags || [p.categoryId, p.neighborhoodId],
-    source_info: p.sourceInfo || null,
-    source_badge: p.sourceInfo?.badge,
-    source_channel: p.sourceInfo?.channel,
-    source_uploaded_at: p.sourceInfo?.uploadedAt,
-    contributor_masked: p.sourceInfo?.contributorMasked,
-    contributor_revealed: p.sourceInfo?.contributorRevealed,
-    reliability_score: p.sourceInfo?.reliabilityScore,
-    original_notes: p.sourceInfo?.originalNotes,
-    source_sheet: p.sourceInfo?.sourceSheet,
+    source_info: p.sourceInfo || {
+      badge: 'Nairobi Accueil',
+      channel: 'direct_submission',
+      uploadedAt: new Date().toISOString(),
+      contributorMasked: 'Recommandé par un membre',
+      contributorRevealed: 'Membre vérifié',
+      reliabilityScore: 5,
+      originalNotes: '',
+      sourceSheet: 'Annuaire'
+    },
     updated_at: new Date().toISOString()
   };
 }
@@ -180,8 +172,7 @@ export function mapSubmissionToRow(s: ProviderSubmission): SupabaseSubmissionRow
     submitter_email: s.submitterEmail,
     consent_given: s.consentGiven,
     status: s.status || 'pending',
-    created_at: s.createdAt || new Date().toISOString(),
-    updated_at: new Date().toISOString()
+    created_at: s.createdAt || new Date().toISOString()
   };
 }
 
@@ -328,7 +319,7 @@ export async function updateRemoteSubmissionStatus(id: string, status: 'approved
   try {
     const { error } = await supabase
       .from('submissions')
-      .update({ status, updated_at: new Date().toISOString() })
+      .update({ status })
       .eq('id', id);
 
     if (error) {
