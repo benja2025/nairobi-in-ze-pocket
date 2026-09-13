@@ -14,6 +14,7 @@ import {
   KeyRound, 
   LogOut, 
   Download, 
+  Upload,
   Copy, 
   CheckCheck, 
   Send, 
@@ -59,6 +60,7 @@ interface AdminPageProps {
   onUpdateProvider?: (provider: Provider) => void;
   onDeleteProvider?: (id: string) => void;
   onResetDefaultProviders?: () => void;
+  onImportProviders?: (providers: Provider[]) => void;
 }
 
 type AdminTab = 'providers_crud' | 'moderation' | 'waitlist' | 'moderator_apps' | 'analytics';
@@ -77,7 +79,8 @@ export const AdminPage: React.FC<AdminPageProps> = ({
   onCreateProvider,
   onUpdateProvider,
   onDeleteProvider,
-  onResetDefaultProviders
+  onResetDefaultProviders,
+  onImportProviders
 }) => {
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
@@ -189,6 +192,32 @@ export const AdminPage: React.FC<AdminPageProps> = ({
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
+  };
+
+  // Import Directory Backup from JSON
+  const fileInputRef = React.useRef<HTMLInputElement | null>(null);
+
+  const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const parsed = JSON.parse(event.target?.result as string);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          if (onImportProviders) {
+            onImportProviders(parsed);
+          }
+          alert(`Importation réussie : ${parsed.length} fiches synchronisées dans votre navigateur !`);
+        } else {
+          alert('Fichier JSON invalide : doit être une liste de fiches prestataires.');
+        }
+      } catch (err) {
+        alert('Erreur lors de la lecture du fichier JSON.');
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
   };
 
   const handleSaveProvider = (savedProvider: Provider) => {
@@ -785,7 +814,24 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                 title="Télécharger une copie de sauvegarde complète"
               >
                 <Download className="w-3.5 h-3.5 text-french-400" />
-                <span>Sauvegarde JSON</span>
+                <span>Exporter JSON</span>
+              </button>
+
+              <input
+                type="file"
+                ref={fileInputRef}
+                onChange={handleImportFile}
+                accept=".json"
+                className="hidden"
+              />
+
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors border border-slate-700"
+                title="Importer un fichier JSON de sauvegarde pour synchroniser ce navigateur"
+              >
+                <Upload className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Importer JSON</span>
               </button>
 
               <button

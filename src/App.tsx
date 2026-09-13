@@ -91,7 +91,8 @@ import {
   deleteWaitlistEntryFromStorage,
   loadModeratorApplications,
   saveModeratorApplication,
-  deleteModeratorApplicationFromStorage
+  deleteModeratorApplicationFromStorage,
+  bulkImportProviders
 } from './services/storageService';
 import {
   isSupabaseConfigured,
@@ -184,6 +185,12 @@ export const App: React.FC = () => {
     console.info('[Nairobi Storage] Resetting to default clean seeds');
     const resetList = resetStorageToDefaults();
     setProviders(resetList);
+  };
+
+  const handleImportProviders = (imported: Provider[]) => {
+    console.info('[Nairobi Storage] Bulk importing providers:', imported.length);
+    const updatedList = bulkImportProviders(imported);
+    setProviders(updatedList);
   };
 
   const handleAddSubmission = (newSub: ProviderSubmission) => {
@@ -296,6 +303,7 @@ export const App: React.FC = () => {
                   onUpdateProvider={handleUpdateProvider}
                   onDeleteProvider={handleDeleteProvider}
                   onResetDefaultProviders={handleResetDefaultProviders}
+                  onImportProviders={handleImportProviders}
                 />
               )}
               {!['directory', 'guides', 'emergency', 'bot', 'submit', 'admin'].includes(activeTab) && (

@@ -234,6 +234,32 @@ export function deleteManagedProvider(id: string): Provider[] {
 }
 
 /**
+ * Bulk imports an array of providers (e.g. from a backup JSON file)
+ */
+export function bulkImportProviders(imported: Provider[]): Provider[] {
+  if (!Array.isArray(imported) || imported.length === 0) {
+    return loadManagedProviders();
+  }
+  const seedIdSet = new Set(MOCK_PROVIDERS.map((p) => p.id));
+  const customItems: Provider[] = [];
+  const overrides: Record<string, Partial<Provider>> = {};
+
+  for (const item of imported) {
+    if (!seedIdSet.has(item.id)) {
+      customItems.push(item);
+    } else {
+      overrides[item.id] = item;
+    }
+  }
+
+  safeSetItem(STORAGE_KEYS.CUSTOM_PROVIDERS, customItems);
+  safeSetItem(STORAGE_KEYS.OVERRIDES, overrides);
+  safeSetItem(STORAGE_KEYS.DELETED_IDS, []);
+
+  return loadManagedProviders();
+}
+
+/**
  * Resets all overrides, custom additions, and tombstones back to clean defaults
  */
 export function resetStorageToDefaults(): Provider[] {
