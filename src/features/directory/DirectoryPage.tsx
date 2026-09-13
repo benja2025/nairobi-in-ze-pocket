@@ -78,15 +78,12 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
 
   const allProviders = useMemo(() => {
     const baseList = providers && providers.length > 0 ? providers : MOCK_PROVIDERS;
-    // Managed / edited providers always take priority over community submissions
-    const combined = [...baseList, ...communityProviders];
-    const seen = new Set<string>();
-    return combined.filter((p) => {
-      const key = `${p.name.toLowerCase().trim()}-${p.categoryId}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+    const seenIds = new Set<string>(baseList.map((p) => p.id));
+    
+    // Add pending community submissions whose ID is not yet promoted into baseList
+    const extraCommunity = communityProviders.filter((cp) => !seenIds.has(cp.id));
+    
+    return [...baseList, ...extraCommunity];
   }, [communityProviders, providers]);
 
   const filteredProviders = useMemo(() => {

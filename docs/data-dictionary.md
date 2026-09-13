@@ -259,3 +259,17 @@ export interface ProviderSubmission {
   createdAt?: string;
 }
 ```
+
+---
+
+## 5. Architecture de Persistance Déterministe & Synchronisation Hybride
+
+### A. Modèle Déterministe Client (`storageService.ts`)
+* **`SCHEMA_VERSION = 2`** : Versioning de schéma garantissant une migration et réconciliation transparente.
+* **Registre des Suppressions (*Tombstones* / `nairobi_deleted_provider_ids_v2`)** : Éradique la réapparition intempestive des fiches supprimées.
+* **Registre des Surcharges (*Overrides* / `nairobi_provider_overrides_v2`)** : Conserve les modifications apportées aux fiches seeds sans écraser les mises à jour structurelles du code.
+* **Identifiants Déterministes** : Remplacement des clés composites fragiles `${name}-${category}` par un mapping strict sur `p.id`.
+
+### B. Synchronisation Cloud Hybride (`supabaseClient.ts`)
+* **Mode Offline-First** : Fonctionnement 100 % autonome et résilient sans dépendance réseau.
+* **Connecteur Cloud Optionnel** : Activé via `VITE_SUPABASE_URL` et `VITE_SUPABASE_ANON_KEY` pour la réplication bidirectionnelle asynchrone des fiches et de la file de modération.
