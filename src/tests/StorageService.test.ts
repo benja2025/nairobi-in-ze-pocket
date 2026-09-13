@@ -158,14 +158,20 @@ describe('Phase 1 & Phase 2 : StorageService & Supabase Hybrid Architecture Test
      7. PHASE 2 : SUPABASE CLIENT OFFLINE-FIRST FALLBACK
      ========================================================================= */
   it('gracefully handles unconfigured/offline Supabase sync without throwing errors', async () => {
-    // When no env vars are set, isSupabaseConfigured is false
+    // Verifies that neither configured nor unconfigured states throw runtime errors
     expect(typeof isSupabaseConfigured).toBe('boolean');
 
     const fetchResult = await fetchRemoteProviders();
-    expect(fetchResult.isOffline).toBe(true);
+    expect(fetchResult.success).toBe(true);
+    if (!isSupabaseConfigured) {
+      expect(fetchResult.isOffline).toBe(true);
+    }
 
     const syncResult = await syncProviderToCloud(MOCK_PROVIDERS[0]);
-    expect(syncResult.isOffline).toBe(true);
+    expect(syncResult.success).toBe(true);
+    if (!isSupabaseConfigured) {
+      expect(syncResult.isOffline).toBe(true);
+    }
 
     const submitResult = await submitRecommendationToCloud({
       id: 'sub-cloud-1',
@@ -180,6 +186,9 @@ describe('Phase 1 & Phase 2 : StorageService & Supabase Hybrid Architecture Test
       status: 'pending',
       createdAt: new Date().toISOString()
     });
-    expect(submitResult.isOffline).toBe(true);
+    expect(submitResult.success).toBe(true);
+    if (!isSupabaseConfigured) {
+      expect(submitResult.isOffline).toBe(true);
+    }
   });
 });
