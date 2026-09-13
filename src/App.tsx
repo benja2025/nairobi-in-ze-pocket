@@ -101,7 +101,8 @@ import {
   deleteRemoteProvider,
   fetchRemoteSubmissions,
   submitRecommendationToCloud,
-  updateRemoteSubmissionStatus
+  updateRemoteSubmissionStatus,
+  subscribeToCloudChanges
 } from './services/supabaseClient';
 
 export const App: React.FC = () => {
@@ -135,6 +136,36 @@ export const App: React.FC = () => {
           setSubmissions(res.data);
         }
       });
+
+      // Subscribe to live Realtime changes across all connected devices
+      const channel = subscribeToCloudChanges({
+        onProviderChange: (provider, eventType) => {
+          console.info(`[Supabase Realtime] Provider ${eventType}:`, provider.name || provider.id);
+          if (eventType === 'DELETE') {
+            setProviders((prev) => prev.filter((p) => p.id !== provider.id));
+          } else if (eventType === 'INSERT') {
+            setProviders((prev) => [provider, ...prev.filter((p) => p.id !== provider.id)]);
+          } else if (eventType === 'UPDATE') {
+            setProviders((prev) => prev.map((p) => (p.id === provider.id ? provider : p)));
+          }
+        },
+        onSubmissionChange: (submission, eventType) => {
+          console.info(`[Supabase Realtime] Submission ${eventType}:`, submission.providerName || submission.id);
+          if (eventType === 'DELETE') {
+            setSubmissions((prev) => prev.filter((s) => s.id !== submission.id));
+          } else if (eventType === 'INSERT') {
+            setSubmissions((prev) => [submission, ...prev.filter((s) => s.id !== submission.id)]);
+          } else if (eventType === 'UPDATE') {
+            setSubmissions((prev) => prev.map((s) => (s.id === submission.id ? submission : s)));
+          }
+        }
+      });
+
+      return () => {
+        if (channel) {
+          channel.unsubscribe();
+        }
+      };
     }
   }, []);
 

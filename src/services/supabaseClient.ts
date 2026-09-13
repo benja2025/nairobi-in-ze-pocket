@@ -1,13 +1,34 @@
+import { createClient, SupabaseClient, RealtimeChannel } from '@supabase/supabase-js';
 import { Provider, ProviderSubmission, CategoryId, NeighborhoodId, SourceBadge, SourceChannel } from '../types';
 
 /**
  * Environment configuration for Supabase
  */
 const env = (import.meta as any).env || {};
-const SUPABASE_URL = env.VITE_SUPABASE_URL || '';
-const SUPABASE_ANON_KEY = env.VITE_SUPABASE_ANON_KEY || '';
+const SUPABASE_URL: string = env.VITE_SUPABASE_URL || '';
+const SUPABASE_ANON_KEY: string = env.VITE_SUPABASE_ANON_KEY || '';
 
-export const isSupabaseConfigured = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
+export const isSupabaseConfigured: boolean = Boolean(
+  SUPABASE_URL && 
+  SUPABASE_ANON_KEY && 
+  SUPABASE_URL !== 'https://your-project-id.supabase.co' &&
+  !SUPABASE_URL.includes('placeholder')
+);
+
+// Official Supabase client instance
+export const supabase: SupabaseClient | null = isSupabaseConfigured
+  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true
+      },
+      realtime: {
+        params: {
+          eventsPerSecond: 10
+        }
+      }
+    })
+  : null;
 
 export interface SyncResult<T> {
   success: boolean;
@@ -43,6 +64,7 @@ export interface SupabaseProviderRow {
   reliability_score?: number;
   original_notes?: string;
   source_sheet?: string;
+  source_info?: any;
   created_at?: string;
   updated_at?: string;
 }
@@ -64,35 +86,37 @@ export interface SupabaseSubmissionRow {
 
 // Mappers
 export function mapRowToProvider(row: SupabaseProviderRow): Provider {
+  const parsedSource = row.source_info || {
+    badge: (row.source_badge || 'Nairobi Accueil') as SourceBadge,
+    channel: (row.source_channel || 'direct_submission') as SourceChannel,
+    uploadedAt: row.source_uploaded_at || row.created_at || new Date().toISOString(),
+    contributorMasked: row.contributor_masked || 'Recommandé par un membre',
+    contributorRevealed: row.contributor_revealed || 'Membre vérifié',
+    reliabilityScore: Number(row.reliability_score || 5),
+    originalNotes: row.original_notes,
+    sourceSheet: row.source_sheet || 'Annuaire Cloud'
+  };
+
   return {
     id: row.id,
     name: row.name,
     categoryId: row.category_id as CategoryId,
     neighborhoodId: (row.neighborhood_id || 'westlands') as Exclude<NeighborhoodId, 'all'>,
-    specialty: row.specialty,
-    description: row.description,
-    phone: row.phone,
-    whatsapp: row.whatsapp,
-    email: row.email,
-    website: row.website,
-    address: row.address,
-    languages: row.languages || ['Français', 'Anglais'],
-    pricingNotes: row.pricing_notes,
+    specialty: row.specialty || '',
+    description: row.description || '',
+    phone: row.phone || '',
+    whatsapp: row.whatsapp || undefined,
+    email: row.email || undefined,
+    website: row.website || undefined,
+    address: row.address || undefined,
+    languages: Array.isArray(row.languages) ? row.languages : ['Français', 'Anglais'],
+    pricingNotes: row.pricing_notes || undefined,
     isVerified: row.is_verified ?? true,
     rating: Number(row.rating || 5.0),
     reviewsCount: Number(row.reviews_count || 1),
-    tags: row.tags || [],
-    sourceInfo: {
-      badge: (row.source_badge || 'WhatsApp Verified') as SourceBadge,
-      channel: (row.source_channel || 'whatsapp_group') as SourceChannel,
-      uploadedAt: row.source_uploaded_at || row.created_at || new Date().toISOString(),
-      contributorMasked: row.contributor_masked || 'Recommandé par un membre',
-      contributorRevealed: row.contributor_revealed || 'Marie Élodie C.',
-      reliabilityScore: Number(row.reliability_score || 5),
-      originalNotes: row.original_notes,
-      sourceSheet: row.source_sheet
-    },
-    createdAt: row.created_at
+    tags: Array.isArray(row.tags) ? row.tags : [row.category_id, row.neighborhood_id],
+    sourceInfo: parsedSource,
+    createdAt: row.created_at || new Date().toISOString()
   };
 }
 
@@ -102,19 +126,20 @@ export function mapProviderToRow(p: Provider): SupabaseProviderRow {
     name: p.name,
     category_id: p.categoryId,
     neighborhood_id: p.neighborhoodId,
-    specialty: p.specialty,
-    description: p.description,
-    phone: p.phone,
-    whatsapp: p.whatsapp,
-    email: p.email,
-    website: p.website,
-    address: p.address,
-    languages: p.languages,
-    pricing_notes: p.pricingNotes,
+    specialty: p.specialty || '',
+    description: p.description || '',
+    phone: p.phone || '',
+    whatsapp: p.whatsapp || undefined,
+    email: p.email || undefined,
+    website: p.website || undefined,
+    address: p.address || undefined,
+    languages: p.languages || ['Français', 'Anglais'],
+    pricing_notes: p.pricingNotes || undefined,
     is_verified: p.isVerified,
-    rating: p.rating,
-    reviews_count: p.reviewsCount,
-    tags: p.tags,
+    rating: p.rating || 5.0,
+    reviews_count: p.reviewsCount || 1,
+    tags: p.tags || [p.categoryId, p.neighborhoodId],
+    source_info: p.sourceInfo || null,
     source_badge: p.sourceInfo?.badge,
     source_channel: p.sourceInfo?.channel,
     source_uploaded_at: p.sourceInfo?.uploadedAt,
@@ -160,100 +185,205 @@ export function mapSubmissionToRow(s: ProviderSubmission): SupabaseSubmissionRow
   };
 }
 
-/**
- * Generic REST client helper using standard fetch
- */
-async function supabaseRest<T>(
-  endpoint: string,
-  options: RequestInit = {}
-): Promise<SyncResult<T>> {
-  if (!isSupabaseConfigured) {
-    return { success: true, isOffline: true };
-  }
-
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    return { success: false, isOffline: true, error: 'Network offline' };
-  }
-
-  try {
-    const url = `${SUPABASE_URL}/rest/v1/${endpoint}`;
-    const headers = {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': 'application/json',
-      'Prefer': 'return=representation',
-      ...(options.headers || {})
-    };
-
-    const response = await fetch(url, { ...options, headers });
-    if (!response.ok) {
-      const errText = await response.text();
-      return { success: false, isOffline: false, error: errText };
-    }
-
-    const data = await response.json();
-    return { success: true, isOffline: false, data: data as T };
-  } catch (err: any) {
-    console.warn('[Supabase Sync] Network error, operating in offline fallback:', err);
-    return { success: false, isOffline: true, error: err.message };
-  }
-}
-
 /* =========================================================================
    PUBLIC API
    ========================================================================= */
 
 export async function fetchRemoteProviders(): Promise<SyncResult<Provider[]>> {
-  const result = await supabaseRest<SupabaseProviderRow[]>('providers?select=*&order=created_at.desc');
-  if (result.success && result.data) {
-    return { ...result, data: result.data.map(mapRowToProvider) };
+  if (!supabase) {
+    return { success: true, isOffline: true, data: undefined };
   }
-  return { ...result, data: undefined };
+
+  try {
+    const { data, error } = await supabase
+      .from('providers')
+      .select('*')
+      .order('is_verified', { ascending: false })
+      .order('rating', { ascending: false });
+
+    if (error) {
+      console.warn('[Supabase Sync] Providers query error:', error.message);
+      return { success: false, isOffline: false, error: error.message };
+    }
+
+    if (data && data.length > 0) {
+      return { success: true, isOffline: false, data: data.map(mapRowToProvider) };
+    }
+    return { success: true, isOffline: false, data: [] };
+  } catch (err: any) {
+    console.warn('[Supabase Sync] Exception fetching providers:', err);
+    return { success: false, isOffline: true, error: err.message };
+  }
 }
 
 export async function syncProviderToCloud(provider: Provider): Promise<SyncResult<Provider>> {
-  const row = mapProviderToRow(provider);
-  const result = await supabaseRest<SupabaseProviderRow[]>('providers', {
-    method: 'POST',
-    headers: { 'Prefer': 'resolution=merge-duplicates,return=representation' },
-    body: JSON.stringify(row)
-  });
-  if (result.success && result.data && result.data[0]) {
-    return { ...result, data: mapRowToProvider(result.data[0]) };
+  if (!supabase) {
+    return { success: true, isOffline: true, data: provider };
   }
-  return { ...result, data: undefined };
+
+  try {
+    const row = mapProviderToRow(provider);
+    const { data, error } = await supabase
+      .from('providers')
+      .upsert(row, { onConflict: 'id' })
+      .select()
+      .single();
+
+    if (error) {
+      console.warn('[Supabase Sync] Error syncing provider:', error.message);
+      return { success: false, isOffline: false, error: error.message };
+    }
+
+    return { success: true, isOffline: false, data: data ? mapRowToProvider(data) : provider };
+  } catch (err: any) {
+    console.warn('[Supabase Sync] Exception syncing provider:', err);
+    return { success: false, isOffline: true, error: err.message };
+  }
 }
 
 export async function deleteRemoteProvider(id: string): Promise<SyncResult<void>> {
-  return supabaseRest<void>(`providers?id=eq.${id}`, {
-    method: 'DELETE'
-  });
+  if (!supabase) {
+    return { success: true, isOffline: true };
+  }
+
+  try {
+    const { error } = await supabase
+      .from('providers')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      console.warn('[Supabase Sync] Error deleting provider:', error.message);
+      return { success: false, isOffline: false, error: error.message };
+    }
+
+    return { success: true, isOffline: false };
+  } catch (err: any) {
+    console.warn('[Supabase Sync] Exception deleting provider:', err);
+    return { success: false, isOffline: true, error: err.message };
+  }
 }
 
 export async function fetchRemoteSubmissions(): Promise<SyncResult<ProviderSubmission[]>> {
-  const result = await supabaseRest<SupabaseSubmissionRow[]>('submissions?select=*&order=created_at.desc');
-  if (result.success && result.data) {
-    return { ...result, data: result.data.map(mapRowToSubmission) };
+  if (!supabase) {
+    return { success: true, isOffline: true, data: undefined };
   }
-  return { ...result, data: undefined };
+
+  try {
+    const { data, error } = await supabase
+      .from('submissions')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      console.warn('[Supabase Sync] Submissions query error:', error.message);
+      return { success: false, isOffline: false, error: error.message };
+    }
+
+    return {
+      success: true,
+      isOffline: false,
+      data: data ? data.map(mapRowToSubmission) : []
+    };
+  } catch (err: any) {
+    console.warn('[Supabase Sync] Exception fetching submissions:', err);
+    return { success: false, isOffline: true, error: err.message };
+  }
 }
 
 export async function submitRecommendationToCloud(submission: ProviderSubmission): Promise<SyncResult<ProviderSubmission>> {
-  const row = mapSubmissionToRow(submission);
-  const result = await supabaseRest<SupabaseSubmissionRow[]>('submissions', {
-    method: 'POST',
-    headers: { 'Prefer': 'resolution=merge-duplicates,return=representation' },
-    body: JSON.stringify(row)
-  });
-  if (result.success && result.data && result.data[0]) {
-    return { ...result, data: mapRowToSubmission(result.data[0]) };
+  if (!supabase) {
+    return { success: true, isOffline: true, data: submission };
   }
-  return { ...result, data: undefined };
+
+  try {
+    const row = mapSubmissionToRow(submission);
+    const { data, error } = await supabase
+      .from('submissions')
+      .upsert(row, { onConflict: 'id' })
+      .select()
+      .single();
+
+    if (error) {
+      console.warn('[Supabase Sync] Error submitting recommendation:', error.message);
+      return { success: false, isOffline: false, error: error.message };
+    }
+
+    return {
+      success: true,
+      isOffline: false,
+      data: data ? mapRowToSubmission(data) : submission
+    };
+  } catch (err: any) {
+    console.warn('[Supabase Sync] Exception submitting recommendation:', err);
+    return { success: false, isOffline: true, error: err.message };
+  }
 }
 
 export async function updateRemoteSubmissionStatus(id: string, status: 'approved' | 'rejected'): Promise<SyncResult<void>> {
-  return supabaseRest<void>(`submissions?id=eq.${id}`, {
-    method: 'PATCH',
-    body: JSON.stringify({ status, updated_at: new Date().toISOString() })
-  });
+  if (!supabase) {
+    return { success: true, isOffline: true };
+  }
+
+  try {
+    const { error } = await supabase
+      .from('submissions')
+      .update({ status, updated_at: new Date().toISOString() })
+      .eq('id', id);
+
+    if (error) {
+      console.warn('[Supabase Sync] Error updating submission status:', error.message);
+      return { success: false, isOffline: false, error: error.message };
+    }
+
+    return { success: true, isOffline: false };
+  } catch (err: any) {
+    console.warn('[Supabase Sync] Exception updating submission status:', err);
+    return { success: false, isOffline: true, error: err.message };
+  }
+}
+
+/**
+ * Realtime Subscriptions via Supabase Channels
+ */
+export function subscribeToCloudChanges(callbacks: {
+  onProviderChange?: (provider: Provider, eventType: 'INSERT' | 'UPDATE' | 'DELETE') => void;
+  onSubmissionChange?: (submission: ProviderSubmission, eventType: 'INSERT' | 'UPDATE' | 'DELETE') => void;
+}): RealtimeChannel | null {
+  if (!supabase) return null;
+
+  try {
+    const channel = supabase
+      .channel('public:nairobi_sync')
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'providers' },
+        (payload) => {
+          if (!callbacks.onProviderChange) return;
+          if (payload.eventType === 'DELETE') {
+            callbacks.onProviderChange({ id: payload.old?.id } as Provider, 'DELETE');
+          } else if (payload.new) {
+            callbacks.onProviderChange(mapRowToProvider(payload.new as SupabaseProviderRow), payload.eventType as any);
+          }
+        }
+      )
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'submissions' },
+        (payload) => {
+          if (!callbacks.onSubmissionChange) return;
+          if (payload.eventType === 'DELETE') {
+            callbacks.onSubmissionChange({ id: payload.old?.id } as ProviderSubmission, 'DELETE');
+          } else if (payload.new) {
+            callbacks.onSubmissionChange(mapRowToSubmission(payload.new as SupabaseSubmissionRow), payload.eventType as any);
+          }
+        }
+      )
+      .subscribe();
+
+    return channel;
+  } catch (e) {
+    console.warn('[Supabase Sync] Could not initialize realtime channel:', e);
+    return null;
+  }
 }

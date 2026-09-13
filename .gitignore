@@ -17,7 +17,8 @@ Thumbs.db
 
 # Environment variables
 .env
-.env.*
+.env.local
+.env.production
+.env.development
 !.env.example
 .vercel
-.env*
