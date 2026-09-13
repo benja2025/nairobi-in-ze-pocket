@@ -88,10 +88,12 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
       {/* Form Card */}
       <form onSubmit={handleSubmit} className="glass-panel rounded-2xl p-5 sm:p-6 space-y-4">
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+          <label htmlFor="providerName" className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
             Nom de l'artisan / professionnel *
           </label>
           <input
+            id="providerName"
+            name="providerName"
             type="text"
             required
             placeholder="ex: Peter Fundi Plomberie & Fuites"
@@ -103,10 +105,12 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+            <label htmlFor="categoryId" className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
               Catégorie *
             </label>
             <select
+              id="categoryId"
+              name="categoryId"
               value={formData.categoryId}
               onChange={(e) => setFormData({ ...formData, categoryId: e.target.value as CategoryId })}
               className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-100 focus:outline-none focus:border-amber-500"
@@ -120,10 +124,12 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
           </div>
 
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+            <label htmlFor="neighborhoodId" className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
               Quartier d'intervention *
             </label>
             <select
+              id="neighborhoodId"
+              name="neighborhoodId"
               value={formData.neighborhoodId}
               onChange={(e) => setFormData({ ...formData, neighborhoodId: e.target.value as Exclude<NeighborhoodId, 'all'> })}
               className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-100 focus:outline-none focus:border-amber-500"
@@ -138,10 +144,12 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
         </div>
 
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+          <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
             Téléphone / WhatsApp du prestataire *
           </label>
           <input
+            id="phone"
+            name="phone"
             type="text"
             required
             placeholder="ex: +254 712 345 678"
@@ -152,10 +160,12 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
         </div>
 
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+          <label htmlFor="description" className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
             Votre retour d'expérience & spécialité *
           </label>
           <textarea
+            id="description"
+            name="description"
             required
             rows={3}
             placeholder="Expliquez pourquoi vous recommandez ce service (dépannage rapide, ponctualité, tarifs...)"
@@ -167,10 +177,12 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
 
         <div className="pt-2 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+            <label htmlFor="submitterName" className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
               Votre Prénom & Nom *
             </label>
             <input
+              id="submitterName"
+              name="submitterName"
               type="text"
               required
               placeholder="ex: Thomas Martin"
@@ -181,10 +193,12 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
           </div>
 
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+            <label htmlFor="submitterEmail" className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
               Votre e-mail membre *
             </label>
             <input
+              id="submitterEmail"
+              name="submitterEmail"
               type="email"
               required
               placeholder="ex: thomas@gmail.com"
@@ -197,8 +211,10 @@ export const SubmitPage: React.FC<SubmitPageProps> = ({ onSubmitSuccess }) => {
 
         {/* Kenya DPA 2019 Consent Checkbox */}
         <div className="p-3.5 rounded-xl bg-slate-900/80 border border-amber-500/20 text-xs text-slate-300 space-y-2">
-          <label className="flex items-start space-x-2 cursor-pointer">
+          <label htmlFor="consentGiven" className="flex items-start space-x-2 cursor-pointer">
             <input
+              id="consentGiven"
+              name="consentGiven"
               type="checkbox"
               required
               checked={formData.consentGiven}
