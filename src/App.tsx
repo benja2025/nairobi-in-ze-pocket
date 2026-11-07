@@ -7,6 +7,8 @@ import ScrollToTop from './components/ScrollToTop';
 import { Provider, ProviderSubmission, TelegramWaitlistEntry, ModeratorApplication } from './types';
 import { MOCK_PROVIDERS } from './data/mockProviders';
 import { motion, AnimatePresence } from 'framer-motion';
+import TelegramAnnouncementModal from './components/TelegramAnnouncementModal';
+import { notifyNewSubmissionOnTelegram } from './services/telegramAlertService';
 
 // Code-splitting of non-critical views to optimize initial bundle (LCP / TBT)
 const GuidesPage = lazy(() => import('./features/guides/GuidesPage'));
@@ -107,6 +109,32 @@ import {
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('directory');
+  const [showTelegramAnnouncement, setShowTelegramAnnouncement] = useState<boolean>(false);
+
+  // Check announcement modal display (only once per user/device via localStorage)
+  useEffect(() => {
+    try {
+      const hasSeen = localStorage.getItem('nairobi_telegram_bot_announced_v1');
+      if (!hasSeen) {
+        // Small delay so the app renders smoothly first
+        const timer = setTimeout(() => {
+          setShowTelegramAnnouncement(true);
+        }, 1200);
+        return () => clearTimeout(timer);
+      }
+    } catch (e) {
+      console.warn('Storage check error for announcement:', e);
+    }
+  }, []);
+
+  const handleCloseTelegramAnnouncement = () => {
+    setShowTelegramAnnouncement(false);
+    try {
+      localStorage.setItem('nairobi_telegram_bot_announced_v1', 'true');
+    } catch (e) {
+      console.warn('Could not save announcement dismissal in storage:', e);
+    }
+  };
 
   // Submissions State with Deterministic Storage Persistence
   const [submissions, setSubmissions] = useState<ProviderSubmission[]>(() => loadSubmissions());
@@ -248,6 +276,8 @@ export const App: React.FC = () => {
     setSubmissions(nextSubs);
     // Background Cloud Sync
     submitRecommendationToCloud(newSub).catch((e) => console.warn('[Supabase Sync] Submission error:', e));
+    // Instant Telegram Alert notification to Admin's phone
+    notifyNewSubmissionOnTelegram(newSub).catch((e) => console.warn('[Telegram Alert] Error:', e));
   };
 
   const handleApproveSubmission = (id: string) => {
@@ -371,6 +401,13 @@ export const App: React.FC = () => {
         activeTab={activeTab}
         onTabChange={setActiveTab}
         pendingSubmissionsCount={pendingCount}
+      />
+
+      {/* Engaging Telegram Bot Announcement Modal */}
+      <TelegramAnnouncementModal
+        isOpen={showTelegramAnnouncement}
+        onClose={handleCloseTelegramAnnouncement}
+        botUsername="nairobiinzepocket_bot"
       />
     </div>
   );

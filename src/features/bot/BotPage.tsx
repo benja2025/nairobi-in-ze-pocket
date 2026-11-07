@@ -48,6 +48,12 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
   const [telegramHandle, setTelegramHandle] = useState('');
   const [visitorName, setVisitorName] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const botUsername = 'nairobiinzepocket_bot';
+  const telegramUrl = `https://t.me/${botUsername}`;
+
+  const handleOpenTelegram = () => {
+    window.open(telegramUrl, '_blank', 'noopener,noreferrer');
+  };
 
   const handleSendMessage = (textToSend?: string) => {
     const query = (textToSend || inputQuery).trim();
@@ -163,11 +169,11 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
           </div>
 
           <button
-            onClick={() => setIsModalOpen(true)}
-            className="flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl bg-french-600 hover:bg-french-500 text-white font-extrabold text-xs transition-all shadow-lg shadow-french-600/30 shrink-0 active:scale-95 border border-french-400/20 cursor-pointer self-start"
+            onClick={handleOpenTelegram}
+            className="flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-french-600 to-amber-500 hover:from-french-500 hover:to-amber-400 text-white font-extrabold text-xs transition-all shadow-lg shadow-french-600/30 shrink-0 active:scale-95 border border-white/10 cursor-pointer self-start"
           >
             <Send className="w-4 h-4" />
-            <span>Ouvrir sur Telegram</span>
+            <span>Ouvrir sur Telegram (@{botUsername})</span>
           </button>
         </div>
       </div>
@@ -187,7 +193,15 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
               </p>
             </div>
           </div>
-          <span className="text-[11px] text-slate-400 font-mono">@NairobiInZePocketBot</span>
+          <a
+            href={telegramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] text-amber-400 hover:text-amber-300 font-mono font-bold hover:underline flex items-center space-x-1"
+          >
+            <span>@{botUsername}</span>
+            <span className="text-[10px] text-emerald-400">● En direct</span>
+          </a>
         </div>
 
         {/* Messages Feed */}
