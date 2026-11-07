@@ -3,22 +3,12 @@ import {
   Bot, 
   Send, 
   Sparkles, 
-  MessageSquare, 
-  ShieldCheck, 
-  User, 
-  Zap, 
-  X, 
-  CheckCircle2, 
-  Clock, 
-  BellRing,
-  AtSign
+  Zap 
 } from 'lucide-react';
 import { MOCK_PROVIDERS } from '../../data/mockProviders';
 import { MOCK_EMERGENCY_CONTACTS } from '../../data/mockEmergency';
 import { MOCK_GUIDES } from '../../data/mockGuides';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import { Guide, TelegramWaitlistEntry } from '../../types';
+import { TelegramWaitlistEntry } from '../../types';
 
 interface ChatMessage {
   id: string;
@@ -43,11 +33,6 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
   const [inputQuery, setInputQuery] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
-  // Modal State
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [telegramHandle, setTelegramHandle] = useState('');
-  const [visitorName, setVisitorName] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const botUsername = 'nairobiinzepocket_bot';
   const telegramUrl = `https://t.me/${botUsername}`;
 
@@ -84,34 +69,6 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
       setMessages((prev) => [...prev, botMsg]);
       setIsTyping(false);
     }, 700);
-  };
-
-  const handleModalSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!telegramHandle.trim()) return;
-
-    const newEntry: TelegramWaitlistEntry = {
-      id: `waitlist-${Date.now()}`,
-      name: visitorName.trim() || undefined,
-      telegramHandle: telegramHandle.trim(),
-      source: 'Modal PocketBot Telegram',
-      createdAt: new Date().toISOString()
-    };
-
-    if (onJoinWaitlist) {
-      onJoinWaitlist(newEntry);
-    }
-
-    setIsSubmitted(true);
-  };
-
-  const resetModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setTelegramHandle('');
-      setVisitorName('');
-    }, 300);
   };
 
   const generateBotAnswer = (q: string): string => {
@@ -286,132 +243,6 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
           </button>
         </form>
       </div>
-
-      {/* Telegram Under Development Waitlist Modal */}
-      <AnimatePresence>
-        {isModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 15 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="glass-panel w-full max-w-md rounded-2xl p-6 sm:p-7 relative bg-slate-900 border border-french-500/30 shadow-2xl space-y-5"
-            >
-              {/* Close Button */}
-              <button
-                onClick={resetModal}
-                className="absolute top-4 right-4 p-2 rounded-xl bg-slate-800/60 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors border border-slate-700/50"
-                aria-label="Fermer"
-              >
-                <X className="w-4 h-4" />
-              </button>
-
-              {!isSubmitted ? (
-                <>
-                  {/* Header */}
-                  <div className="space-y-2">
-                    <div className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                      <Clock className="w-3.5 h-3.5 animate-pulse" />
-                      <span>En cours de finalisation</span>
-                    </div>
-
-                    <h3 className="text-lg sm:text-xl font-extrabold text-slate-50 tracking-tight flex items-center gap-2">
-                      <span>Bot Telegram en développement</span>
-                    </h3>
-
-                    <p className="text-xs text-slate-300 leading-relaxed">
-                      L'intégration directe de <strong>@NairobiInZePocketBot</strong> sur Telegram est actuellement en phase finale de tests par notre équipe technique.
-                    </p>
-                  </div>
-
-                  {/* Benefit Card */}
-                  <div className="p-3.5 rounded-xl bg-french-950/40 border border-french-500/20 flex items-start space-x-3 text-xs text-french-200">
-                    <BellRing className="w-4 h-4 text-french-400 shrink-0 mt-0.5" />
-                    <p className="leading-snug">
-                      Indiquez votre identifiant Telegram ou votre numéro pour être alerté(e) en priorité dès son ouverture officielle aux résidents !
-                    </p>
-                  </div>
-
-                  {/* Form */}
-                  <form onSubmit={handleModalSubmit} className="space-y-3.5">
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">
-                        Votre Prénom / Nom <span className="text-slate-500 font-normal">(optionnel)</span>
-                      </label>
-                      <input
-                        type="text"
-                        value={visitorName}
-                        onChange={(e) => setVisitorName(e.target.value)}
-                        placeholder="Ex: Sophie M."
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-french-500 focus:ring-1 focus:ring-french-500 transition-all"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">
-                        Votre Telegram (@pseudo ou téléphone) <span className="text-amber-400">*</span>
-                      </label>
-                      <div className="relative">
-                        <AtSign className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                        <input
-                          type="text"
-                          required
-                          value={telegramHandle}
-                          onChange={(e) => setTelegramHandle(e.target.value)}
-                          placeholder="@mon_pseudo_telegram ou +254 7..."
-                          className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-french-500 focus:ring-1 focus:ring-french-500 transition-all"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="pt-2 flex items-center justify-end space-x-2.5">
-                      <button
-                        type="button"
-                        onClick={resetModal}
-                        className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors"
-                      >
-                        Annuler
-                      </button>
-                      <button
-                        type="submit"
-                        className="px-5 py-2 rounded-xl bg-french-600 hover:bg-french-500 text-white text-xs font-bold transition-all shadow-md shadow-french-600/30 active:scale-95 flex items-center space-x-1.5"
-                      >
-                        <Send className="w-3.5 h-3.5" />
-                        <span>Rejoindre la liste prioritaire</span>
-                      </button>
-                    </div>
-                  </form>
-                </>
-              ) : (
-                /* Success State */
-                <div className="py-4 text-center space-y-4">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mx-auto">
-                    <CheckCircle2 className="w-6 h-6" />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <h3 className="text-lg font-extrabold text-slate-50">
-                      C'est bien noté {visitorName ? visitorName : ''} !
-                    </h3>
-                    <p className="text-xs text-slate-300 max-w-xs mx-auto leading-relaxed">
-                      Votre identifiant <span className="font-mono text-french-300 font-semibold">{telegramHandle}</span> a été ajouté à la liste d'accès prioritaire. Vous recevrez une notification privée dès le lancement du bot !
-                    </p>
-                  </div>
-
-                  <div className="pt-2">
-                    <button
-                      onClick={resetModal}
-                      className="w-full py-2.5 rounded-xl bg-french-600 hover:bg-french-500 text-white text-xs font-bold transition-all shadow-md shadow-french-600/30"
-                    >
-                      Retourner au simulateur
-                    </button>
-                  </div>
-                </div>
-              )}
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
