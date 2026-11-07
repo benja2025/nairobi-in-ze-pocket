@@ -1,0 +1,31 @@
+name: ICPRA CI/CD & Cloud Quality Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-and-build:
+    name: "ICPRA Gate : Lint, Test & PWA Build"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Vitest Suite (TDD Gate)
+        run: npm run test
+
+      - name: Run Production PWA Build
+        run: npm run build

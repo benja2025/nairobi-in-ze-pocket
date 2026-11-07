@@ -1,0 +1,202 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Nairobi in ze Pocket API",
+    "version": "1.0.0",
+    "description": "API officielle pour l'annuaire, les guides, le centre d'urgence et le Webhook Telegram de Nairobi in ze Pocket."
+  },
+  "servers": [
+    {
+      "url": "https://api.nairobi-in-ze-pocket.app",
+      "description": "Production Edge Server"
+    },
+    {
+      "url": "http://localhost:5173",
+      "description": "Environnement Local"
+    }
+  ],
+  "paths": {
+    "/api/providers": {
+      "get": {
+        "summary": "Liste filtrée des prestataires vérifiés",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["sante", "fundis", "education", "transports", "loisirs", "domestique"]
+            }
+          },
+          {
+            "name": "neighborhood",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["westlands", "gigiri", "lavington", "karen", "runda", "kilimani"]
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste des prestataires",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Provider" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/emergency": {
+      "get": {
+        "summary": "Contacts d'urgence vitale SOS",
+        "responses": {
+          "200": {
+            "description": "Liste des numéros SOS",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/EmergencyContact" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/submissions": {
+      "post": {
+        "summary": "Soumission d'une nouvelle recommandation de prestataire",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/SubmissionInput" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Recommandation enregistrée avec succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string", "example": "success" },
+                    "submissionId": { "type": "string", "format": "uuid" }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Consentement DPA 2019 absent ou données invalides",
+            "content": {
+              "application/problem+json": {
+                "schema": { "$ref": "#/components/schemas/ProblemDetails" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/telegram-webhook": {
+      "post": {
+        "summary": "Webhook de réception des messages du Bot Telegram",
+        "parameters": [
+          {
+            "name": "X-Telegram-Bot-Api-Secret-Token",
+            "in": "header",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Mise à jour Telegram traitée avec succès"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Provider": {
+        "type": "object",
+        "required": ["id", "name", "categoryId", "neighborhoodId", "specialty", "description", "phone", "languages", "isVerified"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "categoryId": { "type": "string" },
+          "neighborhoodId": { "type": "string" },
+          "specialty": { "type": "string" },
+          "description": { "type": "string" },
+          "phone": { "type": "string" },
+          "whatsapp": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "website": { "type": "string", "format": "uri" },
+          "address": { "type": "string" },
+          "languages": { "type": "array", "items": { "type": "string" } },
+          "isVerified": { "type": "boolean" },
+          "rating": { "type": "number" },
+          "reviewsCount": { "type": "integer" },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "EmergencyContact": {
+        "type": "object",
+        "required": ["id", "title", "category", "phone", "is247"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "category": { "type": "string", "enum": ["hospital", "ambulance", "pharmacy", "embassy", "security"] },
+          "phone": { "type": "string" },
+          "secondaryPhone": { "type": "string" },
+          "neighborhood": { "type": "string" },
+          "address": { "type": "string" },
+          "is247": { "type": "boolean" },
+          "notes": { "type": "string" }
+        }
+      },
+      "SubmissionInput": {
+        "type": "object",
+        "required": ["providerName", "categoryId", "neighborhoodId", "phone", "description", "submitterName", "submitterEmail", "consentGiven"],
+        "properties": {
+          "providerName": { "type": "string" },
+          "categoryId": { "type": "string" },
+          "neighborhoodId": { "type": "string" },
+          "phone": { "type": "string" },
+          "description": { "type": "string" },
+          "submitterName": { "type": "string" },
+          "submitterEmail": { "type": "string", "format": "email" },
+          "consentGiven": { "type": "boolean", "enum": [true] }
+        }
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "required": ["type", "title", "status"],
+        "properties": {
+          "type": { "type": "string", "format": "uri" },
+          "title": { "type": "string" },
+          "status": { "type": "integer" },
+          "detail": { "type": "string" },
+          "instance": { "type": "string" }
+        }
+      }
+    }
+  }
+}
