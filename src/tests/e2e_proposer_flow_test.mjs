@@ -258,7 +258,7 @@ async function runE2EProposerTest() {
     }
 
     // Check if the provider was created in the public 'providers' table
-    const remoteProviders = await querySupabase(`providers?name=like.*Paul%20Mwangi*`);
+    const remoteProviders = await querySupabase(`providers?name=ilike.%25Paul%20Mwangi%25`);
     console.log(`  Fiche creee dans la table "providers" Supabase : ${remoteProviders.length > 0 ? 'OUI (SUCCES)' : 'NON'}`);
     if (remoteProviders.length > 0) {
       console.log(`    - ID Fiche            : ${remoteProviders[0].id}`);
@@ -305,7 +305,7 @@ async function runE2EProposerTest() {
         }
       }
       // Verify that NO provider was created in 'providers' table for the rejected entry
-      const checkRejectedProvider = await querySupabase(`providers?name=like.*Fake%20Plombier*`);
+      const checkRejectedProvider = await querySupabase(`providers?name=ilike.%25Fake%20Plombier%25`);
       console.log(`  Absence de la fiche rejetee dans l'annuaire public : ${checkRejectedProvider.length === 0 ? 'GARANTIE (0 fiche creee)' : 'ERREUR (fiche presente)'}`);
     }
 

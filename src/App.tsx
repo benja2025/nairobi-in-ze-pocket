@@ -180,6 +180,7 @@ export const App: React.FC = () => {
                 merged.unshift(rs);
               }
             }
+            syncSubmissionsToStorage(merged);
             return merged;
           });
         }
@@ -284,7 +285,8 @@ export const App: React.FC = () => {
 
   const handleApproveSubmission = (id: string) => {
     console.info('[Nairobi Storage] Approving submission:', id);
-    const result = approveSubmissionInStorage(id);
+    const subToApprove = submissions.find((s) => s.id === id);
+    const result = approveSubmissionInStorage(id, subToApprove);
     setSubmissions(result.submissions);
     if (result.promotedProvider) {
       setProviders(loadManagedProviders());
@@ -295,7 +297,8 @@ export const App: React.FC = () => {
 
   const handleRejectSubmission = (id: string) => {
     console.info('[Nairobi Storage] Rejecting submission:', id);
-    const nextSubs = rejectSubmissionInStorage(id);
+    const subToReject = submissions.find((s) => s.id === id);
+    const nextSubs = rejectSubmissionInStorage(id, subToReject);
     setSubmissions(nextSubs);
     updateRemoteSubmissionStatus(id, 'rejected').catch((e) => console.warn('[Supabase Sync] Status error:', e));
   };
