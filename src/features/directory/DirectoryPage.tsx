@@ -8,17 +8,27 @@ import { Compass, Sparkles, Plus, AlertCircle } from 'lucide-react';
 
 // Lazy load the detailed modal to only fetch it on user demand
 const ProviderModal = lazy(() => import('./ProviderModal'));
+import { DirectorySkeleton } from '../../components/DirectorySkeleton';
+import { RefreshCw, WifiOff } from 'lucide-react';
 
 interface DirectoryPageProps {
   onNavigateToSubmit: () => void;
   submissions?: ProviderSubmission[];
   providers?: Provider[];
+  isLoading?: boolean;
+  isError?: boolean;
+  errorMessage?: string;
+  onRetry?: () => void;
 }
 
 export const DirectoryPage: React.FC<DirectoryPageProps> = ({ 
   onNavigateToSubmit, 
   submissions = [],
-  providers = MOCK_PROVIDERS
+  providers = MOCK_PROVIDERS,
+  isLoading = false,
+  isError = false,
+  errorMessage,
+  onRetry
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<CategoryId | 'all'>('all');
   const [selectedNeighborhoods, setSelectedNeighborhoods] = useState<NeighborhoodId[]>(['all']);
@@ -77,7 +87,7 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
   }, [submissions]);
 
   const allProviders = useMemo(() => {
-    const baseList = providers && providers.length > 0 ? providers : MOCK_PROVIDERS;
+    const baseList = providers !== undefined ? providers : MOCK_PROVIDERS;
     const seenIds = new Set<string>(baseList.map((p) => p.id));
     
     // Add pending community submissions whose ID is not yet promoted into baseList
@@ -115,13 +125,68 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
     return () => observer.disconnect();
   }, [filteredProviders.length]);
 
+  const [isOnline, setIsOnline] = useState<boolean>(() => typeof navigator !== 'undefined' ? navigator.onLine : true);
+
+  React.useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
+
   const isFilteringActive =
     selectedCategory !== 'all' ||
     (!selectedNeighborhoods.includes('all') && selectedNeighborhoods.length > 0) ||
     Boolean(searchQuery.trim());
 
+  if (isLoading) {
+    return (
+      <div className="space-y-6 pb-24" data-testid="directory-loading-state">
+        <DirectorySkeleton />
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="space-y-6 pb-24" data-testid="directory-error-state">
+        <div className="glass-panel rounded-2xl p-8 text-center space-y-4 my-8 max-w-lg mx-auto border-sos-600/40 bg-slate-900/90 shadow-xl shadow-sos-950/40">
+          <div className="w-12 h-12 rounded-full bg-sos-600/20 text-sos-400 flex items-center justify-center mx-auto">
+            <AlertCircle className="w-8 h-8" />
+          </div>
+          <h2 className="text-xl font-bold text-slate-100">Erreur de chargement</h2>
+          <p className="text-xs text-slate-300 leading-relaxed">
+            {errorMessage || "Impossible de récupérer les adresses distantes. Vérifiez votre connexion internet ou réessayez dans un instant."}
+          </p>
+          {onRetry && (
+            <button
+              type="button"
+              onClick={onRetry}
+              className="px-5 py-2.5 min-h-[44px] rounded-xl bg-sos-600 hover:bg-sos-500 text-white font-bold text-xs inline-flex items-center justify-center space-x-2 transition-all shadow-md shadow-sos-600/20 active:scale-95"
+            >
+              <RefreshCw className="w-4 h-4" />
+              <span>Réessayer</span>
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6 pb-24">
+      {/* Offline Alert Banner */}
+      {!isOnline && (
+        <div data-testid="directory-offline-banner" className="flex items-center space-x-2 p-3.5 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-semibold animate-pulse">
+          <WifiOff className="w-4 h-4 shrink-0 text-amber-400" />
+          <span>Mode hors-ligne actif : consultation des adresses et contacts en cache local.</span>
+        </div>
+      )}
+
       {/* Banner Pitch */}
       <div className="glass-panel rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 border-amber-500/20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
@@ -142,7 +207,8 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
           <button
             type="button"
             onClick={onNavigateToSubmit}
-            className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition-all shadow-md shadow-amber-500/20 shrink-0 cursor-pointer active:scale-95"
+            aria-label="Recommander une adresse"
+            className="flex items-center space-x-1.5 px-4 py-2.5 min-h-[44px] rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition-all shadow-md shadow-amber-500/20 shrink-0 cursor-pointer active:scale-95"
           >
             <Plus className="w-4 h-4 stroke-[2.5]" />
             <span>Recommander</span>
@@ -167,12 +233,13 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
         </span>
         {isFilteringActive && (
           <button
+            type="button"
             onClick={() => {
               setSelectedCategory('all');
               setSelectedNeighborhoods(['all']);
               setSearchQuery('');
             }}
-            className="text-xs text-amber-400 font-semibold hover:underline"
+            className="text-xs text-amber-400 font-semibold hover:underline min-h-[44px] inline-flex items-center"
           >
             Réinitialiser les filtres
           </button>
@@ -203,19 +270,35 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
           )}
         </div>
       ) : (
-        <div className="glass-panel rounded-2xl p-8 text-center space-y-3 my-6">
+        <div data-testid="directory-empty-state" className="glass-panel rounded-2xl p-8 text-center space-y-3 my-6">
           <AlertCircle className="w-10 h-10 text-amber-400 mx-auto opacity-80" />
           <h3 className="text-base font-bold text-slate-100">Aucun résultat trouvé</h3>
           <p className="text-xs text-slate-400 max-w-sm mx-auto">
             Aucun contact ne correspond à la recherche "{searchQuery}". Essayez de modifier les filtres ou proposez une nouvelle adresse !
           </p>
-          <button
-            onClick={onNavigateToSubmit}
-            className="px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs inline-flex items-center space-x-1.5"
-          >
-            <Plus className="w-4 h-4" />
-            <span>Ajouter une adresse</span>
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            {isFilteringActive && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedCategory('all');
+                  setSelectedNeighborhoods(['all']);
+                  setSearchQuery('');
+                }}
+                className="px-4 py-2.5 min-h-[44px] rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs inline-flex items-center justify-center space-x-1.5 border border-slate-700 transition-colors"
+              >
+                <span>Réinitialiser les filtres</span>
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={onNavigateToSubmit}
+              className="px-4 py-2.5 min-h-[44px] rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs inline-flex items-center justify-center space-x-1.5 transition-colors"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Ajouter une adresse</span>
+            </button>
+          </div>
         </div>
       )}
 

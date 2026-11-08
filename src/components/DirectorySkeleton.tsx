@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 export const DirectorySkeleton: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ export const DirectorySkeleton: React.FC = () => {
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="glass-panel rounded-2xl p-5 h-48 bg-slate-900/60 border-slate-800/80 flex flex-col justify-between"
+            className="glass-panel rounded-2xl p-5 min-h-[220px] bg-slate-900/60 border-slate-800/80 flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex gap-2">
@@ -32,9 +32,9 @@ export const DirectorySkeleton: React.FC = () => {
               <div className="h-4 w-full rounded bg-slate-800/60" />
             </div>
             <div className="grid grid-cols-3 gap-2 pt-2">
-              <div className="h-8 rounded-xl bg-slate-800" />
-              <div className="h-8 rounded-xl bg-slate-800" />
-              <div className="h-8 rounded-xl bg-slate-800" />
+              <div className="min-h-[44px] rounded-xl bg-slate-800" />
+              <div className="min-h-[44px] rounded-xl bg-slate-800" />
+              <div className="min-h-[44px] rounded-xl bg-slate-800" />
             </div>
           </div>
         ))}

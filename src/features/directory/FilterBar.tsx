@@ -41,18 +41,23 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     <div className="space-y-3.5 mb-6">
       {/* Search Input Bar */}
       <div className="relative">
-        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
         <input
+          id="directory-search-input"
+          name="searchQuery"
           type="text"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Rechercher par nom, métier, pédiatre, fundi, quartier..."
-          className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-slate-800/80 border border-slate-700/80 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+          aria-label="Rechercher par nom, métier, pédiatre, fundi, quartier..."
+          className="w-full pl-10 pr-16 py-2.5 min-h-[44px] rounded-2xl bg-slate-800/80 border border-slate-700/80 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
         />
         {searchQuery && (
           <button
+            type="button"
             onClick={() => onSearchChange('')}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400 hover:text-slate-200"
+            aria-label="Effacer la recherche"
+            className="absolute right-2 top-1/2 -translate-y-1/2 min-h-[44px] min-w-[44px] inline-flex items-center justify-center text-xs font-semibold text-slate-400 hover:text-slate-200"
           >
             Effacer
           </button>
@@ -61,7 +66,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
       {/* Neighborhood Multi-Select Pills (Horizontal Scroll) */}
       <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar text-xs">
-        <div className="flex items-center space-x-1.5 text-slate-400 font-medium shrink-0 mr-1">
+        <div className="flex items-center space-x-1.5 text-slate-400 font-medium shrink-0 mr-1 min-h-[44px]">
           <MapPin className="w-3.5 h-3.5 text-amber-500" />
           <span>Quartiers {activeNeighborhoodCount > 1 ? `(${activeNeighborhoodCount})` : ''} :</span>
         </div>
@@ -70,8 +75,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           return (
             <button
               key={neigh.id}
+              type="button"
               onClick={() => onToggleNeighborhood(neigh.id)}
-              className={`flex items-center space-x-1 px-3 py-1.5 rounded-xl font-medium shrink-0 transition-all ${
+              aria-label={`Filtrer par quartier : ${neigh.name}`}
+              className={`flex items-center space-x-1 px-3.5 py-2 min-h-[44px] rounded-xl font-medium shrink-0 transition-all ${
                 isSelected
                   ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
                   : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-slate-700/60'
@@ -89,8 +96,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       {/* Category Pills with Amber Highlights */}
       <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar text-xs">
         <button
+          type="button"
           onClick={() => onCategoryChange('all')}
-          className={`px-3 py-1.5 rounded-xl font-medium shrink-0 transition-all ${
+          aria-label="Toutes catégories"
+          className={`px-3.5 py-2 min-h-[44px] rounded-xl font-medium shrink-0 transition-all ${
             selectedCategory === 'all'
               ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/25'
               : 'bg-slate-800/80 text-slate-300 hover:bg-slate-750 border border-white/10'
@@ -104,8 +113,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           return (
             <button
               key={cat.id}
+              type="button"
               onClick={() => onCategoryChange(cat.id)}
-              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-xl font-medium shrink-0 transition-all ${
+              aria-label={`Filtrer par catégorie : ${cat.name}`}
+              className={`flex items-center space-x-1.5 px-3.5 py-2 min-h-[44px] rounded-xl font-medium shrink-0 transition-all ${
                 isActive
                   ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/25'
                   : 'bg-slate-800/80 text-slate-300 hover:bg-slate-750 border border-white/10'

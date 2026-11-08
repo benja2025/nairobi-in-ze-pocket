@@ -17,9 +17,18 @@ Aucune modification de code métier, d'algorithme de filtrage ou de composant ne
 
 | Fichier de Test | Type | Périmètre Testé | Nombre de Tests | Résultat |
 | :--- | :--- | :--- | :--- | :--- |
-| `src/tests/directoryFilter.test.ts` | Test Unitaire / Algorithmique | Filtrage sans filtre, par quartier (Lavington), par catégorie (santé), combiné avec recherche textuelle floue, gestion des résultats vides. | 5 tests | 5 passed |
+| `src/tests/FrontendConsistencyGuardian.test.tsx` | Test de Composants & A11y | Quadriptyque Frontend ICPRA : Cibles 44x44px (BottomNav, Header, ProviderCard), Loi des 5 États UI (Loading Skeleton, Empty avec CTA, Error avec Retry, Offline), Accessibilité formulaires et verrouillage DPA 2019. | 8 tests | 8 passed |
+| `src/tests/RecommendationFlow.test.tsx` | Test d'Intégration | Cycle de recommandation, modération et promotion dans l'annuaire. | 7 tests | 7 passed |
+| `src/tests/CardModificationFlow.test.tsx` | Test d'Intégration | Édition directe et mise à jour dynamique des fiches. | 5 tests | 5 passed |
+| `src/tests/directoryFilter.test.ts` | Test Unitaire / Algorithmique | Filtrage sans filtre, par quartier (Lavington), par catégorie (santé), combiné avec recherche textuelle floue, gestion des résultats vides. | 16 tests | 16 passed |
+| `src/tests/PersistenceRootCauses.test.ts` | Test Unitaire / Robustesse | Persistance locale, gestion des corruptions et intégrité du cache. | 5 tests | 5 passed |
+| `src/tests/SupabaseSync.test.ts` | Test Unitaire & Mock | Synchronisation cloud Supabase et résilience hors-ligne. | 7 tests | 7 passed |
+| `src/tests/StorageService.test.ts` | Test Unitaire / Services | CRUD providers, submissions, waitlist et export/import. | 7 tests | 7 passed |
+| `src/tests/ProviderCrud.test.ts` | Test Unitaire | Invariants de données prestataires. | 3 tests | 3 passed |
+| `src/tests/TelegramIntegration.test.tsx` | Test de Composant | Modal d'annonce et alertes Telegram. | 3 tests | 3 passed |
 | `src/tests/EmergencyHub.test.tsx` | Test de Composant | Présence des hôpitaux de référence (Aga Khan, Nairobi Hospital), intégrité des liens d'appel direct `tel:+254203662000`. | 2 tests | 2 passed |
 | `src/tests/SubmissionForm.test.tsx` | Test de Composant & Sécurité | Présence des mentions légales Kenya DPA 2019, verrouillage strict du bouton de soumission tant que la case n'est pas cochée. | 2 tests | 2 passed |
+| **Total Suite Vitest** | **11 Suites** | **Couverture Frontend, Logique & Contrats Métier** | **65 tests** | **100% passed** |
 
 ---
 

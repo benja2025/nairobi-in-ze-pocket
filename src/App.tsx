@@ -9,6 +9,7 @@ import { MOCK_PROVIDERS } from './data/mockProviders';
 import { motion, AnimatePresence } from 'framer-motion';
 import TelegramAnnouncementModal from './components/TelegramAnnouncementModal';
 import { notifyNewSubmissionOnTelegram } from './services/telegramAlertService';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Code-splitting of non-critical views to optimize initial bundle (LCP / TBT)
 const GuidesPage = lazy(() => import('./features/guides/GuidesPage'));
@@ -343,54 +344,56 @@ export const App: React.FC = () => {
 
       {/* Main Responsive Viewport with reserved min height to eliminate CLS */}
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-4 sm:px-6 min-h-[80vh] relative z-10">
-        <Suspense fallback={<PageSkeleton />}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -6 }}
-              transition={{ duration: 0.15 }}
-            >
-              {activeTab === 'directory' && (
-                <DirectoryPage 
-                  onNavigateToSubmit={() => setActiveTab('submit')} 
-                  submissions={submissions}
-                  providers={providers}
-                />
-              )}
-              {activeTab === 'guides' && <GuidesPage />}
-              {activeTab === 'emergency' && <EmergencyPage />}
-              {activeTab === 'bot' && (
-                <BotPage onJoinWaitlist={handleJoinWaitlist} />
-              )}
-              {activeTab === 'submit' && (
-                <SubmitPage onSubmitSuccess={handleAddSubmission} />
-              )}
-              {activeTab === 'admin' && (
-                <AdminPage
-                  submissions={submissions}
-                  telegramWaitlist={telegramWaitlist}
-                  moderatorApplications={moderatorApplications}
-                  providers={providers}
-                  onApprove={handleApproveSubmission}
-                  onReject={handleRejectSubmission}
-                  onDeleteWaitlistEntry={handleDeleteWaitlistEntry}
-                  onApplyModerator={handleApplyModerator}
-                  onDeleteModeratorApp={handleDeleteModeratorApp}
-                  onCreateProvider={handleCreateProvider}
-                  onUpdateProvider={handleUpdateProvider}
-                  onDeleteProvider={handleDeleteProvider}
-                  onResetDefaultProviders={handleResetDefaultProviders}
-                  onImportProviders={handleImportProviders}
-                />
-              )}
-              {!['directory', 'guides', 'emergency', 'bot', 'submit', 'admin'].includes(activeTab) && (
-                <NotFoundPage onGoHome={() => setActiveTab('directory')} />
-              )}
-            </motion.div>
-          </AnimatePresence>
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<PageSkeleton />}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.15 }}
+              >
+                {activeTab === 'directory' && (
+                  <DirectoryPage 
+                    onNavigateToSubmit={() => setActiveTab('submit')} 
+                    submissions={submissions}
+                    providers={providers}
+                  />
+                )}
+                {activeTab === 'guides' && <GuidesPage />}
+                {activeTab === 'emergency' && <EmergencyPage />}
+                {activeTab === 'bot' && (
+                  <BotPage onJoinWaitlist={handleJoinWaitlist} />
+                )}
+                {activeTab === 'submit' && (
+                  <SubmitPage onSubmitSuccess={handleAddSubmission} />
+                )}
+                {activeTab === 'admin' && (
+                  <AdminPage
+                    submissions={submissions}
+                    telegramWaitlist={telegramWaitlist}
+                    moderatorApplications={moderatorApplications}
+                    providers={providers}
+                    onApprove={handleApproveSubmission}
+                    onReject={handleRejectSubmission}
+                    onDeleteWaitlistEntry={handleDeleteWaitlistEntry}
+                    onApplyModerator={handleApplyModerator}
+                    onDeleteModeratorApp={handleDeleteModeratorApp}
+                    onCreateProvider={handleCreateProvider}
+                    onUpdateProvider={handleUpdateProvider}
+                    onDeleteProvider={handleDeleteProvider}
+                    onResetDefaultProviders={handleResetDefaultProviders}
+                    onImportProviders={handleImportProviders}
+                  />
+                )}
+                {!['directory', 'guides', 'emergency', 'bot', 'submit', 'admin'].includes(activeTab) && (
+                  <NotFoundPage onGoHome={() => setActiveTab('directory')} />
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </Suspense>
+        </ErrorBoundary>
       </main>
 
       {/* Scroll To Top Floating Button */}

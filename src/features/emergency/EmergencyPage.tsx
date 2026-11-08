@@ -70,7 +70,8 @@ export const EmergencyPage: React.FC = () => {
               <div className="flex flex-row sm:flex-col gap-2 shrink-0">
                 <a
                   href={`tel:${cleanPhone}`}
-                  className="flex-1 sm:flex-none flex items-center justify-center space-x-2 py-2.5 px-4 rounded-xl bg-sos-600 hover:bg-sos-700 text-white font-extrabold text-xs transition-all shadow-md shadow-sos-600/30 active:scale-95 text-center"
+                  aria-label={`Appeler d'urgence ${item.title}`}
+                  className="flex-1 sm:flex-none flex items-center justify-center space-x-2 py-2.5 px-4 min-h-[44px] rounded-xl bg-sos-600 hover:bg-sos-700 text-white font-extrabold text-xs transition-all shadow-md shadow-sos-600/30 active:scale-95 text-center"
                 >
                   <PhoneCall className="w-4 h-4 animate-bounce" />
                   <span>Appeler {item.phone}</span>
@@ -79,7 +80,8 @@ export const EmergencyPage: React.FC = () => {
                 {cleanSecondary && (
                   <a
                     href={`tel:${cleanSecondary}`}
-                    className="flex-1 sm:flex-none flex items-center justify-center space-x-1.5 py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-all text-center"
+                    aria-label={`Appeler la ligne 2 de ${item.title}`}
+                    className="flex-1 sm:flex-none flex items-center justify-center space-x-1.5 py-2 px-3 min-h-[44px] rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-all text-center"
                   >
                     <span>Ligne 2 ({item.secondaryPhone})</span>
                   </a>

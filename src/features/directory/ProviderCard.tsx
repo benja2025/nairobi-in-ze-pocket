@@ -100,7 +100,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider, onSelect }
         {isCallable && (
           <a
             href={`tel:${cleanPhone}`}
-            className="flex items-center justify-center space-x-1.5 py-2 px-2 rounded-xl bg-french-600/20 hover:bg-french-600/30 text-french-400 border border-french-500/30 text-xs font-semibold transition-all active:scale-95 text-center"
+            aria-label={`Appeler ${provider.name}`}
+            className="flex items-center justify-center space-x-1.5 py-2.5 px-2 min-h-[44px] rounded-xl bg-french-600/20 hover:bg-french-600/30 text-french-400 border border-french-500/30 text-xs font-semibold transition-all active:scale-95 text-center"
           >
             <Phone className="w-3.5 h-3.5" />
             <span>Appeler</span>
@@ -112,7 +113,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider, onSelect }
             href={`https://wa.me/${cleanWhatsapp.replace('+', '')}?text=Bonjour,%20je%20vous%20contacte%20via%20Nairobi%20in%20ze%20Pocket`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center space-x-1.5 py-2 px-2 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/40 text-xs font-bold transition-all active:scale-95 text-center shadow-sm shadow-emerald-950/40"
+            aria-label={`Contacter ${provider.name} sur WhatsApp`}
+            className="flex items-center justify-center space-x-1.5 py-2.5 px-2 min-h-[44px] rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/40 text-xs font-bold transition-all active:scale-95 text-center shadow-sm shadow-emerald-950/40"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>WhatsApp</span>
@@ -124,7 +126,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider, onSelect }
             href={provider.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center space-x-1.5 py-2 px-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-white/10 text-xs font-semibold transition-all active:scale-95 text-center"
+            aria-label={`Visiter le site de ${provider.name}`}
+            className="flex items-center justify-center space-x-1.5 py-2.5 px-2 min-h-[44px] rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-white/10 text-xs font-semibold transition-all active:scale-95 text-center"
           >
             <Globe className="w-3.5 h-3.5" />
             <span>Site web</span>
@@ -137,7 +140,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider, onSelect }
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center space-x-1.5 py-2 px-2 rounded-xl bg-slate-800/80 hover:bg-slate-750 text-slate-300 border border-white/10 text-xs font-semibold transition-all active:scale-95 text-center"
+          aria-label={`Localiser ${provider.name} sur Google Maps`}
+          className="flex items-center justify-center space-x-1.5 py-2.5 px-2 min-h-[44px] rounded-xl bg-slate-800/80 hover:bg-slate-750 text-slate-300 border border-white/10 text-xs font-semibold transition-all active:scale-95 text-center"
         >
           <MapPin className="w-3.5 h-3.5" />
           <span>Maps</span>

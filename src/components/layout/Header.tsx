@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSos, activeTab, onGoHome }
           onClick={onGoHome}
           type="button"
           aria-label="Retour à l'accueil"
-          className="flex items-center space-x-3 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl transition-transform active:scale-95"
+          className="flex items-center space-x-3 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl transition-transform active:scale-95 min-h-[44px]"
         >
           <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-safari-600 via-amber-500 to-french-600 shadow-md shadow-amber-500/20 group-hover:shadow-amber-500/40 group-hover:scale-105 transition-all">
             <Compass className="w-5 h-5 text-white animate-pulse" />
@@ -42,7 +42,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSos, activeTab, onGoHome }
           {/* Quick SOS Trigger */}
           <button
             onClick={onOpenSos}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-sos-600/20 hover:bg-sos-600/30 text-sos-400 border border-sos-600/40 text-xs font-semibold transition-all active:scale-95 shadow-sm shadow-sos-600/10"
+            aria-label="Accéder aux numéros d'urgence SOS"
+            className="flex items-center justify-center space-x-1.5 px-3.5 py-2 min-h-[44px] rounded-xl bg-sos-600/20 hover:bg-sos-600/30 text-sos-400 border border-sos-600/40 text-xs font-semibold transition-all active:scale-95 shadow-sm shadow-sos-600/10"
             title="Numéros d'Urgence SOS"
           >
             <PhoneCall className="w-3.5 h-3.5 animate-bounce" />

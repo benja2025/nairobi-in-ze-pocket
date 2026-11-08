@@ -126,8 +126,10 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
           </div>
 
           <button
+            type="button"
             onClick={handleOpenTelegram}
-            className="flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-french-600 to-amber-500 hover:from-french-500 hover:to-amber-400 text-white font-extrabold text-xs transition-all shadow-lg shadow-french-600/30 shrink-0 active:scale-95 border border-white/10 cursor-pointer self-start"
+            aria-label={`Ouvrir sur Telegram (@${botUsername})`}
+            className="flex items-center justify-center space-x-2 px-4 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-french-600 to-amber-500 hover:from-french-500 hover:to-amber-400 text-white font-extrabold text-xs transition-all shadow-lg shadow-french-600/30 shrink-0 active:scale-95 border border-white/10 cursor-pointer self-start"
           >
             <Send className="w-4 h-4" />
             <span>Ouvrir sur Telegram (@{botUsername})</span>
@@ -154,7 +156,8 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
             href={telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] text-amber-400 hover:text-amber-300 font-mono font-bold hover:underline flex items-center space-x-1"
+            aria-label={`Voir le bot Telegram @${botUsername}`}
+            className="text-[11px] text-amber-400 hover:text-amber-300 font-mono font-bold hover:underline flex items-center space-x-1 min-h-[44px]"
           >
             <span>@{botUsername}</span>
             <span className="text-[10px] text-emerald-400">● En direct</span>
@@ -201,20 +204,23 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
         <div className="flex items-center space-x-2 overflow-x-auto py-2 border-t border-slate-800 no-scrollbar text-xs">
           <span className="text-[10px] text-slate-500 font-bold shrink-0">Essayer :</span>
           <button
+            type="button"
             onClick={() => handleSendMessage('Quel pédiatre francophone appeler ?')}
-            className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] shrink-0 border border-slate-700"
+            className="px-3 py-2 min-h-[44px] inline-flex items-center rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs shrink-0 border border-slate-700"
           >
             🩺 Pédiatre francophone
           </button>
           <button
+            type="button"
             onClick={() => handleSendMessage('Quel fundi plombier à Lavington ?')}
-            className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] shrink-0 border border-slate-700"
+            className="px-3 py-2 min-h-[44px] inline-flex items-center rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs shrink-0 border border-slate-700"
           >
             🔧 Fundi plombier
           </button>
           <button
+            type="button"
             onClick={() => handleSendMessage('Contrat et NSSF nounou')}
-            className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] shrink-0 border border-slate-700"
+            className="px-3 py-2 min-h-[44px] inline-flex items-center rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs shrink-0 border border-slate-700"
           >
             📄 Contrat Nounou NSSF
           </button>
@@ -229,15 +235,19 @@ export const BotPage: React.FC<BotPageProps> = ({ onJoinWaitlist }) => {
           className="flex items-center space-x-2 pt-2"
         >
           <input
+            id="bot-query-input"
+            name="botQuery"
             type="text"
             value={inputQuery}
             onChange={(e) => setInputQuery(e.target.value)}
             placeholder="Posez votre question à PocketBot..."
-            className="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-amber-500"
+            aria-label="Posez votre question à PocketBot"
+            className="flex-1 px-4 py-2.5 min-h-[44px] rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-amber-500"
           />
           <button
             type="submit"
-            className="p-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold transition-all active:scale-95 shrink-0"
+            aria-label="Envoyer le message à PocketBot"
+            className="p-2.5 min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold transition-all active:scale-95 shrink-0"
           >
             <Send className="w-4 h-4" />
           </button>

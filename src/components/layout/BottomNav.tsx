@@ -33,7 +33,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 glass-nav px-2 py-1.5 sm:px-4">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 glass-nav px-2 py-1.5 sm:px-4" role="tablist" aria-label="Navigation principale">
       <div className="max-w-xl mx-auto flex items-center justify-around">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -42,8 +42,11 @@ export const BottomNav: React.FC<BottomNavProps> = ({
           return (
             <button
               key={item.id}
+              role="tab"
+              aria-selected={isActive}
+              aria-label={item.label}
               onClick={() => onTabChange(item.id as TabType)}
-              className={`relative flex flex-col items-center py-1 px-2.5 rounded-xl transition-all ${
+              className={`relative flex flex-col items-center justify-center min-h-[44px] min-w-[44px] py-1 px-2.5 rounded-xl transition-all ${
                 isActive
                   ? item.highlight
                     ? 'text-sos-400 font-bold'

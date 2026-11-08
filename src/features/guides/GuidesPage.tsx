@@ -44,87 +44,117 @@ export const GuidesPage: React.FC = () => {
 
       {/* Search Input */}
       <div className="relative">
-        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
         <input
+          id="guides-search-input"
+          name="searchQuery"
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Rechercher dans les guides (contrat, NSSF, Denis Diderot, quartier, hôpital...)"
-          className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-slate-800/80 border border-slate-700/80 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-french-500 focus:ring-1 focus:ring-french-500 transition-all"
+          aria-label="Rechercher dans les fiches pratiques et guides"
+          className="w-full pl-10 pr-16 py-2.5 min-h-[44px] rounded-2xl bg-slate-800/80 border border-slate-700/80 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-french-500 focus:ring-1 focus:ring-french-500 transition-all"
         />
+        {searchQuery && (
+          <button
+            type="button"
+            onClick={() => setSearchQuery('')}
+            aria-label="Effacer la recherche des guides"
+            className="absolute right-2 top-1/2 -translate-y-1/2 min-h-[44px] min-w-[44px] inline-flex items-center justify-center text-xs font-semibold text-slate-400 hover:text-slate-200"
+          >
+            Effacer
+          </button>
+        )}
       </div>
 
-      {/* Guides Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {filteredGuides.map((guide) => (
-          <motion.div
-            key={guide.id}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -3 }}
-            onClick={() => setSelectedGuide(guide)}
-            className="glass-panel rounded-2xl overflow-hidden cursor-pointer hover:border-french-500/50 transition-all flex flex-col justify-between group shadow-lg shadow-black/20"
-          >
-            <div>
-              {/* Image Banner */}
-              {guide.imageUrl && (
-                <div className="relative h-44 w-full overflow-hidden bg-slate-800">
-                  <img
-                    src={guide.imageUrl}
-                    alt={guide.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
-                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-french-300 border border-french-500/30 text-xs font-semibold">
-                    {guide.category}
-                  </span>
-                </div>
-              )}
-
-              <div className="p-5">
-                <div className="flex items-center justify-between text-xs text-slate-400 mb-2.5">
-                  <div className="flex items-center space-x-1.5">
-                    <Clock className="w-3.5 h-3.5 text-french-400" />
-                    <span>{guide.readTimeMinutes} min de lecture</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
-                    <span>{guide.updatedAt}</span>
-                  </div>
-                </div>
-
-                <h3 className="text-base font-bold text-slate-100 group-hover:text-french-400 transition-colors mb-2.5 leading-snug">
-                  {guide.title}
-                </h3>
-                
-                <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed mb-3">
-                  {guide.summary}
-                </p>
-
-                {guide.keyTakeaways && guide.keyTakeaways.length > 0 && (
-                  <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/50 text-[11px] text-slate-300 space-y-1">
-                    <div className="flex items-center space-x-1 font-semibold text-french-400">
-                      <Sparkles className="w-3 h-3" />
-                      <span>Point clé :</span>
-                    </div>
-                    <p className="line-clamp-2 italic text-slate-300">
-                      "{guide.keyTakeaways[0]}"
-                    </p>
+      {/* Guides Grid / Empty State */}
+      {filteredGuides.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {filteredGuides.map((guide) => (
+            <motion.div
+              key={guide.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -3 }}
+              onClick={() => setSelectedGuide(guide)}
+              className="glass-panel rounded-2xl overflow-hidden cursor-pointer hover:border-french-500/50 transition-all flex flex-col justify-between group shadow-lg shadow-black/20"
+            >
+              <div>
+                {/* Image Banner */}
+                {guide.imageUrl && (
+                  <div className="relative h-44 w-full overflow-hidden bg-slate-800">
+                    <img
+                      src={guide.imageUrl}
+                      alt={guide.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                    <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-french-300 border border-french-500/30 text-xs font-semibold">
+                      {guide.category}
+                    </span>
                   </div>
                 )}
-              </div>
-            </div>
 
-            <div className="p-5 pt-0">
-              <div className="flex items-center justify-between text-xs pt-3 border-t border-slate-700/50 text-french-400 font-semibold group-hover:translate-x-0.5 transition-transform">
-                <span>Consulter le guide complet</span>
-                <ChevronRight className="w-4 h-4" />
+                <div className="p-5">
+                  <div className="flex items-center justify-between text-xs text-slate-400 mb-2.5">
+                    <div className="flex items-center space-x-1.5">
+                      <Clock className="w-3.5 h-3.5 text-french-400" />
+                      <span>{guide.readTimeMinutes} min de lecture</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="w-3.5 h-3.5 text-slate-500" />
+                      <span>{guide.updatedAt}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-base font-bold text-slate-100 group-hover:text-french-400 transition-colors mb-2.5 leading-snug">
+                    {guide.title}
+                  </h3>
+                  
+                  <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed mb-3">
+                    {guide.summary}
+                  </p>
+
+                  {guide.keyTakeaways && guide.keyTakeaways.length > 0 && (
+                    <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/50 text-[11px] text-slate-300 space-y-1">
+                      <div className="flex items-center space-x-1 font-semibold text-french-400">
+                        <Sparkles className="w-3 h-3" />
+                        <span>Point clé :</span>
+                      </div>
+                      <p className="line-clamp-2 italic text-slate-300">
+                        "{guide.keyTakeaways[0]}"
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+
+              <div className="p-5 pt-0">
+                <div className="flex items-center justify-between text-xs pt-3 border-t border-slate-700/50 text-french-400 font-semibold group-hover:translate-x-0.5 transition-transform min-h-[44px]">
+                  <span>Consulter le guide complet</span>
+                  <ChevronRight className="w-4 h-4" />
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      ) : (
+        <div className="glass-panel rounded-2xl p-8 text-center space-y-3 my-6">
+          <BookOpen className="w-10 h-10 text-french-400 mx-auto opacity-80" />
+          <h3 className="text-base font-bold text-slate-100">Aucun guide trouvé</h3>
+          <p className="text-xs text-slate-400 max-w-sm mx-auto">
+            Aucun guide pratique ne correspond à votre recherche "{searchQuery}".
+          </p>
+          <button
+            type="button"
+            onClick={() => setSearchQuery('')}
+            className="px-4 py-2.5 min-h-[44px] rounded-xl bg-french-600 hover:bg-french-500 text-white font-bold text-xs inline-flex items-center justify-center space-x-1.5 transition-colors"
+          >
+            <span>Réinitialiser la recherche</span>
+          </button>
+        </div>
+      )}
 
       {/* Full Guide Article Modal */}
       <AnimatePresence>
@@ -149,9 +179,10 @@ export const GuidesPage: React.FC = () => {
 
                 {/* Close button */}
                 <button
+                  type="button"
                   onClick={() => setSelectedGuide(null)}
-                  className="absolute top-4 right-4 p-2 rounded-xl bg-slate-950/70 text-slate-300 hover:text-white hover:bg-slate-900 backdrop-blur-md transition-colors border border-white/10"
-                  aria-label="Fermer"
+                  className="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-slate-950/70 text-slate-300 hover:text-white hover:bg-slate-900 backdrop-blur-md transition-colors border border-white/10"
+                  aria-label="Fermer la fiche"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -254,8 +285,10 @@ export const GuidesPage: React.FC = () => {
                     <span>Fiche rédigée par : <strong className="text-slate-200">{selectedGuide.author}</strong></span>
                   </div>
                   <button
+                    type="button"
                     onClick={() => setSelectedGuide(null)}
-                    className="px-5 py-2.5 rounded-xl bg-french-600 hover:bg-french-500 text-white text-xs sm:text-sm font-semibold transition-colors shadow-md shadow-french-600/30 text-center"
+                    aria-label="Fermer la fiche"
+                    className="px-5 py-2.5 min-h-[44px] rounded-xl bg-french-600 hover:bg-french-500 text-white text-xs sm:text-sm font-semibold transition-colors shadow-md shadow-french-600/30 text-center inline-flex items-center justify-center"
                   >
                     Fermer la fiche
                   </button>
