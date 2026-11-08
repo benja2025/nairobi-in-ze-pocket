@@ -95,7 +95,8 @@ import {
   loadModeratorApplications,
   saveModeratorApplication,
   deleteModeratorApplicationFromStorage,
-  bulkImportProviders
+  bulkImportProviders,
+  syncSubmissionsToStorage
 } from './services/storageService';
 import {
   isSupabaseConfigured,

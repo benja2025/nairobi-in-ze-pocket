@@ -323,14 +323,26 @@ export function saveSubmission(newSub: ProviderSubmission): ProviderSubmission[]
   return next;
 }
 
-export function approveSubmissionInStorage(id: string): { submissions: ProviderSubmission[]; promotedProvider?: Provider } {
-  const current = loadSubmissions();
-  let approvedSub: ProviderSubmission | undefined;
+export function syncSubmissionsToStorage(subs: ProviderSubmission[]): void {
+  safeSetItem(STORAGE_KEYS.SUBMISSIONS, subs);
+}
+
+export function approveSubmissionInStorage(
+  id: string,
+  fallbackSub?: ProviderSubmission
+): { submissions: ProviderSubmission[]; promotedProvider?: Provider } {
+  let current = loadSubmissions();
+  let approvedSub: ProviderSubmission | undefined = current.find((s) => s.id === id);
+
+  if (!approvedSub && fallbackSub) {
+    approvedSub = fallbackSub;
+    current = [fallbackSub, ...current.filter((s) => s.id !== fallbackSub.id)];
+  }
 
   const nextSubmissions = current.map((s) => {
     if (s.id === id) {
-      approvedSub = s;
-      return { ...s, status: 'approved' as const };
+      approvedSub = { ...s, status: 'approved' as const };
+      return approvedSub;
     }
     return s;
   });
@@ -373,8 +385,11 @@ export function approveSubmissionInStorage(id: string): { submissions: ProviderS
   return { submissions: nextSubmissions };
 }
 
-export function rejectSubmissionInStorage(id: string): ProviderSubmission[] {
-  const current = loadSubmissions();
+export function rejectSubmissionInStorage(id: string, fallbackSub?: ProviderSubmission): ProviderSubmission[] {
+  let current = loadSubmissions();
+  if (!current.some((s) => s.id === id) && fallbackSub) {
+    current = [fallbackSub, ...current];
+  }
   const next = current.map((s) => (s.id === id ? { ...s, status: 'rejected' as const } : s));
   safeSetItem(STORAGE_KEYS.SUBMISSIONS, next);
   return next;
